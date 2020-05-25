@@ -1,0 +1,77 @@
+td.border-size-2,
+th.border-size-2
+{
+  border-width: 2px!important;
+}
+
+.text-center-table-column-1 tr td:first-child,
+.text-center-table-column-1 tr th:first-child
+{
+  text-align: center!important;
+}
+
+.text-center-table-column-2 tr td:nth-child(2),
+.text-center-table-column-2 tr th:nth-child(2)
+{
+  text-align: center!important;
+}
+
+/* Cloak spinner */
+[v-cloak] {
+  display: none;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+.modal-content {border: none;}
+
+.no-table-striped > tbody > tr:nth-child(2n+1),
+.no-table-striped > tbody > tr:nth-child(2n+1) > td,
+.no-table-striped > tbody > tr:nth-child(2n+1) > th,
+tbody.no-striped tr:nth-of-type(odd) {
+  background-color: transparent;
+}
+
+.table-no-hover tbody tr:hover {background-color: transparent;}
+
+.table-hover > tbody > tr:hover,
+.table-hover > tbody > tr:hover > td
+{
+  background: #e6f6fc;
+}
+
+#map-container {
+  height: 500px;
+}
+
+#city-map-nav {
+  min-height: 468px;
+}
+
+#power-chart,
+#moneys-chart {
+  height: 150px;
+}
+
+.login-page {
+  background: url("../dist/img/bg/bg1.jpeg") no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.input-bg,
+.input-bg input,
+.input-bg input:hover
+{
+  background: #fafdc4!important;
+}
+
