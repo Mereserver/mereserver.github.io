@@ -1,3 +1,6 @@
+body {
+  font-family: Courier New;
+}
 td.border-size-2,
 th.border-size-2
 {
@@ -83,7 +86,8 @@ tbody.no-striped tr:nth-of-type(odd) {
 }
 
 .brand-container .brand-image {
-  width: 70px;
+  width: 50px;
+  display: block;
 }
 
 .top-container .top-info p {
@@ -98,5 +102,33 @@ tbody.no-striped tr:nth-of-type(odd) {
   margin: 0 0 .2em;
 }
 
+.table-fixed tbody {
+  height: 400px;
+  overflow-y: auto;
+}
+.table-fixed thead,
+.table-fixed tbody,
+.table-fixed tr,
+.table-fixed td,
+.table-fixed th {
+  display: block;
+}
+.table-fixed th {
+  min-height: 100px;
+}
+.table-fixed tr:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.table-fixed tbody td,
+.table-fixed thead > tr > th {
+  float: left;
+}
 
+.spacer {
+  min-height: 69px;
+  border-top: 2px solid black;
+}
 

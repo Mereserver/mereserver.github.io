@@ -39,138 +39,29 @@
 <body class="hold-transition sidebar-mini layout-fixed">
 <!-- wrapper -->
 <div class="wrapper" id="app">
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-    </ul>
 
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#" role="button" title="Exit">
-          <i class="fas fa-sign-out-alt"></i>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <!-- /.navbar -->
+  <div class="top-container row mt-3 mb-3 justify-content-between mr-4 ml-4">
 
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="#" class="brand-link">
-      <img src="dist/img/logos/uber.png" alt="My favorite Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
-      <span class="brand-text font-weight-light">Uber</span>
-    </a>
+    <nav class="navbar navbar-white navbar-light top-nav-bar col-md-auto">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="index.html" role="button"><i class="fas fa-long-arrow-alt-left mr-1"></i></a>
+          <span>Stations</span>
+        </li>
+      </ul>
+    </nav>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-
-<!--          <li class="nav-header pl-lg-3">User</li>-->
-
-          <li class="nav-item">
-            <a href="dashboard.html" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>Dashboard</p>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="stations.html" class="nav-link active">
-              <i class="nav-icon fab fa-dev"></i>
-              <p>Stations</p>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="scooters.html" class="nav-link">
-              <i class="nav-icon fas fa-biking"></i>
-              <p>Scooters</p>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="history.html" class="nav-link">
-              <i class="nav-icon fas fa-history"></i>
-              <p>History</p>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="locations.html" class="nav-link">
-              <i class="nav-icon fas fa-map-marker"></i>
-              <p>Locations</p>
-            </a>
-          </li>
-
-          <li class="nav-header pl-lg-3">System</li>
-          <li class="nav-item">
-            <a href="users.html" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
-              <p>Users</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="system-log.html" class="nav-link">
-              <i class="nav-icon fas fa-list"></i>
-              <p>System log</p>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="fw-update.html" class="nav-link">
-              <i class="nav-icon fas fa-wrench"></i>
-              <p>Fw update</p>
-            </a>
-          </li>
-
-          <li class="nav-item has-treeview "> <!-- menu-open -->
-            <a href="#" class="nav-link "> <!--active-->
-              <i class="nav-icon fas fa-cog"></i>
-              <p>
-                Settings
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="settings.html" class="nav-link "> <!--active-->
-                  <i class="far fa-circle nav-icon "></i>
-                  <p>Server settings</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
+    <div class="top-info col-md-auto">
+      <p>Lime: UserName, <a href="#" title="Exit">log out</a></p>
+      <span>Relationship Manager: Jon Doy (jd@support.com)</span>
     </div>
-    <!-- /.sidebar -->
-  </aside>
+  </div>
 
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Stations</h1>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
+  <div class="spacer">
+  </div>
+
+  <div class="content mr-4 ml-4">
 
     <!-- Main content -->
     <div class="content">
@@ -180,29 +71,30 @@
 
             <!-- /.card -->
             <div class="card">
-              <div class="card-header border-0">
-                <!-- SEARCH FORM -->
-                <form class="card-title form-inline">
-                  <div class="input-group input-group-sm">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                    <div class="input-group-append">
-                      <button class="btn btn-navbar" type="submit">
-                        <i class="fas fa-search"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
 
-                <!--<h3 class="card-title">Devices</h3>-->
-                <div class="card-tools">
-                  <a href="#" class="btn btn-tool btn-sm">
-                    <i class="fas fa-download"></i>
-                  </a>
-                  <!--<a href="#" class="btn btn-tool btn-sm">
-                    <i class="fas fa-bars"></i>
-                  </a>-->
-                </div>
-              </div>
+<!--              <div class="card-header border-0">-->
+<!--                &lt;!&ndash; SEARCH FORM &ndash;&gt;-->
+<!--                <form class="card-title form-inline">-->
+<!--                  <div class="input-group input-group-sm">-->
+<!--                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">-->
+<!--                    <div class="input-group-append">-->
+<!--                      <button class="btn btn-navbar" type="submit">-->
+<!--                        <i class="fas fa-search"></i>-->
+<!--                      </button>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </form>-->
+
+<!--                &lt;!&ndash;<h3 class="card-title">Devices</h3>&ndash;&gt;-->
+<!--                <div class="card-tools">-->
+<!--                  <a href="#" class="btn btn-tool btn-sm">-->
+<!--                    <i class="fas fa-download"></i>-->
+<!--                  </a>-->
+<!--                  &lt;!&ndash;<a href="#" class="btn btn-tool btn-sm">-->
+<!--                    <i class="fas fa-bars"></i>-->
+<!--                  </a>&ndash;&gt;-->
+<!--                </div>-->
+<!--              </div>-->
 
               <div class="spinner text-center pb-3 " v-if="loading">
                 <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
@@ -210,7 +102,7 @@
               </div>
 
               <!-- Table -->
-              <div class="card-body table-responsive table-hover noselect" v-else v-cloak>
+              <div class="card-body table-responsive noselect" v-else v-cloak>
 
                 <!-- Call to action buttons -->
 <!--                <ul class="list-inline m-0">-->
@@ -337,7 +229,73 @@
                       </td>
                       <td>
                         <table class="no-border table table-no-hover no-table-striped">
-                          <tr><td>50</td></tr>
+                          <tr><td>16</td></tr>
+                          <tr><td>-</td></tr>
+                          <tr><td>-</td></tr>
+                        </table>
+                      </td>
+                      <td><a href="https://www.google.ru/maps/place/%D0%A0%D0%B8%D0%B3%D0%B0,+%D0%9B%D0%B0%D1%82%D0%B2%D0%B8%D1%8F/@56.8509021,24.1430431,9z/" target="_blank">Riga, Elinos 34-3</a></td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>XX:YY:ZZ:QQ</td>
+                      <td>
+                        <table class="no-border table table-no-hover no-table-striped">
+                          <tr><td>XX:YY:ZZ:WW</td></tr>
+                          <tr><td>XX:YY:ZZ:EE</td></tr>
+                          <tr><td>XX:YY:ZZ:SS</td></tr>
+                        </table>
+                      </td>
+                      <td>
+                        <table class="no-border table table-no-hover no-table-striped">
+                          <tr><td>Online</td></tr>
+                          <tr><td>Online</td></tr>
+                          <tr><td>Online</td></tr>
+                        </table>
+                      </td>
+                      <td>
+                        <table class="no-border table table-no-hover no-table-striped">
+                          <tr><td>Occupied</td></tr>
+                          <tr><td>Available</td></tr>
+                          <tr><td>Unavailable</td></tr>
+                        </table>
+                      </td>
+                      <td>
+                        <table class="no-border table table-no-hover no-table-striped">
+                          <tr><td>32</td></tr>
+                          <tr><td>-</td></tr>
+                          <tr><td>-</td></tr>
+                        </table>
+                      </td>
+                      <td><a href="https://www.google.ru/maps/place/%D0%A0%D0%B8%D0%B3%D0%B0,+%D0%9B%D0%B0%D1%82%D0%B2%D0%B8%D1%8F/@56.8509021,24.1430431,9z/" target="_blank">Riga, Elinos 34-3</a></td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>XX:YY:ZZ:QQ</td>
+                      <td>
+                        <table class="no-border table table-no-hover no-table-striped">
+                          <tr><td>XX:YY:ZZ:WW</td></tr>
+                          <tr><td>XX:YY:ZZ:EE</td></tr>
+                          <tr><td>XX:YY:ZZ:SS</td></tr>
+                        </table>
+                      </td>
+                      <td>
+                        <table class="no-border table table-no-hover no-table-striped">
+                          <tr><td>Online</td></tr>
+                          <tr><td>Online</td></tr>
+                          <tr><td>Online</td></tr>
+                        </table>
+                      </td>
+                      <td>
+                        <table class="no-border table table-no-hover no-table-striped">
+                          <tr><td>Occupied</td></tr>
+                          <tr><td>Available</td></tr>
+                          <tr><td>Unavailable</td></tr>
+                        </table>
+                      </td>
+                      <td>
+                        <table class="no-border table table-no-hover no-table-striped">
+                          <tr><td>41</td></tr>
                           <tr><td>-</td></tr>
                           <tr><td>-</td></tr>
                         </table>
@@ -356,7 +314,6 @@
         </div>
       </div>
     </div>
-
     <!-- /.content -->
 
     <!-- Modal -->
