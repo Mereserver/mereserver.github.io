@@ -61,12 +61,12 @@ tbody.no-striped tr:nth-of-type(odd) {
   height: 150px;
 }
 
-.login-page {
-  background: url("../dist/img/bg/bg1.jpeg") no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-}
+/*.login-page {*/
+/*  background: url("../dist/img/bg/bg1.jpeg") no-repeat;*/
+/*  background-attachment: fixed;*/
+/*  background-position: center;*/
+/*  background-size: cover;*/
+/*}*/
 
 .input-bg,
 .input-bg input,
@@ -74,4 +74,29 @@ tbody.no-striped tr:nth-of-type(odd) {
 {
   background: #fafdc4!important;
 }
+
+.top-container {
+
+}
+.top-container .brand-container {
+
+}
+
+.brand-container .brand-image {
+  width: 70px;
+}
+
+.top-container .top-info p {
+  margin: 0;
+}
+
+.main-header {
+  border: none;
+}
+
+.main-nav-bar p {
+  margin: 0 0 .2em;
+}
+
+
 
