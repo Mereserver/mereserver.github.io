@@ -1,7 +1,4 @@
-let CitiesComponent = function () {
-
-    let citiesModel = new CitiesModel();
-
+let CitiesComponent = function (citiesModel) {
     function CitiesComponent(vueModel) {
 
         let cityArr = [];

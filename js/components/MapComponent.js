@@ -1,5 +1,5 @@
 let MapComponent = (function () {
-  let citiesComponent = CitiesComponent();
+  let citiesComponent = CitiesComponent(new CitiesModel());
   let locations = citiesComponent.GetLocations();
 
   let all = locations['All'];

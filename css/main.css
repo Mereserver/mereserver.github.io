@@ -216,14 +216,38 @@ a {
 
 .filter-combobox {}
 
-.filter-combobox-body label {}
-.filter-combobox-body select {}
-
-.filter-combobox-body label,
-.filter-combobox-body select
-{
-  float: left;
+.filter-combobox label,
+.filter-combobox select {
+  padding: 0;
   height: 40px;
+}
+
+.filter-combobox label {
+  margin: 0 5px 0 0;
+}
+.filter-combobox select {
+  max-width: 120px;
+  min-width: 120px;
+}
+
+.filters-container {
+  margin: 0!important;
+}
+
+.filter-controls-group {
+ border-bottom: 1px solid #c1c1c1;
+}
+
+.filter-controls-group .filter-combobox {
+  margin-left: 33px;
+}
+
+.filter-controls-group .filter-combobox:first-child {
+  margin-left: 0;
+}
+
+.filter-combobox select {
+  border: none;
 }
 
 

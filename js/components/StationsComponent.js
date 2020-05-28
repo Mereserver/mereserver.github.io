@@ -1,8 +1,7 @@
 
 let StationsComponent = (function () {
 
-  let citiesComponent = CitiesComponent();
-  let locations = citiesComponent.GetLocations();
+  let countriesComponent = CountriesComponent();
 
   let StateType = Aggregator.StateType;
 
@@ -15,7 +14,10 @@ let StationsComponent = (function () {
     if (typeof vueModel.methods == "undefined")
       vueModel.methods = {};
 
-    let citiesComponentObj = new citiesComponent(vueModel);
+    let countriesComponentObj = new countriesComponent(vueModel);
+
+    if (typeof vueModel.watch == "undefined")
+      vueModel.watch = {};
 
     CopyObjects(vueModel.data, {
       stationsAggregator: sAgg,
@@ -56,6 +58,10 @@ let StationsComponent = (function () {
         sAgg.OnCheckClick(e);
       }
     });
+
+    countriesComponentObj.Callback = function (country, city) {
+
+    }
 
     this.model = vueModel;
   }
