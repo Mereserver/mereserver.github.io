@@ -55,9 +55,9 @@ tbody.no-striped tr:nth-of-type(odd) {
   height: 500px;
 }
 
-#city-map-nav {
-  min-height: 468px;
-}
+/*#city-map-nav {*/
+/*  min-height: 468px;*/
+/*}*/
 
 #power-chart,
 #moneys-chart {
@@ -78,11 +78,15 @@ tbody.no-striped tr:nth-of-type(odd) {
   background: #fafdc4!important;
 }
 
-.top-container {
-
+.main-top-container p {
+  margin-bottom: 7px;
 }
-.top-container .brand-container {
 
+.main-top-container {
+  margin: 1.3rem 6rem 10.5rem;
+}
+
+.top-container .brand-container {
 }
 
 .brand-container .brand-image {
@@ -91,8 +95,12 @@ tbody.no-striped tr:nth-of-type(odd) {
 }
 
 .top-container .top-info p {
-  margin: 0;
+  margin-bottom: 7px;
 }
+
+/*.top-info {*/
+/*  padding: 0;*/
+/*}*/
 
 .main-header {
   border: none;
@@ -101,15 +109,124 @@ tbody.no-striped tr:nth-of-type(odd) {
 .main-nav-bar p {
   margin: 0 0 .2em;
 }
+.main-nav-bar ul {
+  font-size: 14px;
+}
+
+.main-nav-bar ul li {
+  line-height: 200%;
+}
+
+.main-nav-bar p {
+  font-size: 10px;
+}
+
+.main-nav-bar .row {
+  margin: 0 3.5rem 2rem;
+}
+
+.navbar-nav {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.navbar-nav .fas  {
+  margin-right: .5rem!important;
+}
 
 .table.table-head-fixed thead tr th {
   border: none;
 }
 
 .spacer {
-  min-height: 69px;
+  min-height: 29px;
   border-top: 2px solid black;
 }
+
+a {
+  color: black;
+}
+
+.top-container .navbar {
+  margin-left: 2.6rem!important;
+  padding-top: 0;
+}
+
+.wrapper > .content {
+  margin: 0 6rem;
+}
+
+.top-container {
+  margin: 32px 6rem 4px;
+}
+
+.dashboard-widgets .small-box {
+  min-height: 130px;
+}
+
+.city-selector-wrapper label {
+  vertical-align: middle;
+  display: block;
+  line-height: 250%;
+  margin: 0;
+}
+
+#city-map-nav,
+.city-selector-wrapper label {
+  height: 40px;
+  float: left;
+}
+
+.map-wrapper {
+  position: relative;
+  z-index: 0;
+  padding-bottom: 15px;
+}
+
+.city-selector-wrapper {
+  position: relative;
+  z-index: 9999999;
+  margin-top: -46px;
+  height: 46px;
+}
+
+.city-selector-body {
+  background: #f2f2f2;
+  border-radius: 5px;
+  width: 300px;
+  padding: 3px;
+}
+.city-selector-wrapper label {
+  min-width: 20%;
+  text-align: center;
+}
+
+#city-map-nav {
+  max-width: 80%;
+}
+
+.log-out {
+  color: #1155cc;
+  font-weight: bold;
+}
+
+.table {
+  font-size: 13px;
+}
+
+.filter-combobox {}
+
+.filter-combobox-body label {}
+.filter-combobox-body select {}
+
+.filter-combobox-body label,
+.filter-combobox-body select
+{
+  float: left;
+  height: 40px;
+}
+
+
 
 
 

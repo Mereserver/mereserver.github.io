@@ -76,8 +76,9 @@
       }
     };
 
-    let mvLoading = new LoadingMV(vueModel);
-    let mvStations = new CitiesAggregatorMV(vueModel);
+    let mvLoading = new LoadingComponent(vueModel);
+
+    let mvCities = new MapComponent(vueModel);
 
     app = new Vue(vueModel);
   }

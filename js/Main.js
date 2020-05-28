@@ -13,9 +13,15 @@ window.onload = function () {
     }
   };
 
-  let mvStations = new StationsAggregatorMView(vueModel);
-  let mvLoading = new LoadingMV(vueModel);
-  let mvUsers = new UsersAggregatorMView(vueModel);
+  let mvLoading = new LoadingComponent(vueModel);
+
+  if(document.getElementById('stations-page')!=null) {
+    let mvStations = new StationsComponent(vueModel);
+  }
+
+  if(document.getElementById('users-page')!=null) {
+    let mvUsers = new UsersComponent(vueModel);
+  }
 
   app = new Vue(vueModel);
 

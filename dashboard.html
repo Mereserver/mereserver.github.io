@@ -36,161 +36,149 @@
 <!-- wrapper -->
 <div class="wrapper">
 
-  <div class="top-container row mt-3 mb-3 justify-content-between mr-4 ml-4">
-
-    <nav class="navbar navbar-white navbar-light top-nav-bar col-md-auto">
+  <div class="top-container">
+    <div class="row justify-content-end">
+      <div class="top-info col-auto">
+        <p>Lime: UserName, <a href="#" title="Exit" class="log-out">log out</a></p>
+        <span>Relationship Manager: Jon Doy (jd@support.com)</span>
+      </div>
+    </div>
+    <nav class="navbar navbar-white navbar-light top-nav-bar col-auto">
       <!-- Left navbar links -->
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a href="index.html" role="button"><i class="fas fa-long-arrow-alt-left mr-1"></i></a>
-          <span>Dashboard</span>
+          <a href="index.html" role="button"><i class="fas fa-long-arrow-alt-left"></i><span>Dashboard</span></a>
         </li>
       </ul>
     </nav>
-
-    <div class="top-info col-md-auto">
-      <p>Lime: UserName, <a href="#" title="Exit">log out</a></p>
-      <span>Relationship Manager: Jon Doy (jd@support.com)</span>
-    </div>
   </div>
 
   <div class="spacer"></div>
 
-  <div class="content mr-4 ml-4">
-
-    <!-- Main content -->
-    <div class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small card -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>1678 kWh</h3>
-                <p>Total power per Month</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-battery-three-quarters"></i>
-              </div>
+  <!-- Main content -->
+  <div class="content" >
+    <div class="container-fluid">
+      <div class="row dashboard-widgets">
+        <div class="col-md-3 col-sm-6 col-12">
+          <!-- small card -->
+          <div class="small-box bg-success">
+            <div class="inner">
+              <h3>1678 kWh</h3>
+              <p>Total power per Month</p>
+            </div>
+            <div class="icon">
+              <i class="fas fa-battery-three-quarters"></i>
             </div>
           </div>
-
-          <div class="col-lg-3 col-6">
-            <!-- small card -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>20</h3>
-                <p>Scooters on charge</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-biking"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-6">
-            <!-- small card -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>100<sup style="font-size: 20px">$</sup><span style="font-size: 16px">till 24.05.2020</span></h3>
-                <p>Balance and prediction</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-wallet"></i>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-6">
-            <!-- small card -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>12</h3>
-                <p><a href="#" class="small-box-footer text-light">Notification errors</a></p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-exclamation"></i>
-              </div>
-              </a>
-            </div>
-          </div>
-
         </div>
-        <div class="row">
-          <div class="col-lg-6 col-6">
 
-            <!-- Line chart -->
-            <div class="card card-primary card-outline">
-              <div class="card-header">
-                <h3 class="card-title">
-                  <i class="far fa-chart-bar"></i>
-                  Power / Time 24h
-                </h3>
-
-              </div>
-              <div class="card-body">
-                <div id="power-chart"></div>
-              </div>
-              <!-- /.card-body-->
+        <div class="col-md-3 col-sm-6 col-12">
+          <!-- small card -->
+          <div class="small-box bg-success">
+            <div class="inner">
+              <h3>20</h3>
+              <p>Scooters on charge</p>
             </div>
-            <!-- /.card -->
+            <div class="icon">
+              <i class="fas fa-biking"></i>
+            </div>
           </div>
+        </div>
 
-          <div class="col-lg-6 col-6">
-            <!-- Bar chart -->
-            <div class="card card-primary card-outline">
-              <div class="card-header">
-                <h3 class="card-title">
-                  <i class="far fa-chart-bar"></i>
-                  $ / Months
-                </h3>
-
-              </div>
-              <div class="card-body">
-                <div id="moneys-chart"></div>
-              </div>
-              <!-- /.card-body-->
+        <div class="col-md-3 col-sm-6 col-12">
+          <!-- small card -->
+          <div class="small-box bg-success">
+            <div class="inner">
+              <h3>100<sup style="font-size: 20px">$</sup><span style="font-size: 16px">till 24.05.2020</span></h3>
+              <p>Balance and prediction</p>
+            </div>
+            <div class="icon">
+              <i class="fas fa-wallet"></i>
             </div>
 
           </div>
         </div>
 
-        <div class="row mb-3">
-
-          <div class="col-lg-9 col-6">
-            <!-- Map -->
-            <div id="map-container"></div>
-          </div>
-
-          <div class="col-lg-3 col-6 vue">
-            <label>Choose city</label>
-
-            <div class="spinner text-center pb-3 " v-if="loading">
-              <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
-              <span class="sr-only">Loading...</span>
+        <div class="col-md-3 col-sm-6 col-12">
+          <!-- small card -->
+          <div class="small-box bg-danger">
+            <div class="inner">
+              <h3>12</h3>
+              <p><a href="#" class="small-box-footer text-light">Notification errors</a></p>
             </div>
-
-            <select multiple="" class="form-control" id="city-map-nav" v-model="citiesSelector" v-else v-cloak>
-              <option v-for="city in cities">{{ city.name }}</option>
-            </select>
+            <div class="icon">
+              <i class="fas fa-exclamation"></i>
+            </div>
+            </a>
           </div>
         </div>
-
-
 
       </div>
+      <div class="row">
+        <div class="col-md-6">
+
+          <!-- Line chart -->
+          <div class="card card-primary card-outline">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="far fa-chart-bar"></i>
+                Power / Time 24h
+              </h3>
+
+            </div>
+            <div class="card-body">
+              <div id="power-chart"></div>
+            </div>
+            <!-- /.card-body-->
+          </div>
+          <!-- /.card -->
+        </div>
+
+        <div class="col-md-6">
+          <!-- Bar chart -->
+          <div class="card card-primary card-outline">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="far fa-chart-bar"></i>
+                $ / Months
+              </h3>
+
+            </div>
+            <div class="card-body">
+              <div id="moneys-chart"></div>
+            </div>
+            <!-- /.card-body-->
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="map-wrapper">
+        <div id="map-container"></div>
+
+        <div class="vue city-selector-wrapper">
+
+          <div class="spinner text-center pb-3 " v-if="loading">
+            <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+            <span class="sr-only">Loading...</span>
+          </div>
+
+          <div v-else v-cloak class="row justify-content-center">
+            <div class="city-selector-body">
+              <label>City:</label>
+              <select class="form-control" id="city-map-nav" v-model="citiesSelector" >
+                <option v-for="city in cities">{{ city.name }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-
-    <!-- /.content -->
-
   </div>
+  <!-- /.content -->
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
 
@@ -229,15 +217,21 @@
 <script src="plugins/flot-old/jquery.flot.resize.min.js"></script>
 <!-- FLOT PIE PLUGIN - also used to draw donut charts -->
 <script src="plugins/flot-old/jquery.flot.pie.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+
 <script src="js/leaflet.js"></script>
 <script src="js/Vue.js"></script>
 
 <script src="js/Exts.js"></script>
-<script src="js/components/CitiesAggregatorMV.js"></script>
-<script src="js/components/LoadingMV.js"></script>
+<script src="js/components/LoadingComponent.js"></script>
 
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.js"></script>
+<script src="js/components/Models/City.js"></script>
+<script src="js/components/Models/CitiesModel.js"></script>
+<script src="js/components/CitiesComponent.js"></script>
+
+<script src="js/components/MapComponent.js"></script>
+
 
 <script src="js/Graphics.js"></script>
 
