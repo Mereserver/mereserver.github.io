@@ -66,7 +66,7 @@
         <div class="col-lg-12">
 
           <!-- /.card -->
-          <div class="">
+          <div class="card-container">
 
             <div class="spinner text-center pb-3 card-header" v-if="loading">
               <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
@@ -112,9 +112,8 @@
                           <label class="col-auto">Status:</label>
                           <div class="col-auto">
                             <div class="row">
-                              <select class="form-control col-auto">
-                                <option selected="selected">Online</option>
-                                <option>Offline</option>
+                              <select class="form-control col-auto" v-model="statusSelector">
+                                <option v-for="s in statuses">{{ s }}</option>
                               </select>
                             </div>
                           </div>
@@ -127,7 +126,7 @@
               </div>
 
               <!-- Table -->
-              <div class="card-body table-responsive noselect">
+              <div class="card-body">
 
                 <!-- Call to action buttons -->
                 <!--                <ul class="list-inline m-0">-->
@@ -148,8 +147,8 @@
                 <!--                    </button>-->
                 <!--                  </li>-->
                 <!--                </ul>-->
-                <div class="table-responsive p-0" style="height: 400px;">
-                  <table class="table table-striped table-valign-middle text-center table-hover table-head-fixed text-nowrap">
+                <div class="table-responsive">
+                  <table cellspacing="0" cellpadding="0" class="table table-striped table-valign-middle text-center table-hover table-head-fixed text-nowrap">
                     <thead>
                     <tr>
                       <th scope="col">№</th>
@@ -167,22 +166,22 @@
                       <td>{{station.stationId}}</td>
                       <td>
                         <table class="no-border table table-no-hover no-table-striped">
-                          <tr v-for="slot in station.slotId" :key="slot.id"><td>{{slot.id}}</td></tr>
+                          <tr v-for="slot in station.slots" :key="slot.id"><td>{{slot.id}}</td></tr>
                         </table>
                       </td>
                       <td>
                         <table class="no-border table table-no-hover no-table-striped" >
-                          <tr v-for="slot in station.slotId" :key="slot.id"><td>{{slot.info}}</td></tr>
+                          <tr v-for="slot in station.slots" :key="slot.id"><td>{{slot.info}}</td></tr>
                         </table>
                       </td>
                       <td>
                         <table class="no-border table table-no-hover no-table-striped">
-                          <tr v-for="slot in station.slotId" :key="slot.id"><td>{{slot.status}}</td></tr>
+                          <tr v-for="slot in station.slots" :key="slot.id"><td>{{slot.status}}</td></tr>
                         </table>
                       </td>
                       <td>
                         <table class="no-border table table-no-hover no-table-striped">
-                          <tr v-for="slot in station.slotId" :key="slot.id"><td>{{slot.chargeLevel}}</td></tr>
+                          <tr v-for="slot in station.slots" :key="slot.id"><td>{{slot.chargeLevel}}</td></tr>
                         </table>
                       </td>
                       <td><a :href="station.location.url" target="_blank">{{station.location.GetString}}</a></td>
@@ -336,6 +335,9 @@
 
 <script src="js/components/Models/CountriesModel.js"></script>
 <script src="js/components/CountriesComponent.js"></script>
+
+<script src="js/components/Models/StationStatusModel.js"></script>
+<script src="js/components/StatusComponent.js"></script>
 
 <script src="js/components/StationsComponent.js"></script>
 <script src="js/components/UsersComponent.js"></script>

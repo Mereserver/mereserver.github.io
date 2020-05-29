@@ -24,6 +24,8 @@ th.border-size-2
   display: none;
 }
 
+.spinner {border: none;}
+
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -248,6 +250,34 @@ a {
 
 .filter-combobox select {
   border: none;
+}
+
+.card-container .card-header {
+  padding-bottom: 54px;
+}
+
+.card-container .card-body {
+  padding-top: 0;
+}
+
+.card-container .table-responsive {
+  height: 480px;
+  padding-bottom: 0;
+}
+
+.card-container .table-responsive table {
+  margin: 0;
+  border: none;
+  border-collapse:collapse;
+}
+
+.table.table-head-fixed thead tr:nth-child(1) th {
+  box-shadow: none;
+}
+
+#stations-page .card-header,
+#stations-page .card-body {
+  margin: 0 110px;
 }
 
 

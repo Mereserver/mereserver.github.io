@@ -22,7 +22,10 @@ let CountriesModel = (function(){
             return ["-"];
 
         if(cities.length == 0 || county == "All") {
-            return this.GetAllCities();
+            cities = this.GetAllCities();
+        }
+        else {
+            cities = ["All"].concat(cities);
         }
 
         return cities;

@@ -25,6 +25,7 @@ let CountriesComponent = function () {
         });
 
         let selectedCountry = "All";
+        let selectedCity = "All";
 
         CopyObjects(vueModel.watch, {
             countriesSelector: function (country, oldVal) {
@@ -36,12 +37,14 @@ let CountriesComponent = function () {
                 if(filteredCities.length == 0)
                   return;
 
-                vueModel.data.cities = ["All"].concat(filteredCities);
-                vueModel.data.citiesSelector = "All";
+                vueModel.data.cities = filteredCities;
+                vueModel.data.citiesSelector = selectedCity = "All";
 
                 $this.Callback(country, "All");
             },
             citiesSelector: function (city, oldVal) {
+
+                selectedCity = city;
 
                 $this.Callback(selectedCountry, city);
             }
@@ -50,6 +53,12 @@ let CountriesComponent = function () {
         this.model = vueModel;
         this.cityArr = countries;
         this.cities = cities;
+        this.GetCountry = function () {
+            return selectedCountry;
+        }
+        this.GetCity = function () {
+            return selectedCity;
+        }
     }
 
     CountriesComponent.GetLocations = () => citiesModel.GetLocations();
