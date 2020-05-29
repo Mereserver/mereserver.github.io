@@ -25,4 +25,10 @@ window.onload = function () {
 
   app = new Vue(vueModel);
 
+
+  let responsiveTable = new ResponsiveTable();
+
+
+
+
 };

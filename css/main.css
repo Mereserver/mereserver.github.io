@@ -7,6 +7,11 @@ th.border-size-2
   border-width: 2px!important;
 }
 
+body,
+html {
+  height: 100%!important;
+}
+
 .text-center-table-column-1 tr td:first-child,
 .text-center-table-column-1 tr th:first-child
 {
@@ -159,7 +164,8 @@ a {
 }
 
 .top-container {
-  margin: 32px 6rem 4px;
+  margin: 0 6rem 4px;
+  padding-top: 32px;
 }
 
 .dashboard-widgets .small-box {
@@ -279,6 +285,15 @@ a {
 #stations-page .card-body {
   margin: 0 110px;
 }
+
+#stations-page .card-body {
+  padding-bottom: 0;
+}
+
+.flex-fill {
+  flex:1;
+}
+
 
 
 
