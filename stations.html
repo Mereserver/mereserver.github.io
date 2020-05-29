@@ -162,170 +162,30 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>XX:YY:ZZ:QQ</td>
+                    <tr v-for="(station, index) in stations">
+                      <td>{{index+1}}</td>
+                      <td>{{station.stationId}}</td>
                       <td>
                         <table class="no-border table table-no-hover no-table-striped">
-                          <tr><td>XX:YY:ZZ:WW</td></tr>
-                          <tr><td>XX:YY:ZZ:EE</td></tr>
-                          <tr><td>XX:YY:ZZ:SS</td></tr>
+                          <tr v-for="slot in station.slotId" :key="slot.id"><td>{{slot.id}}</td></tr>
+                        </table>
+                      </td>
+                      <td>
+                        <table class="no-border table table-no-hover no-table-striped" >
+                          <tr v-for="slot in station.slotId" :key="slot.id"><td>{{slot.info}}</td></tr>
                         </table>
                       </td>
                       <td>
                         <table class="no-border table table-no-hover no-table-striped">
-                          <tr><td>Occupied</td></tr>
-                          <tr><td>Available</td></tr>
-                          <tr><td>Unavailable</td></tr>
+                          <tr v-for="slot in station.slotId" :key="slot.id"><td>{{slot.status}}</td></tr>
                         </table>
                       </td>
                       <td>
                         <table class="no-border table table-no-hover no-table-striped">
-                          <tr><td>Online</td></tr>
-                          <tr><td>Online</td></tr>
-                          <tr><td>Online</td></tr>
+                          <tr v-for="slot in station.slotId" :key="slot.id"><td>{{slot.chargeLevel}}</td></tr>
                         </table>
                       </td>
-                      <td>
-                        <table class="no-border table table-no-hover no-table-striped">
-                          <tr><td>50</td></tr>
-                          <tr><td>-</td></tr>
-                          <tr><td>-</td></tr>
-                        </table>
-                      </td>
-                      <td><a href="https://www.google.ru/maps/place/%D0%A0%D0%B8%D0%B3%D0%B0,+%D0%9B%D0%B0%D1%82%D0%B2%D0%B8%D1%8F/@56.8509021,24.1430431,9z/" target="_blank">Riga, Elinos 34-3</a></td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>XX:YY:ZZ:QQ</td>
-                      <td>
-                        <table class="no-border table table-no-hover no-table-striped">
-                          <tr><td>XX:YY:ZZ:WW</td></tr>
-                          <tr><td>XX:YY:ZZ:EE</td></tr>
-                          <tr><td>XX:YY:ZZ:SS</td></tr>
-                        </table>
-                      </td>
-                      <td>
-                        <table class="no-border table table-no-hover no-table-striped">
-                          <tr><td>Occupied</td></tr>
-                          <tr><td>Available</td></tr>
-                          <tr><td>Unavailable</td></tr>
-                        </table>
-                      </td>
-                      <td>
-                        <table class="no-border table table-no-hover no-table-striped">
-                          <tr><td>Online</td></tr>
-                          <tr><td>Online</td></tr>
-                          <tr><td>Online</td></tr>
-                        </table>
-                      </td>
-                      <td>
-                        <table class="no-border table table-no-hover no-table-striped">
-                          <tr><td>50</td></tr>
-                          <tr><td>-</td></tr>
-                          <tr><td>-</td></tr>
-                        </table>
-                      </td>
-                      <td><a href="https://www.google.ru/maps/place/%D0%A0%D0%B8%D0%B3%D0%B0,+%D0%9B%D0%B0%D1%82%D0%B2%D0%B8%D1%8F/@56.8509021,24.1430431,9z/" target="_blank">Riga, Elinos 34-3</a></td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>XX:YY:ZZ:QQ</td>
-                      <td>
-                        <table class="no-border table table-no-hover no-table-striped">
-                          <tr><td>XX:YY:ZZ:WW</td></tr>
-                          <tr><td>XX:YY:ZZ:EE</td></tr>
-                          <tr><td>XX:YY:ZZ:SS</td></tr>
-                        </table>
-                      </td>
-                      <td>
-                        <table class="no-border table table-no-hover no-table-striped">
-                          <tr><td>Occupied</td></tr>
-                          <tr><td>Available</td></tr>
-                          <tr><td>Unavailable</td></tr>
-                        </table>
-                      </td>
-                      <td>
-                        <table class="no-border table table-no-hover no-table-striped">
-                          <tr><td>Online</td></tr>
-                          <tr><td>Online</td></tr>
-                          <tr><td>Online</td></tr>
-                        </table>
-                      </td>
-                      <td>
-                        <table class="no-border table table-no-hover no-table-striped">
-                          <tr><td>16</td></tr>
-                          <tr><td>-</td></tr>
-                          <tr><td>-</td></tr>
-                        </table>
-                      </td>
-                      <td><a href="https://www.google.ru/maps/place/%D0%A0%D0%B8%D0%B3%D0%B0,+%D0%9B%D0%B0%D1%82%D0%B2%D0%B8%D1%8F/@56.8509021,24.1430431,9z/" target="_blank">Riga, Elinos 34-3</a></td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td>XX:YY:ZZ:QQ</td>
-                      <td>
-                        <table class="no-border table table-no-hover no-table-striped">
-                          <tr><td>XX:YY:ZZ:WW</td></tr>
-                          <tr><td>XX:YY:ZZ:EE</td></tr>
-                          <tr><td>XX:YY:ZZ:SS</td></tr>
-                        </table>
-                      </td>
-                      <td>
-                        <table class="no-border table table-no-hover no-table-striped">
-                          <tr><td>Occupied</td></tr>
-                          <tr><td>Available</td></tr>
-                          <tr><td>Unavailable</td></tr>
-                        </table>
-                      </td>
-                      <td>
-                        <table class="no-border table table-no-hover no-table-striped">
-                          <tr><td>Online</td></tr>
-                          <tr><td>Online</td></tr>
-                          <tr><td>Online</td></tr>
-                        </table>
-                      </td>
-                      <td>
-                        <table class="no-border table table-no-hover no-table-striped">
-                          <tr><td>32</td></tr>
-                          <tr><td>-</td></tr>
-                          <tr><td>-</td></tr>
-                        </table>
-                      </td>
-                      <td><a href="https://www.google.ru/maps/place/%D0%A0%D0%B8%D0%B3%D0%B0,+%D0%9B%D0%B0%D1%82%D0%B2%D0%B8%D1%8F/@56.8509021,24.1430431,9z/" target="_blank">Riga, Elinos 34-3</a></td>
-                    </tr>
-                    <tr>
-                      <td>5</td>
-                      <td>XX:YY:ZZ:QQ</td>
-                      <td>
-                        <table class="no-border table table-no-hover no-table-striped">
-                          <tr><td>XX:YY:ZZ:WW</td></tr>
-                          <tr><td>XX:YY:ZZ:EE</td></tr>
-                          <tr><td>XX:YY:ZZ:SS</td></tr>
-                        </table>
-                      </td>
-                      <td>
-                        <table class="no-border table table-no-hover no-table-striped">
-                          <tr><td>Occupied</td></tr>
-                          <tr><td>Available</td></tr>
-                          <tr><td>Unavailable</td></tr>
-                        </table>
-                      </td>
-                      <td>
-                        <table class="no-border table table-no-hover no-table-striped">
-                          <tr><td>Online</td></tr>
-                          <tr><td>Online</td></tr>
-                          <tr><td>Online</td></tr>
-                        </table>
-                      </td>
-                      <td>
-                        <table class="no-border table table-no-hover no-table-striped">
-                          <tr><td>41</td></tr>
-                          <tr><td>-</td></tr>
-                          <tr><td>-</td></tr>
-                        </table>
-                      </td>
-                      <td><a href="https://www.google.ru/maps/place/%D0%A0%D0%B8%D0%B3%D0%B0,+%D0%9B%D0%B0%D1%82%D0%B2%D0%B8%D1%8F/@56.8509021,24.1430431,9z/" target="_blank">Riga, Elinos 34-3</a></td>
+                      <td><a :href="station.location.url" target="_blank">{{station.location.GetString}}</a></td>
                     </tr>
                     </tbody>
                   </table>

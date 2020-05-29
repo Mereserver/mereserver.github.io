@@ -61,6 +61,21 @@ let StationsComponent = (function () {
 
     countriesComponentObj.Callback = function (country, city) {
 
+      let stations = sAgg.GetObjects();
+
+      if(country != "All") {
+        stations = stations.filter(x => x.location.country == country);
+      }
+
+      if(city != "All") {
+        stations = stations.filter(x => x.location.city == city);
+      }
+
+      vueModel.data.stations = stations;
+      // for(let s in stations) {
+      //
+      //   s.location.country == country
+      // }
     }
 
     this.model = vueModel;

@@ -4,7 +4,7 @@ let CountriesModel = (function(){
     let countries = {
         "All": ["All"],
         "Ukraine" : ["Kiev"],
-        "Latvia": ["Riga"],
+        "Latvia": ["Riga", "Valmiera"],
         "Estonia": ["Tallin"],
         "Finland": ["Helsinki"],
         "Netherlands" : ["Amsterdam"],
