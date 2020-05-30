@@ -19,6 +19,14 @@ window.onload = function () {
     let mvStations = new StationsComponent(vueModel);
   }
 
+  if(document.getElementById('scooters-page')!=null) {
+    let mvStations = new ScootersComponent(vueModel);
+  }
+
+  if(document.getElementById('billing-page')!=null) {
+    let mvStations = new BillingComponent(vueModel);
+  }
+
   if(document.getElementById('users-page')!=null) {
     let mvUsers = new UsersComponent(vueModel);
   }
@@ -27,8 +35,5 @@ window.onload = function () {
 
 
   let responsiveTable = new ResponsiveTable();
-
-
-
 
 };

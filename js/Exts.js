@@ -37,3 +37,16 @@ function CopyObjects(obj1, obj2) {
   }
 }
 
+function VueModelInitial(vueModel) {
+  if (typeof vueModel == "undefined")
+      return;
+
+  if (typeof vueModel.data == "undefined")
+    vueModel.data = {};
+
+  if (typeof vueModel.methods == "undefined")
+    vueModel.methods = {};
+
+  if (typeof vueModel.watch == "undefined")
+    vueModel.watch = {};
+}

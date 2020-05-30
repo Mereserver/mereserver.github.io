@@ -10,16 +10,16 @@ let ResponsiveTable = (function () {
         hSize += CalcHeightOfElement($('.spacer'));
         hSize += CalcHeightOfElement($('.card-header'));
 
-        Log.trace(hSize);
-
         $('.table-responsive').height(window.innerHeight - hSize - 2);
 
+        Log.trace("up");
     }
 
     function ResponsiveTable() {
         let $ = jQuery;
         $(window).on('resize', Update);
         Update();
+        //setInterval(Update, 1000);
     }
 
     return ResponsiveTable;

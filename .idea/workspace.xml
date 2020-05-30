@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f2d33c1-f34b-4b26-8473-2d464abc3c4a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/components/ResponsiveTable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/BillingComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/Models/ScooterStatusModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/MonthComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/ScootersComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Exts.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Exts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stations.html" beforeDir="false" afterPath="$PROJECT_DIR$/stations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/ResponsiveTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/ResponsiveTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scooters.html" beforeDir="false" afterPath="$PROJECT_DIR$/scooters.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +72,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\!Rabota\MereServer\cpanels\AdminLTEMod_v2\js\components\Models" />
       <recent name="D:\!Rabota\MereServer\cpanels\AdminLTEMod_v2\js\components" />
+      <recent name="D:\!Rabota\MereServer\cpanels\AdminLTEMod_v2\js\components\Models" />
       <recent name="D:\!Rabota\MereServer\cpanels\AdminLTEMod_v2\js\components\View" />
       <recent name="C:\xampp\htdocs\cpanels\AdminLTEMod\js\components\Models" />
       <recent name="C:\xampp\htdocs\cpanels\AdminLTEMod\js\components" />
@@ -105,7 +111,7 @@
       <workItem from="1585593480435" duration="103169000" />
       <workItem from="1585892683461" duration="27390000" />
       <workItem from="1586939063597" duration="41673000" />
-      <workItem from="1590445135566" duration="140490000" />
+      <workItem from="1590445135566" duration="160601000" />
     </task>
     <servers />
   </component>
@@ -117,10 +123,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="452" y="99" key="#Menus_and_Toolbars/0.0.1920.1040@0.0.1920.1040" timestamp="1585751208137" />
-    <state x="414" y="172" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585751140010">
+    <state x="414" y="172" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590825444322">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="172" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585751140010" />
+    <state x="414" y="172" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590825444322" />
     <state x="779" y="181" key="#com.intellij.ide.ui.customization.CustomizableActionsPanel.FindAvailableActionsDialog" timestamp="1585751195454">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
