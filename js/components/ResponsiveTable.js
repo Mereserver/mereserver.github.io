@@ -1,7 +1,11 @@
 let ResponsiveTable = (function () {
     function CalcHeightOfElement(element)
     {
-        return parseInt(element.css('margin-top')) + parseInt(element.css('margin-bottom') )+ parseInt(element.css('height'))
+        if(element.length == 0)
+            return 0;
+        return parseInt(element.css('margin-top')) + parseInt(element.css('margin-bottom') ) +
+            parseInt(element.css('border-top-width') ) + parseInt(element.css('border-bottom-width') ) +
+        + parseInt(element.css('height'))
     }
 
     function Update() {
@@ -10,16 +14,32 @@ let ResponsiveTable = (function () {
         hSize += CalcHeightOfElement($('.spacer'));
         hSize += CalcHeightOfElement($('.card-header'));
 
-        $('.table-responsive').height(window.innerHeight - hSize - 2);
+        let sz = window.innerHeight - hSize;
 
-        Log.trace("up");
+        $('.table-responsive').height(sz);
+
+        Log.trace("update");
+
+        return sz;
     }
 
     function ResponsiveTable() {
         let $ = jQuery;
         $(window).on('resize', Update);
         Update();
-        //setInterval(Update, 1000);
+
+        let sz = 0;
+
+        this.timer = setInterval(()=> {
+            let newSz = Update();
+            if(newSz != 0 && newSz == sz)
+            {
+                clearInterval(this.timer);
+            }
+            sz = newSz;
+        }, 100);
+
+        this.Update = Update;
     }
 
     return ResponsiveTable;

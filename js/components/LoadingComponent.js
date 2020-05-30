@@ -8,6 +8,7 @@ function LoadingComponent(vueModel) {
   });
 
   this.model = vueModel;
+  this.CallBack = () => {};
 }
 
 LoadingComponent.prototype.Hide = function () {
@@ -15,6 +16,7 @@ LoadingComponent.prototype.Hide = function () {
   setTimeout(() => {
 
     data.loading = false;
+    this.CallBack();
 
   }, 100);
 }

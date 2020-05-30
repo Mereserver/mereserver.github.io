@@ -43,6 +43,10 @@ html {
 
 .modal-content {border: none;}
 
+.table-striped tbody > tr:nth-of-type(odd) {
+  background: #e9fff7;
+}
+
 .no-table-striped > tbody > tr:nth-child(2n+1),
 .no-table-striped > tbody > tr:nth-child(2n+1) > td,
 .no-table-striped > tbody > tr:nth-child(2n+1) > th,
@@ -243,11 +247,11 @@ a {
 }
 
 .filter-controls-group .filter-combobox {
-  margin-left: 33px;
+  margin-right: 33px;
 }
 
-.filter-controls-group .filter-combobox:first-child {
-  margin-left: 0;
+.filter-controls-group .filter-combobox:last-child {
+  margin-right: 0;
 }
 
 .filter-combobox select {
@@ -263,7 +267,6 @@ a {
 }
 
 .card-container .table-responsive {
-  height: 480px;
   padding-bottom: 0;
 }
 
@@ -318,12 +321,48 @@ a {
   font-size: 14px;
   width: 105px;
   color: white !important;
-  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+  border-radius: 7px;
+  border: 2px solid #91db9d;
+}
+
+.download-btn-group {
+  border-radius: 7px;
+  border: 2px solid #91db9d;
+}
+
+.download-btn-group button {
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 9999999;
+}
+
+.download-btn-group button:nth-child(1) {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 25px;
+  line-height: 25px;
+}
+.download-btn-group button:nth-child(2) {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 25px;
+  line-height: 25px;
 }
 
 .filter-combobox-full select {
   width: 100%;
   max-width: 100%;
+}
+
+.card-header {
+  z-index: 9999999;
+}
+
+.dropdown-item,
+.dropdown-menu {
+  background: white;
+  z-index: 9999999;
+  font-size: 14px;
 }
 
 .brand-image {
@@ -345,6 +384,13 @@ a {
 #billing-page .card-header {
   padding-top: 28px;
 }
+
+
+
+
+
+
+
 
 
 

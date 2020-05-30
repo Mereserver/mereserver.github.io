@@ -13,7 +13,13 @@ window.onload = function () {
     }
   };
 
+  let responsiveTable = new ResponsiveTable();
+
   let mvLoading = new LoadingComponent(vueModel);
+
+  mvLoading.CallBack = () => {
+    responsiveTable.Update();
+  }
 
   if(document.getElementById('stations-page')!=null) {
     let mvStations = new StationsComponent(vueModel);
@@ -34,6 +40,6 @@ window.onload = function () {
   app = new Vue(vueModel);
 
 
-  let responsiveTable = new ResponsiveTable();
+
 
 };

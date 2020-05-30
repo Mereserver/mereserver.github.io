@@ -2,15 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f2d33c1-f34b-4b26-8473-2d464abc3c4a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/components/BillingComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/components/Models/ScooterStatusModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/components/MonthComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/components/ScootersComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/billing.html" beforeDir="false" afterPath="$PROJECT_DIR$/billing.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/avatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/avatar04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/avatar2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/avatar3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/avatar5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/bitcoin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/boxed-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/boxed-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/default-150x150.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/photo1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/photo2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/photo3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/photo4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/prod-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/prod-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/prod-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/prod-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/prod-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/user1-128x128.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/user2-160x160.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/user3-128x128.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/user4-128x128.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/user5-128x128.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/user6-128x128.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/user7-128x128.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/user8-128x128.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/Exts.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Exts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/LoadingComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/LoadingComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/components/ResponsiveTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/ResponsiveTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scooters.html" beforeDir="false" afterPath="$PROJECT_DIR$/scooters.html" afterDir="false" />
     </list>
@@ -111,7 +135,7 @@
       <workItem from="1585593480435" duration="103169000" />
       <workItem from="1585892683461" duration="27390000" />
       <workItem from="1586939063597" duration="41673000" />
-      <workItem from="1590445135566" duration="160601000" />
+      <workItem from="1590445135566" duration="166420000" />
     </task>
     <servers />
   </component>
