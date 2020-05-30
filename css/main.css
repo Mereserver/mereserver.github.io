@@ -442,8 +442,19 @@ a.dropdown-item,
   color: #31d495;
 }
 
+#station-rating-page .card-body {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
 
+#station-rating-page .map-wrapper {padding: 0;}
+/*#station-rating-page #map-container {height: auto;}*/
 
+#dashboard-page .card-header,
+#dashboard-page .card-body {
+  margin: 0;
+  padding: 1.25rem;
+}
 
 
 

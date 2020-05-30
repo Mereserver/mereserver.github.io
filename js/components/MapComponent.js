@@ -1,4 +1,4 @@
-let MapComponent = (function () {
+let MapComponent = function () {
   let citiesComponent = CitiesComponent(new CitiesModel());
   let locations = citiesComponent.GetLocations();
 
@@ -75,4 +75,4 @@ let MapComponent = (function () {
   }
 
   return MapComponent;
-})();
+}

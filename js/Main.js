@@ -1,8 +1,40 @@
 let app;
 
-// Core //
-window.onload = function () {
+let vueModel = {
+  el: ".vue",
+  computed: {},
+  data: {},
+  methods: {},
+  created() {
+    mvLoading.Hide();
+  }
+};
 
+let mvLoading = new LoadingComponent(vueModel);
+
+let responsiveTable = new ResponsiveTable();
+
+mvLoading.CallBack = () => {
+  responsiveTable.Update();
+}
+
+responsiveTable.CallBack = (height) => {
+  Log.trace(height);
+  jQuery('#map-container').height(height);
+};
+
+if(document.getElementById('station-rating-page')!=null) {
+
+  window.onload = function () {
+    let stationRatingComponent = new StationRatingComponent(vueModel);
+
+    app = new Vue(vueModel);
+
+    vueModel.el = ".vue2";
+    let app2 = new Vue(vueModel);
+  }
+}
+else {
   let vueModel = {
     el: "#app",
     computed: {},
@@ -12,36 +44,33 @@ window.onload = function () {
       mvLoading.Hide();
     }
   };
+// Core //
+  window.onload = function () {
 
-  let responsiveTable = new ResponsiveTable();
+    if (document.getElementById('stations-page') != null) {
+      let stationsComponent = new StationsComponent(vueModel);
+    }
 
-  let mvLoading = new LoadingComponent(vueModel);
+    if (document.getElementById('scooters-page') != null) {
+      let scootersComponent = new ScootersComponent(vueModel);
+    }
 
-  mvLoading.CallBack = () => {
-    responsiveTable.Update();
-  }
+    if (document.getElementById('billing-page') != null) {
+      let billingComponent = new BillingComponent(vueModel);
+    }
 
-  if(document.getElementById('stations-page')!=null) {
-    let mvStations = new StationsComponent(vueModel);
-  }
+    if (document.getElementById('users-page') != null) {
+      let usersComponent = new UsersComponent(vueModel);
+    }
 
-  if(document.getElementById('scooters-page')!=null) {
-    let mvStations = new ScootersComponent(vueModel);
-  }
-
-  if(document.getElementById('billing-page')!=null) {
-    let mvStations = new BillingComponent(vueModel);
-  }
-
-  if(document.getElementById('users-page')!=null) {
-    let mvUsers = new UsersComponent(vueModel);
-  }
-
-  if(document.getElementById('power-cost-page')!=null) {
-    let mvUsers = new PowerCostComponent(vueModel);
-  }
-
-  app = new Vue(vueModel);
+    if (document.getElementById('power-cost-page') != null) {
+      let powerCostComponent = new PowerCostComponent(vueModel);
+    }
 
 
-};
+    app = new Vue(vueModel);
+
+  };
+}
+
+
