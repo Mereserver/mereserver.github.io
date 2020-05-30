@@ -159,9 +159,22 @@ a {
   padding-top: 0;
 }
 
+.content-align-1,
 .wrapper > .content {
-  margin: 0 6rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
 }
+
+/*.content-align-1 {*/
+/*  margin-left: 232px!important;*/
+/*  margin-right: 232px!important;*/
+/*}*/
+
+/*.content-align-2 {*/
+/*  padding-left: 232px!important;*/
+/*  padding-right: 232px!important;*/
+/*}*/
+
 
 .top-container {
   margin: 0 6rem 4px;
@@ -224,6 +237,7 @@ a {
 
 .filter-combobox {}
 
+.filter-input label,
 .filter-combobox label,
 .filter-combobox select {
   padding: 0;
@@ -233,10 +247,14 @@ a {
 .filter-combobox label {
   margin: 0 5px 0 0;
 }
+
+.filter-input input,
 .filter-combobox select {
   max-width: 120px;
   min-width: 120px;
 }
+
+
 
 .filters-container {
   margin: 0!important;
@@ -246,14 +264,19 @@ a {
  border-bottom: 1px solid #c1c1c1;
 }
 
+.filter-controls-group.filter-input,
+.filter-controls-group.filter-combobox,
 .filter-controls-group .filter-combobox {
-  margin-right: 33px;
+  padding-right: 33px;
 }
 
+.filter-controls-group.filter-input:last-child,
+.filter-controls-group.filter-combobox:last-child,
 .filter-controls-group .filter-combobox:last-child {
-  margin-right: 0;
+  padding-right: 0;
 }
 
+.filter-input input,
 .filter-combobox select {
   border: none;
 }
@@ -334,6 +357,15 @@ a {
   font-size: 14px;
   font-weight: bold;
   z-index: 9999999;
+  border: none;
+}
+
+.download-btn-group,
+.download-btn-group button {
+  background: #007f00;
+}
+
+.dropdown-toggle {
 }
 
 .download-btn-group button:nth-child(1) {
@@ -349,20 +381,28 @@ a {
   line-height: 25px;
 }
 
+.filter-input-full input,
 .filter-combobox-full select {
   width: 100%;
   max-width: 100%;
+}
+
+.filter-combobox-full {
+  min-width: 384px;
+  padding-right: 0!important;
 }
 
 .card-header {
   z-index: 9999999;
 }
 
+a.dropdown-item,
 .dropdown-item,
 .dropdown-menu {
   background: white;
   z-index: 9999999;
   font-size: 14px;
+  color: black!important;
 }
 
 .brand-image {
@@ -372,18 +412,38 @@ a {
   margin-top: 24px;
 }
 
-.bg-1 {
-  background: #e9fff7;
+.bg-1,
+.bg-1 .table th {
+  background: #e9fff7!important;
 }
 
-.bg-1 .table th,
 .bg-1 .form-control {
+  background: transparent!important;
+}
+
+.bg-2,
+.bg-2 .table th {
+  background: #fff8eb!important;
+}
+
+.bg-2 .form-control {
   background: transparent!important;
 }
 
 #billing-page .card-header {
   padding-top: 28px;
 }
+
+.head-controls p {
+  margin: 0;
+}
+
+.head-controls a {
+  color: #31d495;
+}
+
+
+
 
 
 

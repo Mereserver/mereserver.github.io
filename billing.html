@@ -61,179 +61,156 @@
 
   <div id="billing-page" class="bg-1">
     <!-- Main content -->
-    <div class="content">
-      <!-- /.card -->
-      <div class="card-container">
+    <!-- /.card -->
+    <div class="card-container content-align-1">
 
-        <div class="spinner text-center pb-3 card-header" v-if="loading">
-          <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
-          <span class="sr-only">Loading...</span>
-        </div>
-
-        <div v-else v-cloak>
-
-          <div class="card-header border-0">
-            <!-- Filters -->
-            <div class="m-0 row justify-content-between">
-              <!-- <input class="form-control" type="search" placeholder="Search" aria-label="Search">-->
-              <!-- <div class="input-group-append">-->
-              <!--   <button class="btn btn-navbar" type="submit">-->
-              <!--     <i class="fas fa-search"></i>-->
-              <!--   </button>-->
-              <!-- </div>-->
-
-              <div class="col-auto head-controls">
-                <div class="row form-inline filter-combobox filter-controls-group filter-combobox-full">
-                  <label class="col-auto">Company:</label>
-                  <div class="col">
-                    <div class="row">
-                      <select class="form-control col">
-                        <option value="Lime">Lime</option>
-                        <option value="Google">Google</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row filter-controls-group">
-                  <div class="filter-combobox form-inline col-auto">
-                    <div class="row">
-                      <label class="col-auto" for="country-filter">Month:</label>
-                      <select class="form-control col-auto" v-model="monthSelector" id="month-filter">
-                        <option v-for="month in months">{{ month }}</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="filter-combobox form-inline col-auto">
-                    <div class="row">
-                      <label class="col-auto" for="city-filter">Year:</label>
-                      <select class="form-control col-auto" v-model="yearSelector" id="year-filter">
-                        <option v-for="year in years">{{ year }}</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="btn-group download-btn-group">
-                    <button type="button" class="btn btn-success">Download</button>
-                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                      <span class="sr-only">Download</span>
-                      <div class="dropdown-menu" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-1px, 37px, 0px);">
-                          <a class="dropdown-item" href="#">Download PDF</a>
-                          <a class="dropdown-item" href="#">Download Excel</a>
-                          <a class="dropdown-item" href="#">Download CSV</a>
-                      </div>
-                    </button>
-                  </div>
-<!--                  <div class="btn-group">-->
-<!--                    <button type="button" class="btn btn-block bg-gradient-success download-btn">Download</button>-->
-<!--                    <button type="button" class="btn btn-success dropdown-toggle download-btn" data-toggle="dropdown" aria-expanded="false">-->
-<!--                      <span class="sr-only">Download</span>-->
-<!--                      <div class="dropdown-menu" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-1px, 37px, 0px);">-->
-<!--                        <a class="dropdown-item" href="#">Download PDF</a>-->
-<!--                        <a class="dropdown-item" href="#">Download Excel</a>-->
-<!--                        <a class="dropdown-item" href="#">Download CSV</a>-->
-<!--                      </div>-->
-<!--                    </button>-->
-<!--                  </div>-->
-                </div>
-
-              </div>
-
-              <div class="col-auto head-controls">
-                <div class="row filter-controls-group">
-                  <div class="filter-combobox filter-combobox-full col">
-                    <div class="row form-inline">
-                      <label class="col-auto">Currencies:</label>
-                      <div class="col">
-                        <div class="row">
-                          <select class="form-control col">
-                            <option value="BTC">BTC</option>
-                            <option value="ETH">ETH</option>
-                            <option value="xEUR">xEUR</option>
-                            <option value="USD">USD</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row filter-controls-group">
-                  <div class="filter-combobox form-inline col-auto">
-                    <div class="row">
-                      <label class="col-auto" for="country-filter">Country:</label>
-                      <select class="form-control col-auto" v-model="countriesSelector" id="country-filter">
-                        <option v-for="country in countries">{{ country }}</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="filter-combobox form-inline col-auto">
-                    <div class="row">
-                      <label class="col-auto" for="city-filter">City:</label>
-                      <select class="form-control col-auto" v-model="citiesSelector" id="city-filter">
-                        <option v-for="city in cities">{{ city }}</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <!-- Table -->
-          <div class="card-body">
-            <div class="table-responsive">
-              <table cellspacing="0" cellpadding="0" class="table table-striped table-valign-middle text-center table-hover table-head-fixed text-nowrap">
-                <thead>
-                <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">DATE</th>
-                  <th scope="col">TYPE</th>
-                  <th scope="col">TOTAL POWER</th>
-                  <th scope="col">TOTAL TIME</th>
-                  <th scope="col">TOTAL PRICE</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>789064</td>
-                  <td>05.05.2020</td>
-                  <td>Invoice</td>
-                  <td>5678 kW</td>
-                  <td>567</td>
-                  <td>789</td>
-                </tr>
-                <tr>
-                  <td>781064</td>
-                  <td>11.01.2020</td>
-                  <td>Invoice</td>
-                  <td>1678 kW</td>
-                  <td>527</td>
-                  <td>759</td>
-                </tr>
-                <tr>
-                  <td>781064</td>
-                  <td>01.02.2020</td>
-                  <td>Invoice</td>
-                  <td>137 kW</td>
-                  <td>127</td>
-                  <td>354</td>
-                </tr>
-                </tbody>
-              </table>
-            </div>
-
-          </div>
-
-        </div>
+      <div class="spinner text-center pb-3 card-header" v-if="loading">
+        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+        <span class="sr-only">Loading...</span>
       </div>
-      <!-- /.card -->
+
+      <div v-else v-cloak>
+
+        <div class="card-header border-0">
+          <!-- Filters -->
+          <div class="m-0 row justify-content-between">
+            <!-- <input class="form-control" type="search" placeholder="Search" aria-label="Search">-->
+            <!-- <div class="input-group-append">-->
+            <!--   <button class="btn btn-navbar" type="submit">-->
+            <!--     <i class="fas fa-search"></i>-->
+            <!--   </button>-->
+            <!-- </div>-->
+
+            <div class="col-auto head-controls">
+              <div class="row form-inline filter-combobox filter-controls-group filter-combobox-full">
+                <label class="col-auto">Company:</label>
+                <div class="col">
+                  <div class="row">
+                    <select class="form-control col">
+                      <option value="Lime">Lime</option>
+                      <option value="Google">Google</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row filter-controls-group">
+                <div class="filter-combobox form-inline col-auto">
+                  <div class="row">
+                    <label class="col-auto" for="country-filter">Month:</label>
+                    <select class="form-control col-auto" v-model="monthSelector" id="month-filter">
+                      <option v-for="month in months">{{ month }}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="filter-combobox form-inline col-auto">
+                  <div class="row">
+                    <label class="col-auto" for="city-filter">Year:</label>
+                    <select class="form-control col-auto" v-model="yearSelector" id="year-filter">
+                      <option v-for="year in years">{{ year }}</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="btn-group download-btn-group">
+                  <button type="button" class="btn btn-success">Download</button>
+                  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <span class="sr-only">Download</span>
+                    <div class="dropdown-menu" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-1px, 37px, 0px);">
+                      <a class="dropdown-item" href="#">Download PDF</a>
+                      <a class="dropdown-item" href="#">Download Excel</a>
+                      <a class="dropdown-item" href="#">Download CSV</a>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-auto head-controls">
+              <div class="row filter-controls-group">
+                <div class="filter-combobox filter-combobox-full col">
+                  <div class="row form-inline">
+                    <label class="col-auto">Currencies:</label>
+                    <div class="col">
+                      <div class="row">
+                        <select class="form-control col">
+                          <option value="BTC">BTC</option>
+                          <option value="ETH">ETH</option>
+                          <option value="xEUR">xEUR</option>
+                          <option value="USD">USD</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row filter-controls-group">
+                <div class="filter-combobox form-inline col-auto">
+                  <div class="row">
+                    <label class="col-auto" for="country-filter">Country:</label>
+                    <select class="form-control col-auto" v-model="countriesSelector" id="country-filter">
+                      <option v-for="country in countries">{{ country }}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="filter-combobox form-inline col-auto">
+                  <div class="row">
+                    <label class="col-auto" for="city-filter">City:</label>
+                    <select class="form-control col-auto" v-model="citiesSelector" id="city-filter">
+                      <option v-for="city in cities">{{ city }}</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Table -->
+        <div class="card-body">
+          <div class="table-responsive">
+            <table cellspacing="0" cellpadding="0" class="table table-striped table-valign-middle text-center table-hover table-head-fixed text-nowrap">
+              <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">DATE</th>
+                <th scope="col">TYPE</th>
+                <th scope="col">TOTAL POWER</th>
+                <th scope="col">TOTAL TIME</th>
+                <th scope="col">TOTAL PRICE</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr> <td>789064</td> <td>05.05.2020</td> <td>Invoice</td> <td>5678 kW</td> <td>567</td> <td>789</td> </tr>
+              <tr> <td>781064</td> <td>11.01.2020</td> <td>Invoice</td> <td>1678 kW</td> <td>527</td> <td>759</td> </tr>
+              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
+              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
+              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
+              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
+              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
+              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
+              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
+              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
+              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
+              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
+              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
+              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+      </div>
     </div>
+    <!-- /.card -->
     <!-- /.content -->
   </div>
 

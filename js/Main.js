@@ -37,9 +37,11 @@ window.onload = function () {
     let mvUsers = new UsersComponent(vueModel);
   }
 
+  if(document.getElementById('power-cost-page')!=null) {
+    let mvUsers = new PowerCostComponent(vueModel);
+  }
+
   app = new Vue(vueModel);
-
-
 
 
 };
