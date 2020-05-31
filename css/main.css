@@ -182,9 +182,9 @@ a {
   padding: 32px 0 0;
 }
 
-.dashboard-widgets .small-box {
-  min-height: 130px;
-}
+/*.dashboard-widgets .small-box {*/
+/*  min-height: 130px;*/
+/*}*/
 
 .city-selector-wrapper label {
   vertical-align: middle;
@@ -396,8 +396,8 @@ a {
 
 .filter-input-full input,
 .filter-combobox-full select {
-  width: 100%;
-  max-width: 100%;
+  width: 100%!important;
+  max-width: 100%!important;
 }
 
 .filter-combobox-full {
@@ -521,8 +521,32 @@ a.dropdown-item,
   overflow: auto;
 }
 
+.new-message-block {
+  padding: 0;
+}
 
+.new-message-block .head {
+  color: #5cc15c;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
 
+.new-message-block > .row {
+  margin: 0 0 40px;
+}
+
+.new-message-block .filter-input {
+  padding: 0;
+}
+
+.btn-attach-file {
+  background: white!important;
+  color: #5cc15c;
+}
+
+.new-message-block .buttons > div:last-child{
+  padding-right: 0;
+}
 
 
 

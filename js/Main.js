@@ -7,6 +7,7 @@ function DefaultInit(vueModel) {
 
   mvLoading.CallBack = () => {
     responsiveTable.Update();
+    Log.trace("size updated");
   }
 
   responsiveTable.CallBack = (height) => {

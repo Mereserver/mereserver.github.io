@@ -82,49 +82,56 @@
           <div class="row">
             <div class="col">
 
-              <div class="content-align-1">
-                <div class="card-header border-0">
-                  <div class="row">
-                    <div class="col-auto">
-                      <button type="button" class="btn btn-block bg-gradient-success">New message</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
             </div>
           </div>
 
-          <div class="row bg-1 flex-fill d-flex justify-content-start">
+          <div class="row flex-fill d-flex justify-content-start">
 
             <div class="col portlet-container portlet-dropzone content-align-1">
 
               <div class="card-body">
                 <div class="row">
-                  <div class="col-md-2 in-boxes-tabs">
-                    <<div class="row"><a href="messages-incoming.html">INBOX</a></div>
-                    <div class="row"><a href="messages-outgoing.html" class="active">OUTBOX</a></div>
+                  <div class="col-md-4 in-boxes-tabs">
+                    <div class="row"><a href="messages-incoming.html">INBOX</a></div>
+                    <div class="row"><a href="messages-outgoing.html">OUTBOX</a></div>
                   </div>
-                  <div class="col questions-block">
-                    <div class="row"><div class="col-sm"><p>RE: Question1</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question2</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question3</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question4</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
+
+                  <div class="col new-message-block">
+                    <p class="head">NEW MESSAGE</p>
+
+                    <div class="row form-inline filter-combobox filter-controls-group filter-combobox-full">
+                      <label class="col-auto">To:</label>
+                      <div class="col">
+                        <div class="row">
+                          <select class="form-control col">
+                            <option value="Lime">Lime</option>
+                            <option value="Google">Google</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="filter-input form-inline col filter-controls-group filter-input-full row">
+                      <label class="col-auto">Subject:</label>
+                      <input type="text" class="form-control col">
+                    </div>
+
+                    <div class="filter-input form-inline col filter-controls-group filter-input-full row">
+                      <label class="col-auto">Text:</label>
+                      <input type="text" class="form-control col" placeholder="Your message...">
+                    </div>
+
+                    <div class="row justify-content-end buttons">
+                      <div class="col-auto">
+                        <button type="button" class="btn btn-block bg-gradient-success btn-attach-file">Attach files</button>
+                      </div>
+                      <div class="col-auto">
+                        <button type="button" class="btn btn-block bg-gradient-success">Send</button>
+                      </div>
+                    </div>
+
                   </div>
+
                 </div>
               </div>
 
