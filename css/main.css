@@ -356,7 +356,7 @@ a {
 .btn-block,
 .download-btn-group {
   border-radius: 7px;
-  border: 2px solid #91db9d;
+  /*border: 2px solid #91db9d;*/
 }
 
 .download-btn-group button {
@@ -370,7 +370,8 @@ a {
   font-size: 14px;
   padding: 0 20px;
   height: 30px;
-  line-height: 26px;
+  line-height: 28px;
+  background: #1ab11d!important;
 }
 
 .download-btn-group,
@@ -385,7 +386,7 @@ a {
   padding-top: 0;
   padding-bottom: 0;
   height: 25px;
-  line-height: 25px;
+  line-height: 27px;
 }
 .download-btn-group button:nth-child(2) {
   padding-top: 0;
@@ -551,6 +552,10 @@ a.dropdown-item,
 .btn-attach-file {
   background: white!important;
   color: #5cc15c;
+  border: 2px solid #91db9d;
+  height: 30px;
+  line-height: 26px;
+
 }
 
 .new-message-block .buttons > div:last-child{
@@ -590,6 +595,19 @@ a.dropdown-item,
 #system-logs .filter-tabs a:last-child {
   margin-right: 0;
 }
+
+.login-card-body > .row {
+  margin-bottom: 30px;
+}
+
+.login-card-body > .row:last-child {
+  margin-bottom: 0;
+}
+
+.login-page {
+  background: white;
+}
+
 
 
 
