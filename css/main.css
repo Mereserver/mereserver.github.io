@@ -548,6 +548,11 @@ a.dropdown-item,
   padding-right: 0;
 }
 
+.new-message-block .buttons .btn-block {
+  font-weight: bold;
+}
+
+
 
 
 
