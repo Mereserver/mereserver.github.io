@@ -1,16 +1,17 @@
 body {
   font-family: Courier New;
 }
+body,
+html {
+  height: 100%!important;
+}
+
 td.border-size-2,
 th.border-size-2
 {
   border-width: 2px!important;
 }
 
-body,
-html {
-  height: 100%!important;
-}
 
 .text-center-table-column-1 tr td:first-child,
 .text-center-table-column-1 tr th:first-child
@@ -178,7 +179,7 @@ a {
 
 .top-container {
   margin: 0 6rem 4px;
-  padding-top: 32px;
+  padding: 32px 0 0;
 }
 
 .dashboard-widgets .small-box {
@@ -318,6 +319,10 @@ a {
   flex:1;
 }
 
+.wrapper {
+  height: 100%;
+}
+
 #scooters-page .table td,
 #scooters-page .table th {
   padding-left: 3px;
@@ -340,14 +345,15 @@ a {
   height: 25px;
   line-height: 25px;
   font-weight: normal;
-  padding: 0px 0;
+  padding: 0;
   font-size: 14px;
-  width: 105px;
+  /*width: 105px;*/
   color: white !important;
   border-radius: 7px;
   border: 2px solid #91db9d;
 }
 
+.btn-block,
 .download-btn-group {
   border-radius: 7px;
   border: 2px solid #91db9d;
@@ -358,6 +364,13 @@ a {
   font-weight: bold;
   z-index: 9999999;
   border: none;
+}
+
+.btn-block {
+  font-size: 14px;
+  padding: 0 20px;
+  height: 30px;
+  line-height: 26px;
 }
 
 .download-btn-group,
@@ -455,6 +468,62 @@ a.dropdown-item,
   margin: 0;
   padding: 1.25rem;
 }
+
+.messages .card-header {
+  padding-bottom: 17px;
+}
+
+.messages .card-body {
+  padding-top: 27px;
+}
+
+.messages .card-body > .row {
+  margin: 0;
+}
+
+.in-boxes-tabs a {
+  margin-bottom: 16px;
+  font-weight: bold;
+  color:#1a1b1c;
+}
+
+.in-boxes-tabs a.active,
+.in-boxes-tabs a:hover {
+  color: #5cc15c;
+}
+
+/*.in-boxes-tabs a:last-child {*/
+/*  margin-bottom: 0;*/
+/*}*/
+
+.questions-block > .row {
+  border-bottom: 1px solid #c1c1c1;
+  line-height: 28px;
+  padding: 2px 0;
+}
+
+.questions-block > .row > div {
+  padding: 0;
+}
+
+.questions-block p {
+  margin: 0;
+}
+
+.messages,
+.card-container,
+#messages-page {
+  height: 100%;
+}
+
+.questions-block {
+  max-height: 500px;
+  overflow: auto;
+}
+
+
+
+
 
 
 

@@ -1,29 +1,36 @@
 let app;
 
-let vueModel = {
-  el: ".vue",
-  computed: {},
-  data: {},
-  methods: {},
-  created() {
-    mvLoading.Hide();
+function DefaultInit(vueModel) {
+  let mvLoading = new LoadingComponent(vueModel);
+
+  let responsiveTable = new ResponsiveTable();
+
+  mvLoading.CallBack = () => {
+    responsiveTable.Update();
   }
-};
 
-let mvLoading = new LoadingComponent(vueModel);
+  responsiveTable.CallBack = (height) => {
+    jQuery('#map-container').height(height);
+  };
 
-let responsiveTable = new ResponsiveTable();
-
-mvLoading.CallBack = () => {
-  responsiveTable.Update();
+  return {
+    mvLoading : mvLoading
+  }
 }
 
-responsiveTable.CallBack = (height) => {
-  Log.trace(height);
-  jQuery('#map-container').height(height);
-};
-
 if(document.getElementById('station-rating-page')!=null) {
+
+  let vueModel = {
+    el: ".vue",
+    computed: {},
+    data: {},
+    methods: {},
+    created() {
+      initObj.mvLoading.Hide();
+    }
+  };
+
+  let initObj = DefaultInit(vueModel);
 
   window.onload = function () {
     let stationRatingComponent = new StationRatingComponent(vueModel);
@@ -35,15 +42,19 @@ if(document.getElementById('station-rating-page')!=null) {
   }
 }
 else {
+
   let vueModel = {
     el: "#app",
     computed: {},
     data: {},
     methods: {},
     created() {
-      mvLoading.Hide();
+      initObj.mvLoading.Hide();
     }
   };
+
+  let initObj = DefaultInit(vueModel);
+
 // Core //
   window.onload = function () {
 
@@ -65,6 +76,10 @@ else {
 
     if (document.getElementById('power-cost-page') != null) {
       let powerCostComponent = new PowerCostComponent(vueModel);
+    }
+
+    if (document.getElementById('messages-page') != null) {
+      let responsiveMessages = new ResponsiveMessages();
     }
 
 
