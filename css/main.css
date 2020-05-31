@@ -451,7 +451,16 @@ a.dropdown-item,
   margin: 0;
 }
 
-.head-controls a {
+/*.filter-tabs a {*/
+/*  margin-right: 10px;*/
+/*}*/
+
+.filter-tabs a:last-child {
+  margin-right: 0;
+}
+
+.head-controls a:hover,
+.head-controls a.active {
   color: #31d495;
 }
 
@@ -552,9 +561,35 @@ a.dropdown-item,
   font-weight: bold;
 }
 
+#system-logs .filter-tabs {
+  padding-right: 31px;
+}
 
+.paginator {
+  line-height: 25px;
+}
 
+.paginator span,
+.paginator a {
+  display: inline-block;
+}
+.paginator a {
+  font-size: 12px;
+}
 
+.paginator span {
+  border-bottom: 1px solid #c1c1c1;
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+#system-logs .filter-tabs a {
+  margin-right: 25px;
+}
+
+#system-logs .filter-tabs a:last-child {
+  margin-right: 0;
+}
 
 
 
