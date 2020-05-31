@@ -7,7 +7,7 @@ let ResponsiveMessages = (function () {
         let hSize = CalcElements.CalcPaddingTopBottom($('.card-body'));
 
         $('.messages > div > .row').each(function(index) {
-            if(index < 3) {
+            if(index != 3) {
                 hSize += $(this).height();
             }
 
