@@ -138,6 +138,8 @@ tbody.no-striped tr:nth-of-type(odd) {
   margin-bottom: 28px;
 }
 
+.main-nav-bar > .row {margin: 0;}
+
 .navbar-nav {
   font-size: 19px;
   font-weight: bold;
