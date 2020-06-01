@@ -53,13 +53,26 @@ if(document.getElementById('station-rating-page')!=null) {
 }
 else {
 
+  function AfterInitVue(){
+    $('#date-range-start').daterangepicker({
+      singleDatePicker: true
+    });
+    $('#date-range-end').daterangepicker({
+      singleDatePicker: true
+    });
+  }
+
   let vueModel = {
     el: "#app",
     computed: {},
     data: {},
     methods: {},
-    created() {
+    mounted() {
       initObj.mvLoading.Hide();
+
+      setTimeout(()=> {
+        AfterInitVue();
+      }, 100);
     }
   };
 
@@ -92,10 +105,16 @@ else {
       let responsiveMessages = new ResponsiveMessages();
     }
 
+
+
     app = new Vue(vueModel);
 
   };
 }
+
+
+
+
 
 
 

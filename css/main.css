@@ -692,6 +692,9 @@ button:disabled {
 
 .container-fluid {padding: 0;}
 
+.daterangepicker {
+  z-index: 9999999999;
+}
 
 
 
