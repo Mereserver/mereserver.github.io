@@ -94,31 +94,32 @@ tbody.no-striped tr:nth-of-type(odd) {
   margin-bottom: 7px;
 }
 
-.main-top-container {
-  margin: 0 6rem 10.5rem;
-  padding-top: 60px;
-}
-
-.top-container .brand-container {
+.brand-container {
+  padding-bottom: 100px;
+  /*padding-right: 218px;*/
 }
 
 .top-container .top-info p {
   margin-bottom: 7px;
 }
 
-/*.top-info {*/
-/*  padding: 0;*/
-/*}*/
+.top-info {
+  padding: 0;
+}
 
 .main-header {
   border: none;
+}
+
+.main-nav-bar {
+  margin-top: 70px;
 }
 
 .main-nav-bar p {
   margin: 0 0 .2em;
 }
 .main-nav-bar ul {
-  font-size: 16px;
+  font-size: 19px;
 }
 
 .main-nav-bar ul li {
@@ -126,7 +127,7 @@ tbody.no-striped tr:nth-of-type(odd) {
 }
 
 .main-nav-bar p {
-  font-size: 10px;
+  font-size: 15px;
 }
 
 .main-nav-bar .row > div {
@@ -427,7 +428,7 @@ a.dropdown-item,
   display: block;
   width: 178px;
   height: 75px;
-  margin-top: 24px;
+  margin-top: 7px;
 }
 
 .bg-1,
@@ -467,6 +468,11 @@ a.dropdown-item,
 .head-controls a:hover,
 .head-controls a.active {
   color: #31d495;
+}
+
+.filter-tabs a.disabled,
+.filter-tabs a.disabled:hover {
+  color: grey;
 }
 
 #station-rating-page .card-body {
@@ -622,9 +628,25 @@ button:disabled {
   color:white;
 }
 
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1346px;
+  }
+}
 
+@media (max-width: 770px) {
+  .main-nav-bar .row > div {
+    margin: 0;
+    justify-content: left!important;
+  }
+  .main-nav-bar > .row {
+    /*justify-content: left!important;*/
+  }
+}
 
-
+.top-container > .row {
+  margin-right: 0;
+}
 
 
 

@@ -9,6 +9,10 @@ let ScootersComponent = (function () {
     function ScootersComponent(vueModel) {
         let _this = this;
 
+        this.GetScooters = function () {
+
+        }
+
         VueModelInitial(vueModel);
 
         let countriesComponentObj = new countriesComponent(vueModel);
@@ -16,6 +20,10 @@ let ScootersComponent = (function () {
 
         this.countriesComponentObj = countriesComponentObj;
         this.statusComponentObj = statusComponentObj;
+
+        CopyObjects(vueModel.data, {
+            scooters: _this.GetScooters()
+        });
 
         countriesComponentObj.Callback = function (country, city) {
             _this.Filter();
