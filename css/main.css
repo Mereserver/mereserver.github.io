@@ -467,14 +467,18 @@ a.dropdown-item,
   margin-right: 0;
 }
 
-.head-controls a:hover,
-.head-controls a.active {
+.head-controls a:hover {
   color: #31d495;
 }
 
 .filter-tabs a.disabled,
 .filter-tabs a.disabled:hover {
   color: grey;
+}
+
+
+.head-controls a.active {
+  color: #31d495!important;
 }
 
 #station-rating-page .card-body {

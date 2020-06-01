@@ -115,20 +115,6 @@
                 </div>
               </div>
 
-              <div class="row">
-                <div class="btn-group download-btn-group">
-                  <button type="button" class="btn btn-success">Download</button>
-                  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <span class="sr-only">Download</span>
-                    <div class="dropdown-menu" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-1px, 37px, 0px);">
-                      <a class="dropdown-item" href="#">Download PDF</a>
-                      <a class="dropdown-item" href="#">Download Excel</a>
-                      <a class="dropdown-item" href="#">Download CSV</a>
-                    </div>
-                  </button>
-                </div>
-              </div>
-
             </div>
 
             <div class="col-auto head-controls">
@@ -170,6 +156,22 @@
                 </div>
               </div>
 
+              <div class="row justify-content-end">
+                <div class="col-auto align-self-end">
+                  <div class="btn-group download-btn-group">
+                    <button type="button" class="btn btn-success">Download</button>
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                      <span class="sr-only">Download</span>
+                      <div class="dropdown-menu" role="menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-1px, 37px, 0px);">
+                        <a class="dropdown-item" href="#">Download PDF</a>
+                        <a class="dropdown-item" href="#">Download Excel</a>
+                        <a class="dropdown-item" href="#">Download CSV</a>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
           </div>
@@ -191,20 +193,28 @@
               </tr>
               </thead>
               <tbody>
-              <tr> <td>789064</td> <td>05.05.2020</td> <td>Invoice</td> <td>5678 kW</td> <td>567</td> <td>789</td> </tr>
-              <tr> <td>781064</td> <td>11.01.2020</td> <td>Invoice</td> <td>1678 kW</td> <td>527</td> <td>759</td> </tr>
-              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
-              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
-              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
-              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
-              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
-              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
-              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
-              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
-              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
-              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
-              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
-              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>
+              <tr v-for="(billing, index) in billingRecords">
+                <td>{{billing.id}}</td>
+                <td>{{billing.date}}</td>
+                <td>{{billing.type}}</td>
+                <td>{{billing.totalPower}}</td>
+                <td>{{billing.totalTime}}</td>
+                <td>{{billing.totalPrice}}</td>
+                <td><a :href="billing.location.url" target="_blank">{{billing.location.GetString}}</a></td>
+              </tr>
+<!--              <tr> <td>781064</td> <td>11.01.2020</td> <td>Invoice</td> <td>1678 kW</td> <td>527</td> <td>759</td> </tr>-->
+<!--              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>-->
+<!--              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>-->
+<!--              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>-->
+<!--              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>-->
+<!--              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>-->
+<!--              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>-->
+<!--              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>-->
+<!--              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>-->
+<!--              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>-->
+<!--              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>-->
+<!--              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>-->
+<!--              <tr> <td>781064</td> <td>01.02.2020</td> <td>Invoice</td> <td>137 kW</td> <td>127</td> <td>354</td> </tr>-->
               </tbody>
             </table>
           </div>
@@ -279,6 +289,7 @@
 <script src="js/components/ResponsiveTable.js"></script>
 
 <script src="js/components/MonthComponent.js"></script>
+<script src="js/components/Models/BillingRecords.js"></script>
 <script src="js/components/BillingComponent.js"></script>
 
 <script src="js/Main.js"></script>

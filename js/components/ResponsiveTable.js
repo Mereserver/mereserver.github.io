@@ -96,14 +96,14 @@ let ResponsiveTable = (function () {
 
         let sz = 0;
 
-        this.timer = setTimeout(()=> {
+        this.timer = setInterval(()=> {
             let newSz = LocalUpdate();
-            // if(newSz != 0 && newSz == sz)
-            // {
-            //     clearInterval(this.timer);
-            // }
+            if(newSz != 0 && newSz == sz)
+            {
+                clearInterval(this.timer);
+            }
             sz = newSz;
-        }, 1000);
+        }, 100);
 
         this.Update = Update;
     }

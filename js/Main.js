@@ -92,7 +92,6 @@ else {
       let responsiveMessages = new ResponsiveMessages();
     }
 
-
     app = new Vue(vueModel);
 
   };
