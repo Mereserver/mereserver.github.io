@@ -20,14 +20,16 @@ let StationsComponent = (function () {
     if (typeof vueModel.methods == "undefined")
       vueModel.methods = {};
 
+    if (typeof vueModel.watch == "undefined")
+      vueModel.watch = {};
+
     let countriesComponentObj = new countriesComponent(vueModel);
     let statusComponentObj = new statusComponent(vueModel);
 
     this.countriesComponentObj = countriesComponentObj;
     this.statusComponentObj = statusComponentObj;
 
-    if (typeof vueModel.watch == "undefined")
-      vueModel.watch = {};
+    this.CalcStationsBrief(_this.GetStations(), vueModel.data);
 
     CopyObjects(vueModel.data, {
       stationsAggregator: sAgg,
@@ -126,12 +128,28 @@ let StationsComponent = (function () {
         }
       }
 
-      this.model.data.stations = newStations;
+      this.SetStations(newStations);
 
       return;
     }
 
+    this.SetStations(stations);
+  }
+
+  StationsComponent.prototype.SetStations = function(stations) {
     this.model.data.stations = stations;
+
+    this.CalcStationsBrief(stations, this.model.data)
+  }
+
+  StationsComponent.prototype.CalcStationsBrief = function(stations, data) {
+    if(typeof stations == "undefined" || typeof data == "undefined")
+      return;
+
+    let s = this.GetStations();
+
+    data.stationsNumber = s.length;
+    //data.slotsNumber = stations.map(x => x/)
   }
 
   return StationsComponent;
