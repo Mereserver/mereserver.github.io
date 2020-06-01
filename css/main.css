@@ -501,6 +501,10 @@ a.dropdown-item,
   margin: 0;
 }
 
+.messages > div > .row {
+  margin: 0;
+}
+
 .in-boxes-tabs a {
   margin-bottom: 16px;
   font-weight: bold;
@@ -680,7 +684,7 @@ button:disabled {
   }
 }
 
-
+.container-fluid {padding: 0;}
 
 
 

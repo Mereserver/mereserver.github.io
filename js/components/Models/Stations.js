@@ -110,7 +110,7 @@ let StationsAggregator = (function () {
         new Slot("XX:YY:ZZ:WW", SlotStatus.Info.Occupied, SlotStatus.Type.Online, 16),
         new Slot("XX:YY:ZZ:EE",SlotStatus.Info.Occupied, SlotStatus.Type.Offline, 17),
         new Slot("XX:YY:ZZ:SS",SlotStatus.Info.Occupied, SlotStatus.Type.Online, 18)
-      ], new Location("Ukraine", "Kiev", "Pushkin street 34-3", "https://www.google.ru/maps/place/@56.8509021,24.1430431,9z/"))
+      ], new Location("Ukraine", "Kiev", "Pushkin street 34-3", "https://www.google.ru/maps/@50.4339847,30.5316211,11.67z"))
     ];
   }
 

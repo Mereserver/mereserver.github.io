@@ -22,15 +22,57 @@ let ResponsiveTable = (function () {
         return CalcStage1(element) + parseInt(element.css('height'));
     }
 
+    function SetBgMinHeight(val) {
+        if(typeof  val != "undefined") {
+            $('.bg-1').css('min-height', val + 'px');
+            $('.bg-2').css('min-height', val + 'px');
+        }
+    }
+
     function Update() {
+
+        if($('#billing-page').length > 0) {
+
+            let hSize = CalcHeightOfElement($('.top-container'));
+            hSize += CalcHeightOfElement($('.spacer'));
+
+            let sz = window.innerHeight - hSize;
+
+            SetBgMinHeight(sz);
+            return;
+        }
+
+        if($('#power-cost-page').length > 0) {
+
+            let hSize = CalcHeightOfElement($('.top-container'));
+            hSize += CalcHeightOfElement($('.spacer'));
+            hSize += CalcHeightOfElement($('.card-header'));
+
+            let sz = window.innerHeight - hSize;
+
+            SetBgMinHeight(sz);
+            return;
+        }
 
         let hSize = CalcHeightOfElement($('.top-container'));
         hSize += CalcHeightOfElement($('.spacer'));
         hSize += CalcHeightOfElement($('.card-header'));
-        hSize += CalcHeightOfElement($('.brief-info'));
+        //hSize += CalcHeightOfElement($('.brief-info'));
         hSize += CalcPaddingTopBottom($('.card-body'));
 
         let sz = window.innerHeight - hSize;
+
+        if(
+            $('#stations-page').length > 0 ||
+            $('#scooters-page').length > 0 ||
+            $('#system-logs').length > 0
+        ) {
+            SetBgMinHeight(sz);
+            return;
+        }
+
+
+
 
         $('.table-responsive').height(sz);
 

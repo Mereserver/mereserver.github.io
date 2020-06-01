@@ -14,14 +14,7 @@ let StationsComponent = (function () {
       return sAgg.GetObjects();
     }
 
-    if (typeof vueModel.data == "undefined")
-      vueModel.data = {};
-
-    if (typeof vueModel.methods == "undefined")
-      vueModel.methods = {};
-
-    if (typeof vueModel.watch == "undefined")
-      vueModel.watch = {};
+    VueModelInitial(vueModel);
 
     let countriesComponentObj = new countriesComponent(vueModel);
     let statusComponentObj = new statusComponent(vueModel);

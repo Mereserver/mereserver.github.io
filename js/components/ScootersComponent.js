@@ -4,13 +4,18 @@ let ScootersComponent = (function () {
     let statusComponent = StatusComponent(new ScooterStatusModel());
     let countriesComponent = CountriesComponent();
 
-    let StateType = Aggregator.StateType;
 
     function ScootersComponent(vueModel) {
         let _this = this;
 
-        this.GetScooters = function () {
+        let scootersObj = new Scooters();
 
+        this.GetScooters = function () {
+            return scootersObj.GetObjects();
+        }
+
+        this.GetScootersObj = function () {
+            return scootersObj;
         }
 
         VueModelInitial(vueModel);
@@ -20,6 +25,8 @@ let ScootersComponent = (function () {
 
         this.countriesComponentObj = countriesComponentObj;
         this.statusComponentObj = statusComponentObj;
+
+        this.CalcScootersBrief(_this.GetScooters(), vueModel.data);
 
         CopyObjects(vueModel.data, {
             scooters: _this.GetScooters()
@@ -38,7 +45,40 @@ let ScootersComponent = (function () {
 
     ScootersComponent.prototype.Filter = function()
     {
+        let statusComponentObj = this.statusComponentObj;
 
+        let inStatus = statusComponentObj.GetStatus();
+
+        if(typeof inStatus == "undefined")
+            return;
+
+        let countriesComponentObj = this.countriesComponentObj;
+
+        let scooters = this.GetScootersObj();
+
+        let country = countriesComponentObj.GetCountry();
+        let city = countriesComponentObj.GetCity();
+
+        this.SetScooters(scooters.GetObjectsByCountryCityStatus(country, city, inStatus));
+    }
+
+    ScootersComponent.prototype.SetScooters = function(scooters) {
+        this.model.data.scooters = scooters;
+
+        this.CalcScootersBrief(scooters, this.model.data)
+    }
+
+    ScootersComponent.prototype.CalcScootersBrief = function(scooters, data) {
+        if(typeof scooters == "undefined" || typeof data == "undefined")
+            return;
+
+        let s = scooters;
+
+        data.scootersNumber = s.length;
+        data.scootersGrantedNumber = scooters.filter(x => x.permission == Scooter.Permission.Granted).length;
+        data.scootersDeniedNumber = scooters.filter(x => x.permission == Scooter.Permission.Denied).length;
+        data.scootersChargingNumber = scooters.filter(x => x.status == Scooter.Status.Charging).length;
+        data.scootersOfflineNumber = scooters.filter(x => x.status == Scooter.Status.Offline).length;
     }
 
     return ScootersComponent;
