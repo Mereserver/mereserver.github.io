@@ -15,7 +15,10 @@ function DefaultInit(vueModel) {
   };
 
   return {
-    mvLoading : mvLoading
+    mvLoading : mvLoading,
+    UpdateTable(){
+      responsiveTable.Update();
+    }
   }
 }
 
@@ -37,6 +40,10 @@ if(document.getElementById('station-rating-page')!=null) {
     methods: {},
     created() {
       initObj.mvLoading.Hide();
+      initObj.UpdateTable();
+    },
+    updated(){
+      initObj.UpdateTable();
     }
   };
 
@@ -73,6 +80,11 @@ else {
       setTimeout(()=> {
         AfterInitVue();
       }, 100);
+
+      initObj.UpdateTable();
+    },
+    updated(){
+      initObj.UpdateTable();
     }
   };
 

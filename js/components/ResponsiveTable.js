@@ -19,7 +19,11 @@ let ResponsiveTable = (function () {
         if(element.length == 0)
             return 0;
 
-        return CalcStage1(element) + parseInt(element.css('height'));
+        let sz = CalcStage1(element) + parseInt(element.css('height'));
+
+        Log.trace(sz);
+
+        return sz;
     }
 
     function SetBgMinHeight(val) {
@@ -58,7 +62,6 @@ let ResponsiveTable = (function () {
         hSize += CalcHeightOfElement($('.spacer'));
         hSize += CalcHeightOfElement($('.card-header'));
         //hSize += CalcHeightOfElement($('.brief-info'));
-        hSize += CalcPaddingTopBottom($('.card-body'));
 
         let sz = window.innerHeight - hSize;
 
@@ -75,6 +78,8 @@ let ResponsiveTable = (function () {
 
 
         $('.table-responsive').height(sz);
+
+
 
         return sz;
     }
@@ -94,16 +99,16 @@ let ResponsiveTable = (function () {
         });
         LocalUpdate();
 
-        let sz = 0;
-
-        this.timer = setInterval(()=> {
-            let newSz = LocalUpdate();
-            if(newSz != 0 && newSz == sz)
-            {
-                clearInterval(this.timer);
-            }
-            sz = newSz;
-        }, 100);
+        //let sz = 0;
+        // this.timer = setTimeout(()=> {
+        //     let newSz = LocalUpdate();
+        //     // if(newSz != 0 && newSz == sz)
+        //     // {
+        //     //     clearInterval(this.timer);
+        //     // }
+        //     // sz = newSz;
+        //
+        // }, 1000);
 
         this.Update = Update;
     }

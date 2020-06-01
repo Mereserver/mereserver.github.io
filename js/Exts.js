@@ -1,4 +1,4 @@
-let developMode = false;
+let developMode = true;
 
 /* Exts functions */
 //let ArrayExt =
