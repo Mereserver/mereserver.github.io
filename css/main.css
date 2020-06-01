@@ -52,15 +52,15 @@ th.border-size-2
 .no-table-striped > tbody > tr:nth-child(2n+1) > td,
 .no-table-striped > tbody > tr:nth-child(2n+1) > th,
 tbody.no-striped tr:nth-of-type(odd) {
-  background-color: transparent;
+  background-color: transparent!important;
 }
 
-.table-no-hover tbody tr:hover {background-color: transparent;}
-
 .table-hover > tbody > tr:hover,
-.table-hover > tbody > tr:hover > td
-{
-  background: #e9fff7;
+.table-hover > tbody > tr:hover > td {}
+
+.bg-1 .table-striped tbody > tr:nth-of-type(odd),
+.bg-2 .table-striped tbody > tr:nth-of-type(odd) {
+  background: transparent!important;
 }
 
 #map-container {
@@ -118,7 +118,7 @@ tbody.no-striped tr:nth-of-type(odd) {
   margin: 0 0 .2em;
 }
 .main-nav-bar ul {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .main-nav-bar ul li {
@@ -129,8 +129,12 @@ tbody.no-striped tr:nth-of-type(odd) {
   font-size: 10px;
 }
 
-.main-nav-bar .row {
+.main-nav-bar .row > div {
   margin: 0 3.5rem 2rem;
+}
+
+.main-nav-bar .row > div > div {
+  margin-bottom: 28px;
 }
 
 .navbar-nav {
@@ -608,6 +612,15 @@ a.dropdown-item,
   background: white;
 }
 
+.download-btn-group.disabled, .download-btn-group.disabled button,
+.disabled button,
+button.disabled:hover,
+/*.bg-gradient-success.btn.disabled:hover,*/
+button:disabled {
+  background-color: #6c757d!important;
+  border: none!important;
+  color:white;
+}
 
 
 

@@ -19,6 +19,14 @@ function DefaultInit(vueModel) {
   }
 }
 
+function DisableAllNotImplemented() {
+  jQuery('.btn-group').addClass('disabled').find('button').attr('disabled','disabled');
+  jQuery('#messages-page button').addClass('disabled').attr('disabled','disabled');
+  jQuery('#system-logs button').addClass('disabled').attr('disabled','disabled');
+}
+
+DisableAllNotImplemented();
+
 if(document.getElementById('station-rating-page')!=null) {
 
   let vueModel = {
@@ -88,5 +96,7 @@ else {
 
   };
 }
+
+
 
 
