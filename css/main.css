@@ -648,9 +648,16 @@ button:disabled {
   margin-right: 0;
 }
 
+.brief-info {
+  padding: 33px 0;
+  margin-bottom: 18px;
+}
 
+.brief-info-body > div {
+  margin-right: 50px;
+}
 
-
+.brief-info-body > div:last-child {margin-right: 0;}
 
 
 

@@ -3,20 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8f2d33c1-f34b-4b26-8473-2d464abc3c4a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/billing.html" beforeDir="false" afterPath="$PROJECT_DIR$/billing.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/ScootersComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/ScootersComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messages-incoming.html" beforeDir="false" afterPath="$PROJECT_DIR$/messages-incoming.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messages-new.html" beforeDir="false" afterPath="$PROJECT_DIR$/messages-new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messages-outgoing.html" beforeDir="false" afterPath="$PROJECT_DIR$/messages-outgoing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/power-cost.html" beforeDir="false" afterPath="$PROJECT_DIR$/power-cost.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/ResponsiveTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/ResponsiveTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scooters.html" beforeDir="false" afterPath="$PROJECT_DIR$/scooters.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/station-rating-usage.html" beforeDir="false" afterPath="$PROJECT_DIR$/station-rating-usage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stations.html" beforeDir="false" afterPath="$PROJECT_DIR$/stations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system-logs.html" beforeDir="false" afterPath="$PROJECT_DIR$/system-logs.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +111,7 @@
       <workItem from="1585593480435" duration="103169000" />
       <workItem from="1585892683461" duration="27390000" />
       <workItem from="1586939063597" duration="41673000" />
-      <workItem from="1590445135566" duration="229770000" />
+      <workItem from="1590445135566" duration="231324000" />
     </task>
     <servers />
   </component>
@@ -165,10 +155,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="355" y="62" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585751277619" />
-    <state width="623" height="498" key="SwitcherDM" timestamp="1590585357751">
+    <state width="623" height="498" key="SwitcherDM" timestamp="1591004533198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="623" height="498" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1590585357751" />
+    <state width="623" height="498" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1591004533198" />
     <state x="514" y="48" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585664938571">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

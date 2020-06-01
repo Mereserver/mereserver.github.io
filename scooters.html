@@ -63,7 +63,7 @@
   <!-- Main content -->
   <div id="scooters-page">
     <!-- /.card -->
-    <div class="card-container content-align-1">
+    <div class="card-container">
 
       <div class="spinner text-center pb-3 card-header" v-if="loading">
         <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
@@ -72,7 +72,8 @@
 
       <div v-else v-cloak>
 
-        <div class="card-header border-0">
+        <div class="content-align-1">
+          <div class="card-header border-0">
           <!-- Filters -->
           <div class="m-0 row justify-content-between">
             <!-- <input class="form-control" type="search" placeholder="Search" aria-label="Search">-->
@@ -121,10 +122,26 @@
           </div>
 
         </div>
+        </div>
 
-        <!-- Table -->
-        <div class="card-body">
+        <div class="bg-1 brief-info">
+          <div class="content-align-1">
+            <div class="card-body">
+              <div class="row justify-content-center brief-info-body">
+                <div class="col">Scooters:1000</div>
+                <div class="col-auto">Granted:995</div>
+                <div class="col-auto">Denied:5</div>
+                <div class="col-auto">Charging:555</div>
+                <div class="col-auto">Offline:400</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="content-align-1">
+
+          <!-- Table -->
+          <div class="card-body">
           <div class="table-responsive">
             <table class="table table-striped table-valign-middle text-center table-head-fixed text-nowrap">
               <thead>
@@ -161,6 +178,7 @@
 
         </div>
 
+        </div>
       </div>
     </div>
     <!-- /.card -->

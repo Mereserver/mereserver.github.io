@@ -27,6 +27,7 @@ let ResponsiveTable = (function () {
         let hSize = CalcHeightOfElement($('.top-container'));
         hSize += CalcHeightOfElement($('.spacer'));
         hSize += CalcHeightOfElement($('.card-header'));
+        hSize += CalcHeightOfElement($('.brief-info'));
         hSize += CalcPaddingTopBottom($('.card-body'));
 
         let sz = window.innerHeight - hSize;
