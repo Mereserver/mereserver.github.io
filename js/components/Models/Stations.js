@@ -1,5 +1,5 @@
 
-const Status = {
+const SlotStatus = {
   Info : Object.freeze({
     Occupied: "Occupied",
     Available: "Available",
@@ -87,29 +87,29 @@ let StationsAggregator = (function () {
 
     this.stations = [
       new Station("XX:YY:ZZ:QQ", [
-          new Slot("XX:YY:ZZ:WW", Status.Info.Occupied, Status.Type.Online, 50),
-          new Slot("XX:YY:ZZ:EE",Status.Info.Unavailable, Status.Type.Online, -1),
-          new Slot("XX:YY:ZZ:SS",Status.Info.Occupied, Status.Type.Online, 16)
+          new Slot("XX:YY:ZZ:WW", SlotStatus.Info.Occupied, SlotStatus.Type.Online, 50),
+          new Slot("XX:YY:ZZ:EE",SlotStatus.Info.Unavailable, SlotStatus.Type.Online, -1),
+          new Slot("XX:YY:ZZ:SS",SlotStatus.Info.Occupied, SlotStatus.Type.Online, 16)
       ], new Location("Latvia", "Riga", "Elinos 34-3", "https://www.google.ru/maps/place/@56.8509021,24.1430431,9z/")),
       new Station("XX:YY:22:QQ", [
-        new Slot("XX:YY:ZZ:WW", Status.Info.Available, Status.Type.Online, -1),
-        new Slot("XX:YY:ZZ:EE",Status.Info.Occupied, Status.Type.Online, 78),
-        new Slot("XX:YY:ZZ:SS",Status.Info.Unavailable, Status.Type.Online, -1)
+        new Slot("XX:YY:ZZ:WW", SlotStatus.Info.Available, SlotStatus.Type.Online, -1),
+        new Slot("XX:YY:ZZ:EE",SlotStatus.Info.Occupied, SlotStatus.Type.Online, 78),
+        new Slot("XX:YY:ZZ:SS",SlotStatus.Info.Unavailable, SlotStatus.Type.Online, -1)
       ], new Location("Latvia", "Riga", "Elinos 34-3", "https://www.google.ru/maps/place/@56.8509021,24.1430431,9z/")),
       new Station("XX:YY:33:QQ", [
-        new Slot("XX:YY:ZZ:WW", Status.Info.Unavailable, Status.Type.Offline, -1),
-        new Slot("XX:YY:ZZ:EE",Status.Info.Occupied, Status.Type.Online, 50),
-        new Slot("XX:YY:ZZ:SS",Status.Info.Available, Status.Type.Online, -1)
+        new Slot("XX:YY:ZZ:WW", SlotStatus.Info.Unavailable, SlotStatus.Type.Offline, -1),
+        new Slot("XX:YY:ZZ:EE",SlotStatus.Info.Occupied, SlotStatus.Type.Online, 50),
+        new Slot("XX:YY:ZZ:SS",SlotStatus.Info.Available, SlotStatus.Type.Online, -1)
       ], new Location("Latvia", "Riga", "Elinos 34-3", "https://www.google.ru/maps/place/@56.8509021,24.1430431,9z/")),
       new Station("XX:YY:44:QQ", [
-        new Slot("XX:YY:ZZ:WW", Status.Info.Occupied, Status.Type.Online, 11),
-        new Slot("XX:YY:ZZ:EE",Status.Info.Occupied, Status.Type.Online, 50),
-        new Slot("XX:YY:ZZ:SS",Status.Info.Occupied, Status.Type.Online, 50)
+        new Slot("XX:YY:ZZ:WW", SlotStatus.Info.Occupied, SlotStatus.Type.Online, 11),
+        new Slot("XX:YY:ZZ:EE",SlotStatus.Info.Occupied, SlotStatus.Type.Online, 50),
+        new Slot("XX:YY:ZZ:SS",SlotStatus.Info.Occupied, SlotStatus.Type.Online, 50)
       ], new Location("Latvia", "Valmiera", "Some street 34-3", "https://www.google.ru/maps/place/@56.8509021,24.1430431,9z/")),
       new Station("XX:YY:44:QQ", [
-        new Slot("XX:YY:ZZ:WW", Status.Info.Occupied, Status.Type.Online, 16),
-        new Slot("XX:YY:ZZ:EE",Status.Info.Occupied, Status.Type.Offline, 17),
-        new Slot("XX:YY:ZZ:SS",Status.Info.Occupied, Status.Type.Online, 18)
+        new Slot("XX:YY:ZZ:WW", SlotStatus.Info.Occupied, SlotStatus.Type.Online, 16),
+        new Slot("XX:YY:ZZ:EE",SlotStatus.Info.Occupied, SlotStatus.Type.Offline, 17),
+        new Slot("XX:YY:ZZ:SS",SlotStatus.Info.Occupied, SlotStatus.Type.Online, 18)
       ], new Location("Ukraine", "Kiev", "Pushkin street 34-3", "https://www.google.ru/maps/place/@56.8509021,24.1430431,9z/"))
     ];
   }

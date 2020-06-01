@@ -146,10 +146,13 @@ let StationsComponent = (function () {
     if(typeof stations == "undefined" || typeof data == "undefined")
       return;
 
-    let s = this.GetStations();
+    let s = stations; //this.GetStations();
 
     data.stationsNumber = s.length;
-    //data.slotsNumber = stations.map(x => x/)
+    data.slotsNumber = stations.map(x => x.slots.length).reduce((a, b) => a + b, 0);
+    data.slotsAvailableNumber = stations.map(x => x.slots.filter(y => y.info == SlotStatus.Info.Available).length).reduce((a, b) => a + b, 0);
+    data.slotsOccupiedNumber = stations.map(x => x.slots.filter(y => y.info == SlotStatus.Info.Occupied).length).reduce((a, b) => a + b, 0);
+    data.slotsOfflineNumber = stations.map(x => x.slots.filter(y => y.status == SlotStatus.Type.Offline).length).reduce((a, b) => a + b, 0);
   }
 
   return StationsComponent;
