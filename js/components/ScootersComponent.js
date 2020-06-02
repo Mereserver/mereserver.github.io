@@ -4,7 +4,6 @@ let ScootersComponent = (function () {
     let statusComponent = StatusComponent(new ScooterStatusModel());
     let countriesComponent = CountriesComponent();
 
-
     function ScootersComponent(vueModel) {
         let _this = this;
 

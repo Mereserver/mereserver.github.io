@@ -38,13 +38,26 @@ if(document.getElementById('station-rating-page')!=null) {
     computed: {},
     data: {},
     methods: {},
+    userInitsCallbacks: [],
     created() {
       initObj.mvLoading.Hide();
       initObj.UpdateTable();
     },
-    updated(){
+    updated() {
       initObj.UpdateTable();
-    }
+    },
+    mounted() {
+      setTimeout(()=> {
+        let callBacks = vueModel.userInitsCallbacks;
+
+        for (let i in callBacks)
+        {
+          if(typeof callBacks[i] == "function") {
+            callBacks[i](vueModel.data);
+          }
+        }
+      }, 100);
+    },
   };
 
   let initObj = DefaultInit(vueModel);
