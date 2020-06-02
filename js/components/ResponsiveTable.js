@@ -21,7 +21,7 @@ let ResponsiveTable = (function () {
 
         let sz = CalcStage1(element) + parseInt(element.css('height'));
 
-        Log.trace(sz);
+//        Log.trace(sz);
 
         return sz;
     }
@@ -61,7 +61,8 @@ let ResponsiveTable = (function () {
         let hSize = CalcHeightOfElement($('.top-container'));
         hSize += CalcHeightOfElement($('.spacer'));
         hSize += CalcHeightOfElement($('.card-header'));
-        //hSize += CalcHeightOfElement($('.brief-info'));
+        hSize += CalcHeightOfElement($('.brief-info'));
+        hSize += CalcPaddingTopBottom($('.card-body'));
 
         let sz = window.innerHeight - hSize;
 
@@ -99,16 +100,16 @@ let ResponsiveTable = (function () {
         });
         LocalUpdate();
 
-        //let sz = 0;
-        // this.timer = setTimeout(()=> {
-        //     let newSz = LocalUpdate();
-        //     // if(newSz != 0 && newSz == sz)
-        //     // {
-        //     //     clearInterval(this.timer);
-        //     // }
-        //     // sz = newSz;
-        //
-        // }, 1000);
+        let sz = 0;
+        this.timer = setTimeout(()=> {
+            let newSz = LocalUpdate();
+            // if(newSz != 0 && newSz == sz)
+            // {
+            //     clearInterval(this.timer);
+            // }
+            // sz = newSz;
+
+        }, 1000);
 
         this.Update = Update;
     }

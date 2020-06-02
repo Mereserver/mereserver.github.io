@@ -23,7 +23,7 @@ function DefaultInit(vueModel) {
 }
 
 function DisableAllNotImplemented() {
-  jQuery('.btn-group').addClass('disabled').find('button').attr('disabled','disabled');
+  jQuery('.btn-group').not('[data-toggle="buttons"]').addClass('disabled').find('button').attr('disabled','disabled');
   jQuery('#messages-page button').addClass('disabled').attr('disabled','disabled');
   jQuery('#system-logs button').addClass('disabled').attr('disabled','disabled');
   jQuery('.filter-tabs a').addClass('disabled').on('click', ()=> { return false; });
@@ -60,33 +60,35 @@ if(document.getElementById('station-rating-page')!=null) {
 }
 else {
 
-  function AfterInitVue(){
-    $('#date-range-start').daterangepicker({
-      singleDatePicker: true
-    });
-    $('#date-range-end').daterangepicker({
-      singleDatePicker: true
-    });
-  }
-
   let vueModel = {
     el: "#app",
     computed: {},
     data: {},
     methods: {},
+    userInitsCallbacks: [],
     mounted() {
       initObj.mvLoading.Hide();
 
-      setTimeout(()=> {
-        AfterInitVue();
-      }, 100);
-
       initObj.UpdateTable();
+
+      setTimeout(()=> {
+        let callBacks = vueModel.userInitsCallbacks;
+
+        for (let i in callBacks)
+        {
+          if(typeof callBacks[i] == "function") {
+            callBacks[i](vueModel.data);
+          }
+        }
+      }, 100);
     },
     updated(){
       initObj.UpdateTable();
+    },
+    created(){
     }
   };
+
 
   let initObj = DefaultInit(vueModel);
 
@@ -116,8 +118,6 @@ else {
     if (document.getElementById('messages-page') != null) {
       let responsiveMessages = new ResponsiveMessages();
     }
-
-
 
     app = new Vue(vueModel);
 

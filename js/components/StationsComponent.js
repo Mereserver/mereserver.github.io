@@ -69,6 +69,7 @@ let StationsComponent = (function () {
     }
 
     statusComponentObj.Callback = function (inStatus) {
+      Log.trace(inStatus);
       _this.Filter();
     }
 
@@ -79,9 +80,9 @@ let StationsComponent = (function () {
   {
     let statusComponentObj = this.statusComponentObj;
 
-    let inStatus = statusComponentObj.GetStatus();
+    let inFilter = statusComponentObj.GetStatus();
 
-    if(typeof inStatus == "undefined")
+    if(typeof inFilter == "undefined")
       return;
 
     let countriesComponentObj = this.countriesComponentObj;
@@ -99,14 +100,14 @@ let StationsComponent = (function () {
       stations = stations.filter(x => x.location.city == city);
     }
 
-    if(inStatus != "All") {
+    if(inFilter != "All") {
 
       let newStations = [];
 
       for (let s in stations) {
         if (typeof stations[s].slots != "undefined") {
 
-          let newSlots = stations[s].slots.filter(s => s.status == inStatus);
+          let newSlots = stations[s].slots.filter(s => s.status == inFilter || s.info == inFilter);
 
           if (newSlots.length > 0) {
 
@@ -143,9 +144,9 @@ let StationsComponent = (function () {
 
     data.stationsNumber = s.length;
     data.slotsNumber = stations.map(x => x.slots.length).reduce((a, b) => a + b, 0);
-    data.slotsAvailableNumber = stations.map(x => x.slots.filter(y => y.info == SlotStatus.Info.Available).length).reduce((a, b) => a + b, 0);
-    data.slotsOccupiedNumber = stations.map(x => x.slots.filter(y => y.info == SlotStatus.Info.Occupied).length).reduce((a, b) => a + b, 0);
-    data.slotsOfflineNumber = stations.map(x => x.slots.filter(y => y.status == SlotStatus.Type.Offline).length).reduce((a, b) => a + b, 0);
+    data.slotsAvailableNumber = stations.map(x => x.slots.filter(y => y.status == Slot.Satatus.Available).length).reduce((a, b) => a + b, 0);
+    data.slotsOccupiedNumber = stations.map(x => x.slots.filter(y => y.status == Slot.Satatus.Occupied).length).reduce((a, b) => a + b, 0);
+    data.slotsOfflineNumber = stations.map(x => x.slots.filter(y => y.info == Slot.Info.Offline).length).reduce((a, b) => a + b, 0);
   }
 
   return StationsComponent;

@@ -85,14 +85,14 @@
                   <div class="filter-input form-inline col-auto filter-controls-group">
                     <div class="row">
                       <label class="col-auto">Date from:</label>
-                      <input id="date-range-start" type="text" class="form-control col-auto"/>
+                      <input id="date-range-start" type="text" class="form-control col-auto" v-model="dateRangeStartSelector"/>
                     </div>
                   </div>
 
                   <div class="filter-input form-inline col-auto filter-controls-group">
                     <div class="row">
                       <label class="col-auto">to:</label>
-                      <input id="date-range-end" type="text" class="form-control col-auto"/>
+                      <input id="date-range-end" type="text" class="form-control col-auto"  v-model="dateRangeEndSelector"/>
                     </div>
                   </div>
                 </div>
@@ -101,12 +101,20 @@
 
               <div class="col-auto head-controls">
 
-                <div class="filter-tabs">
-                  <a href="#">Last month</a>
-                  <a href="#" class="active">This month</a>
-                  <a href="#">Last week</a>
-                  <a href="#">This week</a>
+                <div class="btn-group btn-group-toggle filter-radio-buttons">
+
+                  <label class="btn" :class="statusSelector == s ? 'active' : ''" v-for="(s, index) in statuses">
+                    <input type="radio" name="range" autocomplete="off"
+                           :id="'range-'+index+1" :value="s" v-model="statusSelector"/>{{s}}
+                  </label>
+
                 </div>
+<!--                <div class="filter-tabs">-->
+<!--                  <a href="#">Last month</a>-->
+<!--                  <a href="#" class="active">This month</a>-->
+<!--                  <a href="#">Last week</a>-->
+<!--                  <a href="#">This week</a>-->
+<!--                </div>-->
 
               </div>
 
@@ -154,6 +162,7 @@
 
           <div class="bg-2">
             <div class="content-align-1">
+
               <!-- Table -->
               <div class="card-body pt-4 pb-4">
                 <div class="table-responsive">
@@ -170,22 +179,20 @@
                     </tr>
                     </thead>
                     <tbody>
-                      <tr> <td>1</td><td>10.04.2020</td> <td>Riga</td> <td>1356</td> <td>159</td> <td>146 h</td> <td>100$</td> </tr>
-                      <tr> <td>1</td><td>10.04.2020</td> <td>Riga</td> <td>1356</td> <td>159</td> <td>146 h</td> <td>100$</td> </tr>
-                      <tr> <td>2</td><td>10.04.2020</td> <td>Riga</td> <td>1356</td> <td>159</td> <td>146 h</td> <td>100$</td> </tr>
-                      <tr> <td>3</td><td>10.04.2020</td> <td>Riga</td> <td>1356</td> <td>159</td> <td>146 h</td> <td>100$</td> </tr>
-                      <tr> <td>4</td><td>10.04.2020</td> <td>Riga</td> <td>1356</td> <td>159</td> <td>146 h</td> <td>100$</td> </tr>
-                      <tr> <td>5</td><td>10.04.2020</td> <td>Riga</td> <td>1356</td> <td>159</td> <td>146 h</td> <td>100$</td> </tr>
-                      <tr> <td>6</td><td>10.04.2020</td> <td>Riga</td> <td>1356</td> <td>159</td> <td>146 h</td> <td>100$</td> </tr>
-                      <tr> <td>7</td><td>10.04.2020</td> <td>Riga</td> <td>1356</td> <td>159</td> <td>146 h</td> <td>100$</td> </tr>
-                      <tr> <td>8</td><td>10.04.2020</td> <td>Riga</td> <td>1356</td> <td>159</td> <td>146 h</td> <td>100$</td> </tr>
-                      <tr> <td>9</td><td>10.04.2020</td> <td>Riga</td> <td>1356</td> <td>159</td> <td>146 h</td> <td>100$</td> </tr>
-                      <tr> <td>10</td><td>10.04.2020</td> <td>Riga</td> <td>1356</td> <td>159</td> <td>146 h</td> <td>100$</td> </tr>
+                      <tr v-for="(r, index) in reports">
+                        <td>{{index + 1}}</td>
+                        <td>{{r.getDateString}}</td>
+                        <td>{{r.location.city}}</td>
+                        <td>{{r.chargingQty}}</td>
+                        <td>{{r.totalPower}}</td>
+                        <td>{{r.totalTime}}</td>
+                        <td>{{r.totalPrice}}</td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
-
               </div>
+
             </div>
           </div>
         </div>
@@ -234,6 +241,8 @@
 <script src="plugins/toastr/toastr.min.js"></script>
 <script src="js/leaflet.js"></script>
 
+<script src="js/moment.min.js"></script>
+
 <script src="js/Vue.js"></script>
 <script src="js/Exts.js"></script>
 <script src="js/ModalWindows.js"></script>
@@ -258,6 +267,11 @@
 
 <script src="js/components/MonthComponent.js"></script>
 <script src="js/components/BillingComponent.js"></script>
+
+<script src="js/components/Models/Reports.js"></script>
+<script src="js/components/Models/DateRangePresetsModel.js"></script>
+
+<script src="js/components/DateRangeComponent.js"></script>
 <script src="js/components/PowerCostComponent.js"></script>
 
 <script src="js/Main.js"></script>

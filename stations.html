@@ -73,9 +73,9 @@
       <div v-else v-cloak>
 
         <div class="content-align-1">
-          <div class="card-header border-0">
+          <div class="card-header border-0 pb-4">
           <!-- Filters -->
-          <div class="m-0 row justify-content-between">
+          <div class="m-0 row justify-content-between filter-controls-container">
             <!-- <input class="form-control" type="search" placeholder="Search" aria-label="Search">-->
             <!-- <div class="input-group-append">-->
             <!--   <button class="btn btn-navbar" type="submit">-->
@@ -104,46 +104,58 @@
               </div>
             </div>
 
-            <div class="col-auto filter-controls-group">
-              <div class="filter-combobox">
-                <div class="row form-inline">
-                  <label class="col-auto">Status:</label>
-                  <div class="col-auto">
-                    <div class="row">
-                      <select class="form-control col-auto" v-model="statusSelector">
-                        <option v-for="s in statuses">{{ s }}</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
+            <div class="col-auto align-self-end">
+
+              <div class="btn-group btn-group-toggle filter-radio-buttons">
+
+                <label class="btn" :class="statusSelector == s ? 'active' : ''" v-for="(s, index) in statuses">
+                  <input type="radio" name="statuses" autocomplete="off"
+                         :id="'statuses-'+index+1" :value="s" v-model="statusSelector"/>{{s}}
+                </label>
+
               </div>
+
+<!--              <div class="filter-combobox">-->
+<!--                <div class="row form-inline">-->
+<!--                  <label class="col-auto">Status:</label>-->
+<!--                  <div class="col-auto">-->
+<!--                    <div class="row">-->
+<!--                      <select class="form-control col-auto" v-model="statusSelector">-->
+<!--                        <option v-for="s in statuses">{{ s }}</option>-->
+<!--                      </select>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+
             </div>
 
           </div>
 
         </div>
+        </div>
+
+
+
+        <div class="brief-info">
+          <div class="content-align-1">
+            <div class="card-body">
+              <div class="row justify-content-start brief-info-body">
+                <div class="col-auto">Station qty: {{ stationsNumber }}</div>
+                <div class="col-auto">Pad qty: {{ slotsNumber }}</div>
+                <div class="col-auto">Available pads: {{ slotsAvailableNumber }}</div>
+                <div class="col-auto">Occupied pads: {{ slotsOccupiedNumber }}</div>
+                <div class="col-auto">Out of work: {{ slotsOfflineNumber }}</div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="bg-1">
-
-          <div class="brief-info">
-            <div class="content-align-1">
-              <div class="card-body">
-                <div class="row justify-content-center brief-info-body">
-                  <div class="col-auto">Stations: {{ stationsNumber }}</div>
-                  <div class="col-auto">Slots: {{ slotsNumber }}</div>
-                  <div class="col-auto">Available slots: {{ slotsAvailableNumber }}</div>
-                  <div class="col-auto">Occupied slots: {{ slotsOccupiedNumber }}</div>
-                  <div class="col-auto">Slots Out of work: {{ slotsOfflineNumber }}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div class="content-align-1">
 
             <!-- Table -->
-            <div class="card-body">
+            <div class="card-body pt-4 pb-4 ">
 
               <!-- Call to action buttons -->
               <!--                <ul class="list-inline m-0">-->
@@ -170,9 +182,9 @@
                   <tr>
                     <th scope="col">№</th>
                     <th scope="col">Station ID</th>
-                    <th scope="col">Slot ID</th>
-                    <th scope="col">Info</th>
+                    <th scope="col">Pad ID</th>
                     <th scope="col">Status</th>
+                    <th scope="col">Info</th>
                     <th scope="col">Charge level, %</th>
                     <th scope="col">Location</th>
                   </tr>
@@ -188,12 +200,12 @@
                     </td>
                     <td>
                       <table class="no-border table table-no-hover no-table-striped" >
-                        <tr v-for="slot in station.slots" :key="slot.id"><td>{{slot.info}}</td></tr>
+                        <tr v-for="slot in station.slots" :key="slot.id"><td>{{slot.status}}</td></tr>
                       </table>
                     </td>
                     <td>
                       <table class="no-border table table-no-hover no-table-striped">
-                        <tr v-for="slot in station.slots" :key="slot.id"><td>{{slot.status}}</td></tr>
+                        <tr v-for="slot in station.slots" :key="slot.id"><td>{{slot.info}}</td></tr>
                       </table>
                     </td>
                     <td>
@@ -340,6 +352,12 @@
 <script src="plugins/toastr/toastr.min.js"></script>
 <script src="js/leaflet.js"></script>
 
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+
 <script src="js/Vue.js"></script>
 <script src="js/Exts.js"></script>
 <script src="js/ModalWindows.js"></script>
@@ -363,6 +381,8 @@
 <script src="js/components/ResponsiveTable.js"></script>
 
 <script src="js/Main.js"></script>
+
+
 
 </body>
 </html>

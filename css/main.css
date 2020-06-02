@@ -659,8 +659,8 @@ button:disabled {
 }
 
 .brief-info {
-  padding: 33px 0;
   margin-bottom: 18px;
+  font-size: 14px;
 }
 
 .brief-info-body > div {
@@ -695,6 +695,62 @@ button:disabled {
 .daterangepicker {
   z-index: 9999999999;
 }
+
+.filter-radio-buttons {
+  line-height: 30px;
+  height: 30px;
+}
+
+.filter-radio-buttons label {
+  cursor: pointer;
+  padding: 0 5px;
+
+  border-bottom: 1px solid #c1c1c1;
+
+  border-radius: 0;
+
+  font-size: 14px;
+  font-weight: normal!important;
+}
+
+.filter-radio-buttons label:hover,
+.filter-radio-buttons label.active {
+  color: #61bd6a;
+  border-bottom: 1px solid #61bd6a;
+}
+
+.filter-radio-buttons label:last-child {
+  padding-right: 10px;
+}
+
+.filter-radio-buttons label:first-child {
+  padding-left: 10px;
+}
+
+@media (max-width: 1365px) {
+  .filter-controls-container .col-auto,
+  .filter-controls-container .col,
+  .filter-controls-container .row {
+    padding: 0;
+    margin: 0;
+  }
+
+  .filter-controls-container > .col,
+  .filter-controls-container > .col-auto {
+    margin-bottom: 20px;
+  }
+
+  /*.filter-controls-container > .col,*/
+  /*.filter-controls-container > .col-auto:last-child{*/
+  /*  margin-bottom: 0;*/
+  /*}*/
+
+  .card-container .card-header {
+    padding-bottom: 34px;
+  }
+
+}
+
 
 
 

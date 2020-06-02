@@ -6,15 +6,9 @@ let CountriesComponent = function () {
 
         this.Callback = function(country, city){};
 
-        let countriesNames = [];
+        VueModelInitial(vueModel);
 
-        if (typeof vueModel.data == "undefined")
-            vueModel.data = {};
-
-        if (typeof vueModel.watch == "undefined")
-            vueModel.watch = {};
-
-        countriesNames = countries.GetCountries();
+        let countriesNames = countries.GetCountries();
         let cities = countries.GetAllCities();
 
         CopyObjects(vueModel.data, {

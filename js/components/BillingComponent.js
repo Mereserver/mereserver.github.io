@@ -35,12 +35,32 @@ let BillingComponent = (function () {
             _this.Filter();
         }
 
+        monthComponentObj.Callback = function (month, year) {
+            _this.Filter();
+        }
+
         this.model = vueModel;
     }
 
     BillingComponent.prototype.Filter = function()
     {
+        let monthComponentObj = this.monthComponentObj;
 
+        let month = monthComponentObj.GetMonth();
+        let year = monthComponentObj.GetYear();
+
+        let countriesComponentObj = this.countriesComponentObj;
+
+        let billings = this.GetBillingObj();
+
+        let country = countriesComponentObj.GetCountry();
+        let city = countriesComponentObj.GetCity();
+
+        this.SetBilling(billings.GetObjectsByCountryCityTime(country, city, month, year));
+    }
+
+    BillingComponent.prototype.SetBilling = function(b) {
+        this.model.data.billingRecords = b;
     }
 
     return BillingComponent;

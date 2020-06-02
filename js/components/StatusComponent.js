@@ -1,6 +1,6 @@
 let StatusComponent = function (status) {
 
-    function StatusComponent(vueModel) {
+    function StatusComponent(vueModel, defaultValue) {
         if(typeof vueModel == "undefined")
             return;
 
@@ -15,13 +15,11 @@ let StatusComponent = function (status) {
 
         let countriesNames = [];
 
-        if (typeof vueModel.data == "undefined")
-            vueModel.data = {};
+        VueModelInitial(vueModel);
 
-        if (typeof vueModel.watch == "undefined")
-            vueModel.watch = {};
+        defaultValue = defaultValue || statuses[0];
 
-        let defaultStatus = statuses.length == 0 ? "-" : statuses[0];
+        let defaultStatus = statuses.length == 0 ? "-" : defaultValue;
 
         CopyObjects(vueModel.data, {
             statuses: statuses,

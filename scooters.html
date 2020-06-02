@@ -73,9 +73,9 @@
       <div v-else v-cloak>
 
         <div class="content-align-1">
-          <div class="card-header border-0">
+          <div class="card-header border-0 pb-4">
           <!-- Filters -->
-          <div class="m-0 row justify-content-between">
+          <div class="m-0 row justify-content-between filter-controls-container">
             <!-- <input class="form-control" type="search" placeholder="Search" aria-label="Search">-->
             <!-- <div class="input-group-append">-->
             <!--   <button class="btn btn-navbar" type="submit">-->
@@ -104,46 +104,57 @@
               </div>
             </div>
 
-            <div class="col-auto filter-controls-group">
-              <div class="filter-combobox">
-                <div class="row form-inline">
-                  <label class="col-auto">Charging status:</label>
-                  <div class="col-auto">
-                    <div class="row">
-                      <select class="form-control col-auto charging-status" v-model="statusSelector">
-                        <option v-for="s in statuses">{{ s }}</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
+            <div class="col-auto align-self-end">
+              <div class="btn-group btn-group-toggle filter-radio-buttons">
+
+                <label class="btn" :class="statusSelector == s ? 'active' : ''" v-for="(s, index) in statuses">
+                  <input type="radio" name="statuses" autocomplete="off"
+                         :id="'statuses-'+index+1" :value="s" v-model="statusSelector"/>{{s}}
+                </label>
+
               </div>
+
+  <!--            <div class="col-auto filter-controls-group">-->
+  <!--              <div class="filter-combobox">-->
+  <!--                <div class="row form-inline">-->
+  <!--                  <label class="col-auto">Charging status:</label>-->
+  <!--                  <div class="col-auto">-->
+  <!--                    <div class="row">-->
+  <!--                      <select class="form-control col-auto charging-status" v-model="statusSelector">-->
+  <!--                        <option v-for="s in statuses">{{ s }}</option>-->
+  <!--                      </select>-->
+  <!--                    </div>-->
+  <!--                  </div>-->
+  <!--                </div>-->
+  <!--              </div>-->
+  <!--            </div>-->
             </div>
 
           </div>
 
         </div>
+        </div>
+
+        <div class="brief-info">
+          <div class="content-align-1">
+            <div class="card-body">
+              <div class="row justify-content-left brief-info-body">
+                <div class="col-auto">Scooters qty: {{scootersNumber}}</div>
+                <div class="col-auto">Granted: {{scootersGrantedNumber}}</div>
+                <div class="col-auto">Denied: {{scootersDeniedNumber}}</div>
+                <div class="col-auto">Charging: {{scootersChargingNumber}}</div>
+                <div class="col-auto">Offline: {{scootersOfflineNumber}}</div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="bg-1">
 
-          <div class="brief-info">
-            <div class="content-align-1">
-              <div class="card-body">
-                <div class="row justify-content-center brief-info-body">
-                  <div class="col-auto">Scooters: {{scootersNumber}}</div>
-                  <div class="col-auto">Granted: {{scootersGrantedNumber}}</div>
-                  <div class="col-auto">Denied: {{scootersDeniedNumber}}</div>
-                  <div class="col-auto">Charging: {{scootersChargingNumber}}</div>
-                  <div class="col-auto">Offline: {{scootersOfflineNumber}}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div class="content-align-1">
 
             <!-- Table -->
-            <div class="card-body">
+            <div class="card-body pt-4 pb-4 ">
             <div class="table-responsive">
               <table class="table table-striped table-valign-middle text-center table-head-fixed text-nowrap">
                 <thead>
@@ -167,23 +178,6 @@
                     <td>{{s.permission}}</td>
                     <td><a :href="s.location.url" target="_blank">{{s.location.GetString}}</a></td>
                   </tr>
-                      <!--  Test items -->
-  <!--                <tr><td>1</td><td>XX:YY:ZZ:QQ</td><td>Segway</td><td>50</td><td>Charging</td><td>Denied</td><td>Riga, Elinos 34-3</td></tr>-->
-  <!--                <tr><td>2</td><td>XX:YY:ZZ:QQ</td><td>MI</td><td>78</td><td>Offline</td><td>Granted</td><td>Riga, Elinos 34-3</td></tr>-->
-  <!--                <tr><td>4</td><td>XX:YY:ZZ:QQ</td><td>Segway</td><td>14</td><td>Charged</td><td>Granted</td><td>Riga, Elinos 34-3</td></tr>-->
-  <!--                <tr><td>5</td><td>XX:YY:ZZ:QQ</td><td>Segway</td><td>14</td><td>Charged</td><td>Granted</td><td>Riga, Elinos 34-3</td></tr>-->
-  <!--                <tr><td>6</td><td>XX:YY:ZZ:QQ</td><td>Segway</td><td>14</td><td>Charged</td><td>Granted</td><td>Riga, Elinos 34-3</td></tr>-->
-  <!--                <tr><td>7</td><td>XX:YY:ZZ:QQ</td><td>Segway</td><td>14</td><td>Charged</td><td>Granted</td><td>Riga, Elinos 34-3</td></tr>-->
-  <!--                <tr><td>8</td><td>XX:YY:ZZ:QQ</td><td>Segway</td><td>14</td><td>Charged</td><td>Granted</td><td>Riga, Elinos 34-3</td></tr>-->
-  <!--                <tr><td>9</td><td>XX:YY:ZZ:QQ</td><td>Segway</td><td>14</td><td>Charged</td><td>Granted</td><td>Riga, Elinos 34-3</td></tr>-->
-  <!--                <tr><td>10</td><td>XX:YY:ZZ:QQ</td><td>Segway</td><td>14</td><td>Charged</td><td>Granted</td><td>Riga, Elinos 34-3</td></tr>-->
-  <!--                <tr><td>11</td><td>XX:YY:ZZ:QQ</td><td>Segway</td><td>14</td><td>Charged</td><td>Granted</td><td>Riga, Elinos 34-3</td></tr>-->
-  <!--                <tr><td>12</td><td>XX:YY:ZZ:QQ</td><td>Segway</td><td>14</td><td>Charged</td><td>Granted</td><td>Riga, Elinos 34-3</td></tr>-->
-  <!--                <tr><td>13</td><td>XX:YY:ZZ:QQ</td><td>Segway</td><td>14</td><td>Charged</td><td>Granted</td><td>Riga, Elinos 34-3</td></tr>-->
-  <!--                <tr><td>14</td><td>XX:YY:ZZ:QQ</td><td>Segway</td><td>14</td><td>Charged</td><td>Granted</td><td>Riga, Elinos 34-3</td></tr>-->
-  <!--                <tr><td>15</td><td>XX:YY:ZZ:QQ</td><td>Segway</td><td>14</td><td>Charged</td><td>Granted</td><td>Riga, Elinos 34-3</td></tr>-->
-  <!--                <tr><td>16</td><td>XX:YY:ZZ:QQ</td><td>Segway</td><td>14</td><td>Charged</td><td>Granted</td><td>Riga, Elinos 34-3</td></tr>-->
-  <!--                <tr><td>17</td><td>XX:YY:ZZ:QQ</td><td>Segway</td><td>14</td><td>Charged</td><td>Granted</td><td>Riga, Elinos 34-3</td></tr>-->
                 </tbody>
               </table>
             </div>
