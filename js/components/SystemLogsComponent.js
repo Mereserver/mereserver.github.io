@@ -82,9 +82,5 @@ let SystemLogsComponent = (function () {
         this.model.data.systemLogs = logs;
     }
 
-    SystemLogsComponent.prototype.InitMap = function() {
-
-    }
-
     return SystemLogsComponent;
 })();

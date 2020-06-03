@@ -136,6 +136,14 @@ else {
       let responsiveMessages = new SystemLogsComponent(vueModel);
     }
 
+    if (document.getElementById('incoming-msg-page') != null) {
+      let responsiveMessages = new MessagesComponent(vueModel, new IncomingMessages());
+    }
+
+    if (document.getElementById('outgoing-msg-page') != null) {
+      let responsiveMessages = new MessagesComponent(vueModel, new OutgoingMessages());
+    }
+
     app = new Vue(vueModel);
 
   };

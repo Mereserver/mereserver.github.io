@@ -142,6 +142,24 @@ let DateTimeParser = (function() {
 
       return result;
     },
+    ToStringByFormat(dateTimeObj, format) {
+      if (typeof dateTimeObj == 'undefined' || dateTimeObj == null)
+        return "";
+
+      let hours = 0, minutes = 0, seconds = 0;
+
+      if(typeof dateTimeObj.time != "undefined") {
+        if (typeof dateTimeObj.time.hours != "undefined")
+          hours = dateTimeObj.time.hours;
+        if (typeof dateTimeObj.time.minutes != "undefined")
+          minutes = dateTimeObj.time.minutes;
+        if (typeof dateTimeObj.time.seconds != "undefined")
+          seconds = dateTimeObj.time.seconds;
+      }
+
+      let dt = moment(new Date(dateTimeObj.year, dateTimeObj.month, dateTimeObj.day, hours, minutes, seconds));
+      return dt.format(format);
+    },
     GetMonths() {
       return months;
     },

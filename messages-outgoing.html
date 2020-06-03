@@ -43,7 +43,7 @@
   <div id="messages-page">
     <!-- Main content -->
     <!-- /.card -->
-    <div class="card-container">
+    <div class="card-container" id="outgoing-msg-page">
 
       <div class="spinner text-center pb-3 card-header" v-if="loading">
         <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
@@ -107,24 +107,12 @@
                     <div class="row"><a href="messages-outgoing.html" class="active">OUTBOX</a></div>
                   </div>
                   <div class="col questions-block">
-                    <div class="row"><div class="col-sm"><p>RE: Question1</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question2</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question3</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question4</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
-                    <div class="row"><div class="col-sm"><p>RE: Question5</p></div><div class="col-auto">25 May</div></div>
+                    <div class="row" v-for="m in messages">
+                      <div class="col-sm">
+                        <p>{{m.message}}</p>
+                      </div>
+                      <div class="col-auto">{{m.GetDateString}}</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -147,12 +135,12 @@
                     <div class="row">
                       <div class="col">
                         <div class="paginator">
-                          <a href="#"><i class="fas fa-chevron-left"></i></a>
-                          <span>Page: 1 of 1</span>
-                          <a href="#"><i class="fas fa-chevron-right"></i></a>
+                          <a href="#"><i class="fas fa-chevron-left" v-on:click="PrevPage"></i></a>
+                          <span>Page: {{pageNumber}} of {{pageMaxNumber}}</span>
+                          <a href="#"><i class="fas fa-chevron-right" v-on:click="NextPage"></i></a>
                         </div>
                       </div>
-                      <div class="col-auto">Total: 7</div>
+                      <div class="col-auto">Total: {{messagesTotal}}</div>
                     </div>
                   </div>
                 </div>
@@ -234,6 +222,11 @@
 <script src="js/components/MonthComponent.js"></script>
 <script src="js/components/BillingComponent.js"></script>
 <script src="js/components/ResponsiveMessages.js"></script>
+<script src="js/components/PaginatorComponent.js"></script>
+
+<script src="js/components/Models/MessageModel.js"></script>
+<script src="js/components/Models/OutgoingMessages.js"></script>
+<script src="js/components/MessagesComponent.js"></script>
 
 <script src="js/Main.js"></script>
 
