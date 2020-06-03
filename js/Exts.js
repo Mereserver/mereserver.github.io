@@ -84,20 +84,40 @@ let DateTimeParser = (function() {
       if (typeof dateTimeString == 'undefined')
         return null;
 
-      let arr = dateTimeString.split('.');
+      let timeArr = dateTimeString.split(' ');
+
+      let arr = timeArr[0].split('.');
 
       if (arr.length < 3) {
-        arr = dateTimeString.split('/');
+        arr = timeArr[0].split('/');
         if (arr.length < 3) {
           return null;
         }
       }
 
-      return {
-        day: arr[0].trim(),
-        month: arr[1].trim(),
-        year: arr[2].trim()
+      let result = {
+        day: parseInt(arr[0].trim()),
+        month: parseInt(arr[1].trim()),
+        year: parseInt(arr[2].trim())
+      };
+
+      if(timeArr.length >= 2)
+      {
+        result.time = {};
+
+        let times = timeArr[1].split(':');
+
+        if(times.length >=1)
+          result.time.hours = parseInt(times[0]);
+
+        if(times.length >=2)
+          result.time.minutes = parseInt(times[1]);
+
+        if(times.length >=3)
+          result.time.seconds = parseInt(times[2]);
       }
+
+      return result;
     },
     ToString(dateTimeObj, delim) {
       delim = delim || '.';
@@ -105,11 +125,22 @@ let DateTimeParser = (function() {
       if (typeof dateTimeObj == 'undefined' || dateTimeObj == null)
         return "";
 
-      return ('0' + dateTimeObj.day).slice(-2) + delim
+      let result = ('0' + dateTimeObj.day).slice(-2) + delim
       + ('0' + (dateTimeObj.month)).slice(-2) + delim
       + dateTimeObj.year;
 
-      //return dateTimeObj.day.toString() + delim + dateTimeObj.month.toString() + delim + dateTimeObj.year.toString();
+      if(typeof  dateTimeObj.time != "undefined") {
+        if(typeof dateTimeObj.time.hours != "undefined")
+          result += " " + ('0' + dateTimeObj.time.hours).slice(-2)
+
+        if(typeof dateTimeObj.time.minutes != "undefined")
+          result += ":" + ('0' + dateTimeObj.time.minutes).slice(-2)
+
+        if(typeof dateTimeObj.time.seconds != "undefined")
+          result += ":" + ('0' + dateTimeObj.time.seconds).slice(-2)
+      }
+
+      return result;
     },
     GetMonths() {
       return months;

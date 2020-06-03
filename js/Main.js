@@ -132,6 +132,10 @@ else {
       let responsiveMessages = new ResponsiveMessages();
     }
 
+    if (document.getElementById('system-logs') != null) {
+      let responsiveMessages = new SystemLogsComponent(vueModel);
+    }
+
     app = new Vue(vueModel);
 
   };

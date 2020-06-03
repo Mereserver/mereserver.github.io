@@ -1,0 +1,81 @@
+let PaginatorComponent = (function () {
+
+    function Calc($this, objs) {
+        $this.objs = objs;
+
+        let data = $this.model.data;
+
+        let maxObjects = data.pageMaxObjects;
+
+        data.pageMaxNumber = Math.ceil(objs.length / maxObjects);
+
+        let pageIndex = (data.pageNumber - 1) * maxObjects;
+
+        return objs.slice(pageIndex, pageIndex + maxObjects);
+    }
+    
+    function PaginatorComponent(vueModel, maxObjects) {
+        maxObjects = maxObjects || 5;
+
+        let _this = this;
+
+        this.Callback = function(objs){};
+
+        this.model = vueModel;
+
+        VueModelInitial(vueModel);
+
+        this.objs = [];
+
+        CopyObjects(vueModel.data, {
+            pageNumber: 1,
+            pageMaxNumber: 1,
+            pageMaxObjects: maxObjects
+        });
+
+        CopyObjects(vueModel.methods, {
+            NextPage(){
+                if(vueModel.data.pageNumber < vueModel.data.pageMaxNumber)
+                    ++vueModel.data.pageNumber
+            },
+            PrevPage(){
+                if(vueModel.data.pageNumber > 1)
+                    --vueModel.data.pageNumber
+            }
+        })
+
+        CopyObjects(vueModel.watch, {
+            pageMaxObjects: function (maxObjects, oldVal) {
+
+                _this.Callback(Calc(_this, _this.objs));
+            },
+            pageNumber: function (maxObjects, oldVal) {
+
+                _this.Callback(Calc(_this, _this.objs));
+            }
+        });
+    }
+
+    // PaginatorComponent.prototype.SetMaxObjects = function(maxObjs) {
+    //     if(typeof maxObjs != "undefined")
+    //     {
+    //         this.model.data.pageMaxObjects = maxObjs;
+    //         return Calc(this, this.objs);
+    //     }
+    //     return this.objs;
+    // }
+
+    PaginatorComponent.prototype.Filter = function (objs) {
+        if(typeof objs == "object")
+            return Calc(this, objs);
+
+        return [];
+    }
+
+    PaginatorComponent.prototype.SetPageNumber = function (number) {
+        if(typeof number == "number")
+            this.model.data.pageNumber = number;
+    }
+    
+    return PaginatorComponent;
+})();

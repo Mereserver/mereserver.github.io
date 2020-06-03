@@ -46,7 +46,7 @@ let ResponsiveTable = (function () {
             return;
         }
 
-        if($('#power-cost-page').length > 0) {
+        if($('#power-cost-page').length > 0 || $('#system-logs').length > 0) {
 
             let hSize = CalcHeightOfElement($('.top-container'));
             hSize += CalcHeightOfElement($('.spacer'));
@@ -68,8 +68,7 @@ let ResponsiveTable = (function () {
 
         if(
             $('#stations-page').length > 0 ||
-            $('#scooters-page').length > 0 ||
-            $('#system-logs').length > 0
+            $('#scooters-page').length > 0
         ) {
             SetBgMinHeight(sz);
             return;
