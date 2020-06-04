@@ -1,7 +1,7 @@
 
 let UsersComponent = (function () {
 
-  const paginatorMaxObjects = 8;
+  const paginatorMaxObjects = 5;
 
   let StateType = Aggregator.StateType;
 
@@ -19,7 +19,8 @@ let UsersComponent = (function () {
     CopyObjects(vueModel.data, {
       usersAggregator: sAgg,
       users: objs,
-      usersTotal: objs.length
+      usersTotal: objs.length,
+      userRoles : User.Roles
     });
 
     CopyObjects(vueModel.methods, {
@@ -49,14 +50,34 @@ let UsersComponent = (function () {
         } catch (e) {
           ModalWindows.ShowError("OnusersAggregatorSubmit: " + e);
         }
+
+        _this.Filter();
       },
       OnDeleteUser() {
         sAgg.DeleteModel();
+        _this.Filter();
       },
       OnUsersAggregatorCheckClick(e) {
         sAgg.OnCheckClick(e);
       }
     });
+
+    vueModel.methods.previewFiles = function (obj, event) {
+      let files = event.target.files;
+
+      //Log.trace(obj);
+      //Log.trace(event.target);
+
+      if(typeof files != "undefined" && files.length > 0)
+      {
+        obj.logoName = Files.GetFileName(event.target.value);
+        obj.SetLogo(window.URL.createObjectURL(files[0]));
+      }
+    }
+
+    vueModel.methods.CheckIfAdmin = function (r, model) {
+      return r != User.Roles.Admin && model.Roles.indexOf(User.Roles.Admin) != -1;
+    };
 
     let paginatorObj = new PaginatorComponent(vueModel, paginatorMaxObjects);
     this.paginatorObj = paginatorObj;
@@ -81,6 +102,7 @@ let UsersComponent = (function () {
   }
 
   UsersComponent.prototype.SetRecords = function(objs) {
+    this.model.data.usersTotal = this.usersAggregator.GetObjects().length;
     this.model.data.users = objs;
   }
 

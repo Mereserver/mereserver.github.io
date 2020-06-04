@@ -499,8 +499,13 @@ a.dropdown-item,
   padding-bottom: 17px;
 }
 
+.pt-27-px,
 .messages .card-body {
-  padding-top: 27px;
+  padding-top: 27px!important;
+}
+
+.pb-27-px {
+  padding-bottom: 27px!important;
 }
 
 .messages .card-body > .row {
@@ -750,6 +755,57 @@ button:disabled {
   }
 
 }
+
+.no-padding-rows > .row {
+  padding: 0!important;
+  margin: 0!important;
+}
+
+.no-padding-rows > .row > .col {
+  padding-left: 0!important;
+  padding-right: 0!important;
+}
+
+.modal-content .card-header {
+  margin: 0!important;
+}
+
+.modal-content .card-body {
+  margin: 0!important;
+}
+
+.input-group label {
+  overflow: hidden;
+}
+
+.user-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center!important;
+}
+
+.user-logo img {
+  width: 50px;
+  display: inline-block;
+}
+
+.user-logo img,
+.user-logo {
+  height: 50px;
+}
+
+.default-user-logo {
+  font-size: 25px;
+}
+
+.users-table td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+
+
 
 
 

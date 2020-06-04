@@ -201,3 +201,9 @@ let DateTimeParser = (function() {
     }
   };
 })();
+
+function IsObject(obj, name) {
+  return typeof obj == "object" && f.constructor.name == name;
+}
+
+
