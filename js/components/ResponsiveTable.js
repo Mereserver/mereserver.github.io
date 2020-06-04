@@ -35,6 +35,10 @@ let ResponsiveTable = (function () {
 
     function Update() {
 
+        if($('#users-page').length > 0) {
+            return;
+        }
+
         if($('#billing-page').length > 0) {
 
             let hSize = CalcHeightOfElement($('.top-container'));
@@ -74,12 +78,7 @@ let ResponsiveTable = (function () {
             return;
         }
 
-
-
-
         $('.table-responsive').height(sz);
-
-
 
         return sz;
     }

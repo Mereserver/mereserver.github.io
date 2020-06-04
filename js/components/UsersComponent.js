@@ -1,20 +1,25 @@
 
 let UsersComponent = (function () {
 
+  const paginatorMaxObjects = 8;
+
   let StateType = Aggregator.StateType;
 
   function UsersComponent(vueModel) {
+    let _this = this;
+
+    this.model = vueModel;
+
     let sAgg = this.usersAggregator = new Aggregator(new UsersAggregator());
 
-    if (typeof vueModel.data == "undefined")
-      vueModel.data = {};
+    VueModelInitial(vueModel);
 
-    if (typeof vueModel.methods == "undefined")
-      vueModel.methods = {};
+    let objs = sAgg.GetObjects();
 
     CopyObjects(vueModel.data, {
       usersAggregator: sAgg,
-      users: sAgg.GetObjects()
+      users: objs,
+      usersTotal: objs.length
     });
 
     CopyObjects(vueModel.methods, {
@@ -53,7 +58,30 @@ let UsersComponent = (function () {
       }
     });
 
-    this.model = vueModel;
+    let paginatorObj = new PaginatorComponent(vueModel, paginatorMaxObjects);
+    this.paginatorObj = paginatorObj;
+
+    paginatorObj.Callback = (objs) => {
+      this.SetRecords(objs);
+    }
+
+    vueModel.userInitsCallbacks.push(()=> {
+      _this.Filter();
+    });
+
+  }
+
+  UsersComponent.prototype.Filter = function()
+  {
+    let objs = this.usersAggregator.GetObjects();
+
+    objs = this.paginatorObj.Filter(objs);
+
+    this.SetRecords(objs);
+  }
+
+  UsersComponent.prototype.SetRecords = function(objs) {
+    this.model.data.users = objs;
   }
 
   return UsersComponent;
