@@ -43,9 +43,9 @@ let UsersComponent = (function () {
             ModalWindows.HideUserModal();
 
           if (mode == StateType.Add) {
-            ModalWindows.ShowSuccess("Station added");
+            ModalWindows.ShowSuccess("User added");
           } else if (mode == StateType.Edit) {
-            ModalWindows.ShowSuccess("Station updated");
+            ModalWindows.ShowSuccess("User updated");
           }
         } catch (e) {
           ModalWindows.ShowError("OnusersAggregatorSubmit: " + e);

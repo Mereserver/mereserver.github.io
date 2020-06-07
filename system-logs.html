@@ -127,9 +127,9 @@
                 <div class="col-auto head-controls">
 
                   <div class="paginator">
-                    <a href="#"><i class="fas fa-chevron-left" v-on:click="PrevPage"></i></a>
+                    <a href="#"><i class="fas fa-chevron-left" v-on:click.prevent="PrevPage"></i></a>
                     <span>Page: {{pageNumber}} of {{pageMaxNumber}}</span>
-                    <a href="#"><i class="fas fa-chevron-right" v-on:click="NextPage"></i></a>
+                    <a href="#"><i class="fas fa-chevron-right" v-on:click.prevent="NextPage"></i></a>
                   </div>
 
                 </div>
