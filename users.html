@@ -101,13 +101,13 @@
             </div>
           </div>
 
-          <div class="row bg-1 flex-fill d-flex justify-content-start">
+          <div class="row bg-1 flex-fill d-flex justify-content-start table-auto-rows">
 
             <div class="col portlet-container portlet-dropzone content-align-1">
 
               <div class="card-body">
                 <div class="table-responsive pt-27-px pb-27-px">
-                  <table class="table table-striped table-valign-middle text-center table-head-fixed text-nowrap users-table">
+                    <table class="table table-striped table-valign-middle text-center table-head-fixed text-nowrap users-table">
                     <thead>
                     <tr>
                       <th>
@@ -155,7 +155,7 @@
           </div>
 
           <!-- Paginator -->
-          <div class="row">
+          <div class="row auto-rows-footer">
             <div class="col content-align-1 pb-4">
 
               <div class="card-body pt-27-px">
@@ -167,9 +167,9 @@
                     <div class="row">
                       <div class="col">
                         <div class="paginator">
-                          <a href="#"><i class="fas fa-chevron-left" v-on:click="PrevPage"></i></a>
+                          <a href="#"><i class="fas fa-chevron-left" v-on:click.prevent="PrevPage"></i></a>
                           <span>Page: {{pageNumber}} of {{pageMaxNumber}}</span>
-                          <a href="#"><i class="fas fa-chevron-right" v-on:click="NextPage"></i></a>
+                          <a href="#"><i class="fas fa-chevron-right" v-on:click.prevent="NextPage"></i></a>
                         </div>
                       </div>
                       <div class="col-auto">Total: {{usersTotal}}</div>
@@ -357,6 +357,7 @@
 <script src="js/components/BillingComponent.js"></script>
 <script src="js/components/ResponsiveMessages.js"></script>
 <script src="js/components/PaginatorComponent.js"></script>
+<script src="js/components/AutoRowsTable.js"></script>
 
 <script src="js/components/Models/MessageModel.js"></script>
 <script src="js/components/Models/IncomingMessages.js"></script>

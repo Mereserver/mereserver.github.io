@@ -206,4 +206,15 @@ function IsObject(obj, name) {
   return typeof obj == "object" && f.constructor.name == name;
 }
 
+function CheckObjFields(obj, fields) {
+  let r = true;
+  fields.forEach(f => {
+    if(typeof obj[f] == "undefined") {
+      r = false;
+      return;
+    }
+  });
+  return r;
+}
+
 

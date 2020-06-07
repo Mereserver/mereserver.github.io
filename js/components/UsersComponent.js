@@ -86,9 +86,25 @@ let UsersComponent = (function () {
       this.SetRecords(objs);
     }
 
+    this.autorowsTable = new AutoRowsTable(paginatorObj);
+
     vueModel.userInitsCallbacks.push(()=> {
       _this.Filter();
+      setTimeout(()=> {
+        this.autorowsTable.Init();
+        this.autorowsTable.UpdateMaxPageObjects();
+      }, 500);
     });
+
+    let timer = null;
+    window.onresize = () => {
+      if(timer != null)
+        clearTimeout(timer);
+
+      timer = setTimeout(()=> {
+        this.autorowsTable.UpdateMaxPageObjects();
+      }, 500);
+    };
 
   }
 

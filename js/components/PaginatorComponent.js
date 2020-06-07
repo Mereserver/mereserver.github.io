@@ -7,7 +7,12 @@ let PaginatorComponent = (function () {
 
         let maxObjects = data.pageMaxObjects;
 
-        data.pageMaxNumber = Math.ceil(objs.length / maxObjects);
+        let pNum = Math.ceil(objs.length / maxObjects);
+
+        if(pNum <= 0)
+            pNum = 1;
+
+        data.pageMaxNumber = pNum;
 
         let pageIndex = (data.pageNumber - 1) * maxObjects;
 
@@ -36,11 +41,11 @@ let PaginatorComponent = (function () {
         CopyObjects(vueModel.methods, {
             NextPage(){
                 if(vueModel.data.pageNumber < vueModel.data.pageMaxNumber)
-                    ++vueModel.data.pageNumber
+                    ++vueModel.data.pageNumber;
             },
             PrevPage(){
                 if(vueModel.data.pageNumber > 1)
-                    --vueModel.data.pageNumber
+                    --vueModel.data.pageNumber;
             }
         })
 
@@ -75,6 +80,17 @@ let PaginatorComponent = (function () {
     PaginatorComponent.prototype.SetPageNumber = function (number) {
         if(typeof number == "number")
             this.model.data.pageNumber = number;
+    }
+
+    PaginatorComponent.prototype.SetMaxPageObjects = function (maxObjs) {
+        if(typeof maxObjs == "number") {
+            maxObjs = maxObjs > 0 ? maxObjs : 1;
+            this.model.data.pageMaxObjects = maxObjs;
+        }
+    }
+
+    PaginatorComponent.prototype.GetMaxPageObjects = function () {
+        return this.model.data.pageMaxObjects;
     }
     
     return PaginatorComponent;
