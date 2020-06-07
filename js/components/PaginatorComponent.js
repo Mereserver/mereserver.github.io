@@ -50,25 +50,20 @@ let PaginatorComponent = (function () {
         })
 
         CopyObjects(vueModel.watch, {
-            pageMaxObjects: function (maxObjects, oldVal) {
+            pageMaxObjects: function (val, oldVal) {
 
                 _this.Callback(Calc(_this, _this.objs));
             },
-            pageNumber: function (maxObjects, oldVal) {
+            pageNumber: function (val, oldVal) {
 
                 _this.Callback(Calc(_this, _this.objs));
+            },
+            pageMaxNumber: function (val, oldVal) {
+                if(this.pageNumber > this.pageMaxNumber)
+                    this.pageNumber = this.pageMaxNumber;
             }
         });
     }
-
-    // PaginatorComponent.prototype.SetMaxObjects = function(maxObjs) {
-    //     if(typeof maxObjs != "undefined")
-    //     {
-    //         this.model.data.pageMaxObjects = maxObjs;
-    //         return Calc(this, this.objs);
-    //     }
-    //     return this.objs;
-    // }
 
     PaginatorComponent.prototype.Filter = function (objs) {
         if(typeof objs == "object")

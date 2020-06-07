@@ -31,7 +31,7 @@ let AutoRowsTable = (function () {
         this.rowHeight = tableRowsHeight() / this.paginator.GetMaxPageObjects();
         this.footerHeight = tableFooterSelector().height();
 
-        Log.trace("rowHeight = " + this.rowHeight);
+        //Log.trace("rowHeight = " + this.rowHeight);
     }
 
     AutoRowsTable.prototype.UpdateMaxPageObjects = function() {
@@ -45,8 +45,8 @@ let AutoRowsTable = (function () {
 
         let newPageObjects = Math.floor( h / this.rowHeight );
 
-        Log.trace(newPageObjects);
-        Log.trace(h);
+        // Log.trace(newPageObjects);
+        // Log.trace(h);
 
         if(newPageObjects != NaN)
         {
