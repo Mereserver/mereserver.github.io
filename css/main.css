@@ -803,6 +803,33 @@ button:disabled {
   padding-bottom: 5px;
 }
 
+.users-city-group label,
+.select-group label,
+.select-group .head {
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.select-group select,
+.select-group label {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+.users-city-group {
+  height: 100%;
+}
+
+.users-city-group select {
+  display: block;
+  height: calc(100% - 44px) !important;
+}
+
+.cities-group select {
+  height: 300px;
+}
 
 
 

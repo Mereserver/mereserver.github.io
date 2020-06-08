@@ -1,5 +1,5 @@
 // User //
-function User(name, logo, login, password, totalScooters, roles) {
+function User(name, logo, login, password, totalScooters, roles, cities) {
   this.selected = false;
 
   this.name = name;
@@ -13,6 +13,19 @@ function User(name, logo, login, password, totalScooters, roles) {
   this.Role = roles;
 
   this.logoName = "";
+  this.cities = cities || [];
+}
+
+User.prototype.AddLocation = function(country, city) {
+  this.cities.push(new Location(country, city, "", ""))
+}
+
+User.prototype.SetLocations = function(locations) {
+  this.cities = locations;
+}
+
+User.prototype.GetLocations = function() {
+  return this.cities;
 }
 
 User.Roles = Object.freeze({

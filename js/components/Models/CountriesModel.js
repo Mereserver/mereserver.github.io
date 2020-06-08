@@ -46,5 +46,22 @@ let CountriesModel = (function(){
         return rez;
     }
 
+    CountriesModel.prototype.GetLocations = function() {
+        let rez = [];
+        let cnts = countries;
+
+        for(let country in cnts)
+        {
+            if(country == 'All')
+                continue;
+
+            cnts[country].forEach( c => {
+                rez.push(new Location(country, c, "", ""));
+            });
+        }
+
+        return rez;
+    }
+
     return CountriesModel;
 })();

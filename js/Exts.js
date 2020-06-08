@@ -31,6 +31,10 @@ Array.prototype.removeObj = function (obj) {
   }
 }
 
+Array.ConcatUnique = function(a, b) {
+  return a.concat(b.filter((item) => a.indexOf(item) < 0));
+}
+
 function CopyObjects(obj1, obj2) {
   for (let attrname in obj2) {
     obj1[attrname] = obj2[attrname];

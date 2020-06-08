@@ -144,6 +144,10 @@ else {
       let responsiveMessages = new MessagesComponent(vueModel, new OutgoingMessages());
     }
 
+    if (document.getElementById('user-city-list-page') != null) {
+      let usersComponent = new UsersCitiesComponent(vueModel);
+    }
+
     app = new Vue(vueModel);
 
   };
