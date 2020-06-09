@@ -77,7 +77,7 @@ let UsersCitiesComponent = (function () {
         this.model.data.selectedUser.forEach( u => {
             if(typeof u == 'object')
             {
-                u.SetLocations(list);
+                u.SetLocations(Array.ConcatUnique(u.GetLocations(), list));
             }
         });
     }

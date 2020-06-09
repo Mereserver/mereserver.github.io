@@ -816,6 +816,7 @@ button:disabled {
   display: block;
   max-width: 100%;
   width: 100%;
+  white-space: nowrap;
 }
 
 .users-city-group {
@@ -824,13 +825,27 @@ button:disabled {
 
 .users-city-group select {
   display: block;
-  height: calc(100% - 44px) !important;
+  height: 372px !important;
 }
 
 .cities-group select {
   height: 300px;
+
 }
 
+.box1,
+.box2 {
+  margin-bottom: 10px;
+  /*min-width: 240px;*/
+}
+
+.no-shadow {
+  box-shadow: none!important;
+}
+
+.no-border {
+  border: none!important;
+}
 
 
 
