@@ -34,7 +34,7 @@
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <!-- wrapper -->
-<div class="wrapper container-fluid">
+<div class="wrapper container-fluid" id="app">
 
   <div class="top-container">
     <div class="row justify-content-center">
@@ -42,10 +42,10 @@
       <div class="brand-container col">
         <img src="dist/img/logos/logo.png" alt="My favorite Logo" class="brand-image">
       </div>
-      <div class="top-info col-auto">
-        <p>Lime: UserName, <a href="login.html" title="Exit" class="log-out">log out</a></p>
-        <p>Relationship Manager: Jon Doy (jd@support.com)</p>
-        <span>CSO Manager:Alex Frank (a.frank@gmail.com)</span>
+      <div class="top-info col-auto" v-cloak>
+        <p>{{companyName}}: {{userName}}, <a href="login.html" title="Exit" class="log-out">log out</a></p>
+        <p>Relationship Manager: {{relationshipManager.name}} ({{relationshipManager.email}})</p>
+        <span>Manager: {{manager.name}} ({{manager.email}})</span>
       </div>
     </div>
   </div>
@@ -105,6 +105,12 @@
 </script>
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/Vue.js"></script>
+
+<script src="js/Exts.js"></script>
+<script src="js/components/HeaderInfo.js"></script>
+
+<script src="js/MainPage.js"></script>
 
 </body>
 </html>

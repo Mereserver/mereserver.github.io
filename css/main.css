@@ -118,8 +118,10 @@ tbody.no-striped tr:nth-of-type(odd) {
 .main-nav-bar p {
   margin: 0 0 .2em;
 }
+
 .main-nav-bar ul {
   font-size: 19px;
+  font-weight: bold;
 }
 
 .main-nav-bar ul li {
