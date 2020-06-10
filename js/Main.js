@@ -40,16 +40,8 @@ let DefaultVueModel = (function() {
 
         responsiveTable.Update();
 
-        setTimeout(()=> {
-          let callBacks = vueModel.userInitsCallbacks;
+        VueExts.RunInitCallBacks(vueModel);
 
-          for (let i in callBacks)
-          {
-            if(typeof callBacks[i] == "function") {
-              callBacks[i](vueModel.data);
-            }
-          }
-        }, 100);
       },
       updated(){
         responsiveTable.Update();

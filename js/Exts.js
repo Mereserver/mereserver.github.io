@@ -58,6 +58,24 @@ function VueModelInitial(vueModel) {
     vueModel.userInitsCallbacks = {};
 }
 
+let VueExts = {
+  RunInitCallBacks(vueModel) {
+    if(typeof vueModel == "undefined")
+      return;
+
+    setTimeout(()=> {
+      let callBacks = vueModel.userInitsCallbacks;
+
+      for (let i in callBacks)
+      {
+        if(typeof callBacks[i] == "function") {
+          callBacks[i](vueModel.data);
+        }
+      }
+    }, 100);
+  }
+};
+
 let CalcElements = {
   CalcStage1(element) {
   if(element.length == 0)

@@ -1,5 +1,5 @@
 (function($) {
-  let fn = function() {
+  let InitCharts = function() {
 
     if(jQuery('#power-chart').length > 0) {
       let sin = []
@@ -66,22 +66,37 @@
       })
     }
 
-    let vueModel = {
-      el: ".vue",
-      computed: {},
-      data: {},
-      methods: {},
-      created() {
-        mvLoading.Hide();
-      }
-    };
-
-    let mvLoading = new LoadingComponent(vueModel);
-    let Map = MapComponent();
-    let mapObj = new Map(vueModel);
-
-    app = new Vue(vueModel);
   }
 
-  fn();
+  let vueModel = {
+    el: "#app",
+    computed: {},
+    data: {},
+    methods: {},
+    userInitsCallbacks: []
+  };
+
+  let mvLoading = new LoadingComponent(vueModel);
+
+  let Map = MapComponent();
+
+  let mapObj = new Map(vueModel);
+
+  let headerInfo = new HeaderInfo(vueModel);
+
+  CopyObjects(vueModel, {
+    mounted() {
+      mvLoading.Hide();
+
+      VueExts.RunInitCallBacks(vueModel);
+    }
+  });
+
+  vueModel.userInitsCallbacks.push(()=> {
+    InitCharts();
+  });
+
+  app = new Vue(vueModel);
+
+
 })(jQuery);

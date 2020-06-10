@@ -16,10 +16,8 @@ let StationRatingComponent = (function () {
 
         VueModelInitial(vueModel);
 
-        vueModel.userInitsCallbacks.push(()=> {
-            let compObjFactory = MapComponent();
-            let mapObj = new compObjFactory(vueModel);
-        });
+        let compObjFactory = MapComponent();
+        let mapObj = new compObjFactory(vueModel);
 
         let countriesComponentObj = new countriesComponent(vueModel);
         this.countriesComponentObj = countriesComponentObj;
