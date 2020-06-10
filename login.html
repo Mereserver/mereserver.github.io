@@ -22,7 +22,7 @@
 </head>
 <body class="hold-transition">
 
-<div class="login-page">
+<div class="login-page" id="app">
 
   <form action="index.html" method="post">
 
@@ -33,12 +33,12 @@
       </div>
       <div class="filter-input form-inline col filter-controls-group filter-input-full row">
         <label class="col-auto" for="password">Password:</label>
-        <input type="password" class="form-control col" id="password"/>
+        <input type="password" class="form-control col" id="password" @keyup.enter="enterKeyUp"/>
       </div>
       <div class="row justify-content-end">
         <!-- /.col -->
         <div class="col-5">
-          <a href="index.html" class="btn btn-block bg-gradient-success">Log in</a>
+          <a href="index.html" class="btn btn-block bg-gradient-success" ref="sendReply">Log in</a>
         </div>
         <!-- /.col -->
       </div>
@@ -52,6 +52,19 @@
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/Vue.js"></script>
+
+<script>
+  new Vue({
+    el:'#app',
+    methods:{
+      enterKeyUp () {
+        this.$refs.sendReply.click();
+      }
+    }
+  })
+</script>
 
 </body>
 </html>
