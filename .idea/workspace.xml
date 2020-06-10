@@ -48,6 +48,9 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
   <component name="ProjectId" id="1Zov0HHV9kQ9IwVMiWLzHEfxHok" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -109,7 +112,7 @@
       <workItem from="1585593480435" duration="103169000" />
       <workItem from="1585892683461" duration="27390000" />
       <workItem from="1586939063597" duration="41673000" />
-      <workItem from="1590445135566" duration="404301000" />
+      <workItem from="1590445135566" duration="404842000" />
     </task>
     <servers />
   </component>
@@ -133,26 +136,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="222" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590517039481" />
-    <state width="1864" height="301" key="GridCell.Tab.0.bottom" timestamp="1591643285622">
+    <state width="1864" height="301" key="GridCell.Tab.0.bottom" timestamp="1591798150031">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state width="1864" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591111513517" />
-    <state width="1864" height="301" key="GridCell.Tab.0.bottom/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1591643285622" />
-    <state width="1864" height="301" key="GridCell.Tab.0.center" timestamp="1591643285622">
+    <state width="1864" height="301" key="GridCell.Tab.0.bottom/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1591798150031" />
+    <state width="1864" height="301" key="GridCell.Tab.0.center" timestamp="1591798150031">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state width="1864" height="262" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591111513517" />
-    <state width="1864" height="301" key="GridCell.Tab.0.center/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1591643285622" />
-    <state width="1864" height="301" key="GridCell.Tab.0.left" timestamp="1591643285622">
+    <state width="1864" height="301" key="GridCell.Tab.0.center/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1591798150031" />
+    <state width="1864" height="301" key="GridCell.Tab.0.left" timestamp="1591798150030">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state width="1864" height="262" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591111513517" />
-    <state width="1864" height="301" key="GridCell.Tab.0.left/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1591643285622" />
-    <state width="1864" height="301" key="GridCell.Tab.0.right" timestamp="1591643285622">
+    <state width="1864" height="301" key="GridCell.Tab.0.left/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1591798150030" />
+    <state width="1864" height="301" key="GridCell.Tab.0.right" timestamp="1591798150031">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state width="1864" height="262" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591111513517" />
-    <state width="1864" height="301" key="GridCell.Tab.0.right/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1591643285622" />
+    <state width="1864" height="301" key="GridCell.Tab.0.right/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1591798150031" />
     <state x="355" y="62" key="SettingsEditor" timestamp="1585751277619">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

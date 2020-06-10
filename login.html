@@ -29,11 +29,11 @@
     <div class="login-card-body">
       <div class="filter-input form-inline col filter-controls-group filter-input-full row">
         <label class="col-auto" for="login">Login:</label>
-        <input type="text" class="form-control col" id="login"/>
+        <input type="text" class="form-control col" id="login" @keyup.enter="enterKeyUp" v-model="login"/>
       </div>
       <div class="filter-input form-inline col filter-controls-group filter-input-full row">
         <label class="col-auto" for="password">Password:</label>
-        <input type="password" class="form-control col" id="password" @keyup.enter="enterKeyUp"/>
+        <input type="password" class="form-control col" id="password" @keyup.enter="enterKeyUp" v-model="password"/>
       </div>
       <div class="row justify-content-end">
         <!-- /.col -->
@@ -56,14 +56,24 @@
 <script src="js/Vue.js"></script>
 
 <script>
-  new Vue({
-    el:'#app',
-    methods:{
-      enterKeyUp () {
-        this.$refs.sendReply.click();
+  window.onload = function () {
+    let app  = new Vue({
+      el: '#app',
+      data: {
+        login: '',
+        password: ''
+      },
+      methods: {
+        enterKeyUp() {
+          if (this.login.length == 0 || this.password.length == 0) {
+            alert('Invalid login or password');
+          } else {
+            this.$refs.sendReply.click();
+          }
+        }
       }
-    }
-  })
+    });
+  }
 </script>
 
 </body>
