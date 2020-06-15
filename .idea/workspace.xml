@@ -3,13 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="8f2d33c1-f34b-4b26-8473-2d464abc3c4a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/billing.html" beforeDir="false" afterPath="$PROJECT_DIR$/billing.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/MainDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/MainDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/DashboardComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/DashboardComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/Models/DateRangePresetsModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/DateRangePresetsModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/DateRangeComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/DateRangeComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/MapComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/MapComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/Models/CitiesModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/CitiesModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/Models/Stations.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/Stations.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/components/Models/StationsRating.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/StationsRating.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/components/StationRatingComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/StationRatingComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/station-rating-usage.html" beforeDir="false" afterPath="$PROJECT_DIR$/station-rating-usage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +122,7 @@
       <workItem from="1585593480435" duration="103169000" />
       <workItem from="1585892683461" duration="27390000" />
       <workItem from="1586939063597" duration="41673000" />
-      <workItem from="1590445135566" duration="491670000" />
+      <workItem from="1590445135566" duration="502524000" />
     </task>
     <servers />
   </component>

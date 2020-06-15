@@ -23,16 +23,21 @@ Object.defineProperty(StationsRatingModel.prototype, "GetChargingEventsQty", {
 let StationsRating = (function () {
     function StationsRating() {
         this.objs = [
-            new StationsRatingModel(new Location("Latvia", "Riga", "Elinos 34-1", "https://www.google.ru/maps/place/@56.926993, 24.127669,9z/"),7567, "10.04.2019"),
-            new StationsRatingModel(new Location("Latvia", "Valmiera", "Elinos 34-6", "https://www.google.ru/maps/place/@56.8509021,24.1430431,9z/"),75171, "10.04.2020"),
-            new StationsRatingModel(new Location("Estonia", "Tallin", "Elinos 34-8", "https://www.google.ru/maps/place/@59.369593,24.739754,9z/"),75173, "02.06.2020"),
-            new StationsRatingModel(new Location("Finland", "Helsinki", "Elinos 33-8", "https://www.google.ru/maps/place/@60.23163,24.920331,9z/"),75173, "01.06.2020"),
-            new StationsRatingModel(new Location("Ukraine", "Kiev", "Pushkin street 34-11", "https://www.google.ru/maps/@50.445262,30.531903,11.67z"),7576, "10.04.2020"),
-            new StationsRatingModel(new Location("Poland", "Warsaw", "Elinos 34-10", "https://www.google.ru/maps/place/@52.214339,20.899708,9z/"),75175, "26.05.2020"),
-            new StationsRatingModel(new Location("Netherlands", "Amsterdam", "Elinos 34-10", "https://www.google.ru/maps/place/@52.335339,4.946472,9z/"),75175, "26.05.2020"),
-            new StationsRatingModel(new Location("France", "Paris", "Elinos 34-10", "https://www.google.ru/maps/place/@48.84592,2.333719,9z/"),75175, "26.05.2020"),
-            new StationsRatingModel(new Location("Germany", "Berlin", "Elinos 34-10", "https://www.google.ru/maps/place/@49.922935, 8.849602,9z/"),75175, "26.05.2020"),
-            new StationsRatingModel(new Location("Germany", "Frankfurt", "Elinos 34-10", "https://www.google.ru/maps/place/@49.922935, 8.849602,9z/"),75175, "26.05.2020")
+            new StationsRatingModel(new Location("Latvia", "Riga", "WX8C+32 Skulte, Mārupes novads", [56.915246, 23.970103]),7567, "15.06.2020"),
+            new StationsRatingModel(new Location("Latvia", "Riga", "Jurmalas pilseta", [56.968803, 23.890943]),7567, "14.06.2020"),
+            new StationsRatingModel(new Location("Latvia", "Riga", "Daugavgrīva", [57.012477,24.036142]),7567, "13.06.2020"),
+            new StationsRatingModel(new Location("Latvia", "Riga", "Mangaļsala", [57.067269, 24.073939]),7567, "12.05.2020"),
+            new StationsRatingModel(new Location("Latvia", "Riga", "Piedzīvojumu parks", [57.012841, 24.144681]),7567, "11.06.2020"),
+            new StationsRatingModel(new Location("Latvia", "Riga", "Ķekava Parish", [56.886828, 24.132542]),7567, "10.06.2020")
+            // new StationsRatingModel(new Location("Latvia", "Valmiera", "Elinos 34-6", "https://www.google.ru/maps/place/@56.8509021,24.1430431,9z/"),75171, "10.04.2020"),
+            // new StationsRatingModel(new Location("Estonia", "Tallin", "Elinos 34-8", "https://www.google.ru/maps/place/@59.369593,24.739754,9z/"),75173, "02.06.2020"),
+            // new StationsRatingModel(new Location("Finland", "Helsinki", "Elinos 33-8", "https://www.google.ru/maps/place/@60.23163,24.920331,9z/"),75173, "01.06.2020"),
+            // new StationsRatingModel(new Location("Ukraine", "Kiev", "Pushkin street 34-11", "https://www.google.ru/maps/@50.445262,30.531903,11.67z"),7576, "10.04.2020"),
+            // new StationsRatingModel(new Location("Poland", "Warsaw", "Elinos 34-10", "https://www.google.ru/maps/place/@52.214339,20.899708,9z/"),75175, "26.05.2020"),
+            // new StationsRatingModel(new Location("Netherlands", "Amsterdam", "Elinos 34-10", "https://www.google.ru/maps/place/@52.335339,4.946472,9z/"),75175, "26.05.2020"),
+            // new StationsRatingModel(new Location("France", "Paris", "Elinos 34-10", "https://www.google.ru/maps/place/@48.84592,2.333719,9z/"),75175, "26.05.2020"),
+            // new StationsRatingModel(new Location("Germany", "Berlin", "Elinos 34-10", "https://www.google.ru/maps/place/@49.922935, 8.849602,9z/"),75175, "26.05.2020"),
+            // new StationsRatingModel(new Location("Germany", "Frankfurt", "Elinos 34-10", "https://www.google.ru/maps/place/@49.922935, 8.849602,9z/"),75175, "26.05.2020")
         ];
     }
 
@@ -68,6 +73,20 @@ let StationsRating = (function () {
         objs = objs.filter(x => DateTimeParser.InRangeDate(start, end, x.date));
 
         return objs;
+    }
+
+    StationsRating.prototype.GetLocations = function () {
+        let objs = this.GetObjects();
+
+        // let rez  = objs.map( x => {
+        //     let obj = {};
+        //     obj[x.location.GetString] = x.location.GetGeoPos();
+        //     return obj;
+        // });
+
+        //rez = ["All", [55.825973, 17.98517, 4]].concat(rez);
+
+        return objs.map( x => x.location);
     }
 
     return StationsRating;

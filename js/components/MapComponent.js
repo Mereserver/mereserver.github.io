@@ -1,10 +1,14 @@
-let MapComponent = function () {
-  let citiesComponent = CitiesComponent(new CitiesModel(), "mapCities", "mapCitySelector");
-  let locations = citiesComponent.GetLocations();
+let MapComponent = function (model) {
+  model = model || new CitiesModel();
 
-  function InitMap() {
+  //let citiesComponent = CitiesComponent(model, "mapCities", "mapCitySelector");
+  let locations = model.GetLocations();
 
-    let all = locations['All'];
+  const zoom = 10;
+
+  function InitMap(all) {
+
+    //let all = locations['All'];
 
     let mapSelector = 'map-container';
 
@@ -14,6 +18,15 @@ let MapComponent = function () {
     };
 
     if (jQuery('#' + mapSelector).length > 0) {
+
+      if(typeof all == "undefined" || all.length < 2) {
+        all = [56.9500885,24.0319015, zoom];
+      }
+
+      if(all.length < 3)
+      {
+        all[2] = zoom;
+      }
 
       mymap = L.map(mapSelector).setView(all, all[2]);
 
@@ -27,19 +40,22 @@ let MapComponent = function () {
         zoomOffset: -1
       }).addTo(mymap);
 
-      for (let l in locations) {
-        if (l != 'All')
-          L.marker(locations[l]).addTo(mymap);
-      }
-
-      let popup = L.popup();
-      mymap.on('click', function (e) {
-        //console.log(e);
-        popup
-            .setLatLng(e.latlng)
-            .setContent("Position " + e.latlng.toString())
-            .openOn(mymap);
+      locations.forEach( l => {
+        if (l != 'All') {
+          L.marker(l.GetGeoPos()).bindPopup(l.GetString).addTo(mymap);
+          //Log.trace(l.GetGeoPos());
+        }
       });
+
+      // let popup = L.popup();
+      // mymap.on('click', function (e) {
+      //   console.log(e);
+      //   //let titleArr = locations.filter( x=> x.GetGeoPos());
+      //   popup
+      //       .setLatLng(e.latlng)
+      //       .setContent("Position " + e.latlng.toString())
+      //       .openOn(mymap);
+      // });
     }
 
     return mymap;
@@ -48,39 +64,51 @@ let MapComponent = function () {
 
   //Log.trace(cityArr);
 
-  function MapComponent(vueModel) {
+  function MapComponent(vueModel, geoPosAll) {
 
     let _this = this;
 
     VueModelInitial(vueModel);
 
-    let citiesComponentObj = new citiesComponent(vueModel);
+    ///let citiesComponentObj = new citiesComponent(vueModel);
 
     let mymap = null;
 
-    CopyObjects(vueModel.watch, {
-      mapCitySelector: function (val, oldVal) {
-        _this.setView(citiesComponentObj.GetCityByName(val));
-      }
-    });
+    // CopyObjects(vueModel.watch, {
+    //   mapCitySelector: function (val, oldVal) {
+    //     //_this.setView(citiesComponentObj.GetCityByName(val));
+    //     _this.setView(citiesComponentObj.GetCityByName(val));
+    //   }
+    // });
+
+    vueModel.methods.SelLocation = function(e) {
+      let index = parseInt(e.target.attributes["data-index"].value);
+      Log.trace(locations[index].GetGeoPos())
+
+      _this.setView(locations[index].GetGeoPos());
+    }
 
     vueModel.userInitsCallbacks.push(()=> {
-      mymap = InitMap();
+      mymap = InitMap(geoPosAll);
     });
 
     this.model = vueModel;
 
-    this.setView = function(selObjs) {
+    this.setView = function(geoPos) {
 
-      if(selObjs.length == 0)
-        return;
+      // if(selObjs.length == 0)
+      //   return;
+      //
+      // let obj = selObjs[0];
+      //
+      // //Log.trace(obj);
+      //
+      // if(mymap != null)
+      //   mymap.setView(obj.location, obj.zoom);
 
-      let obj = selObjs[0];
-
-      //Log.trace(obj);
-
-      if(mymap != null)
-        mymap.setView(obj.location, obj.zoom);
+      if(mymap != null) {
+        mymap.setView(geoPos, 12);
+      }
 
     }
   }

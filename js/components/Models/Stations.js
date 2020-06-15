@@ -61,8 +61,28 @@ function Location(country, city, appendix, geopos) {
   this.country = country || '';
   this.city = city  || '';
   this.appendix = appendix  || '';
-  this.url = geopos  || '';
+
+  this.geopos = geopos  || '';
 }
+
+Location.prototype.GetGeoPos = function () {
+  return this.geopos.map(x => x);
+}
+
+Object.defineProperty(Location.prototype, "url", {
+  get() {
+    if(typeof this.geopos == "string") {
+      return this.geopos;
+    }
+
+    let pos = [56.9500885, 24.0319015];
+    if(typeof this.geopos == "object" && this.geopos.length >= 2) {
+      pos = this.geopos;
+    }
+
+    return "https://www.google.ru/maps/place/@" + pos.join(",") + ",9z/";
+  }
+});
 
 Location.CreateDefault = function () {
   return new Location();

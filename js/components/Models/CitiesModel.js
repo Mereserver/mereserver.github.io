@@ -16,7 +16,14 @@ let CitiesModel = (function(){
     };
 
     CitiesModel.prototype.GetLocations = function () {
-        return locations;
+        let r = [];
+
+        for(let l in locations)
+        {
+            r.push(new Location("", l, locations[l], ""));
+        }
+
+        return r;
     }
 
      return CitiesModel;

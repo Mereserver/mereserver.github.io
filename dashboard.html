@@ -191,14 +191,14 @@
 
             </div>
 
-            <h5 class="pl-10px">Station Rating</h5>
+            <p class="pl-10px head5">Station Rating</p>
             <!-- Map  -->
             <div class="row">
 
               <div class="col-4">
 
                     <div class="table-responsive">
-                        <table class="table table-valign-middle text-left table-head-fixed text-nowrap no-border">
+                        <table class="table table-valign-middle text-left table-head-fixed no-border">
                             <thead>
                             <tr>
                                 <th>№</th>
@@ -208,7 +208,7 @@
                             <tbody>
                             <tr v-for="(r, index) in stationsRatings">
                                 <td>{{index + 1}}</td>
-                                <td>{{r.GetLocation.GetString}}</td>
+                                <td><a href="#" @click.click.prevent="SelLocation" :data-index="index">{{r.GetLocation.GetString}}</a></td>
                             </tr>
 <!--                            <tr v-for="(r, index) in mapCities">-->
 <!--                                <td>{{index + 1}}</td>-->

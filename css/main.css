@@ -145,11 +145,13 @@ tbody.no-striped tr:nth-of-type(odd) {
 
 .main-nav-bar ul {
   font-size: 19px;
-  text-shadow: 0px 0px 1px #212529;
+  text-shadow: 0px 0px 1px #21252966;
 }
 
+.head5,
 h5 {
-  text-shadow: 0px 0px 1px #212529;
+  /*text-shadow: 0px 0px 1px #21252966;*/
+  font-weight: bold;
 }
 
 .main-nav-bar ul li {
@@ -895,7 +897,7 @@ button:disabled {
 /*  }*/
 /*}*/
 
-.small-box-mod h3 {font-size: 19px;}
+.small-box-mod h3 {font-size: 15px;}
 
 .small-box-mod p {text-align: center;}
 
@@ -948,6 +950,7 @@ button:disabled {
   height: 45px;
 }
 
+.form-control-text {line-height: 35px;}
 
 
 

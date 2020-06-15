@@ -147,6 +147,8 @@ let DateRangeComponent = function () {
 
     DateRangeComponent.prototype.SetRangeState = function(rangeName){
         let dateRangeComponentObj = this;
+        this.rangeState = rangeName;
+
         //Log.trace(rangeName);
 
         switch (rangeName) {

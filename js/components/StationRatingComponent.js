@@ -18,8 +18,10 @@ let StationRatingComponent = (function () {
 
         VueModelInitial(vueModel);
 
-        let compObjFactory = MapComponent();
-        let mapObj = new compObjFactory(vueModel);
+        let stationsRatingObj = new StationsRating();
+
+        let compObjFactory = MapComponent(stationsRatingObj);
+        let mapObj = new compObjFactory(vueModel, [56.9500885,24.0319015, 10]);
 
         let countriesComponentObj = new countriesComponent(vueModel);
         this.countriesComponentObj = countriesComponentObj;
@@ -30,8 +32,6 @@ let StationRatingComponent = (function () {
         countriesComponentObj.Callback = function (country, city) {
             _this.Filter();
         }
-
-        let stationsRatingObj = new StationsRating();
 
         this.GetRecords = function () {
             return stationsRatingObj.GetObjects();
@@ -55,6 +55,8 @@ let StationRatingComponent = (function () {
         vueModel.userInitsCallbacks.push(()=> {
             _this.Filter();
         });
+
+
     }
 
     StationRatingComponent.prototype.Filter = function()
@@ -67,7 +69,7 @@ let StationRatingComponent = (function () {
         let country = countriesComponentObj.GetCountry();
         let city = countriesComponentObj.GetCity();
 
-        if(this.rangeNameDefault == RangeStates.All)
+        if(dateRangeComponentObj.rangeState == RangeStates.All)
         {
             this.SetRecords(stationsRating.GetObjectsByCountryCity(country, city));
             return;
