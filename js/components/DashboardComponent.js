@@ -84,7 +84,7 @@ let DashboardComponent = (function () {
 
         let mvLoading = new LoadingComponent(vueModel);
 
-        let mapObj = new Map(vueModel);
+        //let mapObj = new Map(vueModel);
 
         let headerInfo = new HeaderInfo(vueModel);
 
@@ -93,7 +93,7 @@ let DashboardComponent = (function () {
         this.countriesComponentObj = countriesComponentObj;
 
         countriesComponentObj.Callback = function (country, city) {
-            _this.Filter();
+           // _this.Filter();
         }
 
         CopyObjects(vueModel, {
@@ -107,7 +107,7 @@ let DashboardComponent = (function () {
         vueModel.userInitsCallbacks.push(()=> {
             Charts.DrawMoneys(_this.balance.GetСostsPerMonth());
 
-            _this.Filter();
+            //_this.Filter();
         });
 
         let stationsModel = new StationsAggregator();
@@ -131,14 +131,17 @@ let DashboardComponent = (function () {
         }
 
         CopyObjects(vueModel.data, {
-            stationsNumber: _this.GetStations().length,
-            scootersChargingNumber: 0,
+            stationsTotalNumber: 351,//_this.GetStations().length,
+            stationsNumber: 350,//_this.GetStations().length,
             scooters : [],
             stations : [],
             balance : _this.balance.GetCurrentBalance(),
             balanceCurrency : _this.balance.GetBalanceCurrency(),
             power: _this.powers.GetPowerPerMonth(),
-            slotsNumber: 0
+            slotsNumber: 3500,
+            slotsAvailableNumber : 1000,
+            scootersNumber : 150,
+            scootersChargingNumber: 100
         });
 
 
@@ -172,7 +175,9 @@ let DashboardComponent = (function () {
 
         data.stationsNumber = stations.length;
 
-        data.slotsNumber = stations.map(s => s.slots.filter(s => s.status == Slot.Satatus.Available)).reduce( (a, b) => a.concat(b)).length;
+        data.slotsNumber = stations.map(s => s.slots).reduce( (a, b) => a.concat(b)).length;
+
+        data.slotsAvailableNumber = stations.map(s => s.slots.filter(s => s.status == Slot.Satatus.Available)).reduce( (a, b) => a.concat(b)).length;
     }
 
     DashboardComponent.prototype.SetScooters = function(scooters) {

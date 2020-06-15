@@ -2,6 +2,8 @@ let app;
 
 window.onload = function() {
 
+  let RangeStates = DateRangePresetsModel.States;
+
   let vueModel = {
     el: "#app",
     computed: {},
@@ -11,6 +13,8 @@ window.onload = function() {
   };
 
   let dashboardObj = new DashboardComponent(vueModel);
+
+  let stationRatingComponent = new StationRatingComponent(vueModel, RangeStates.All);
 
 
   app = new Vue(vueModel);

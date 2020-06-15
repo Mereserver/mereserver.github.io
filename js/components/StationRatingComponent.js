@@ -7,10 +7,12 @@ let StationRatingComponent = (function () {
 
     let RangeStates = DateRangePresetsModel.States;
 
-    const rangeNameDefault = RangeStates.ThisMonth;
-
-    function StationRatingComponent(vueModel) {
+    function StationRatingComponent(vueModel, rangeNameDefault) {
         let _this = this;
+
+        rangeNameDefault = rangeNameDefault || RangeStates.ThisMonth;
+
+        this.rangeNameDefault = rangeNameDefault;
 
         this.model = vueModel;
 
@@ -64,6 +66,12 @@ let StationRatingComponent = (function () {
 
         let country = countriesComponentObj.GetCountry();
         let city = countriesComponentObj.GetCity();
+
+        if(this.rangeNameDefault == RangeStates.All)
+        {
+            this.SetRecords(stationsRating.GetObjectsByCountryCity(country, city));
+            return;
+        }
 
         let start = dateRangeComponentObj.GetDateStart();
         let end = dateRangeComponentObj.GetDateEnd();

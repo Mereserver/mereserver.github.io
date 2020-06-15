@@ -1,6 +1,6 @@
 let DateRangePresetsModel = (function(){
     const states = {
-        LastMonth: "Last month", ThisMonth : "This month", LastWeek: "Last week", ThisWeek: "This week"
+        LastMonth: "Last month", ThisMonth : "This month", LastWeek: "Last week", ThisWeek: "This week", All : "All"
     }
 
     function DateRangePresetsModel() {

@@ -6,6 +6,22 @@ html {
   height: 100%!important;
 }
 
+.pl-30px {
+  padding-left: 30px!important;
+}
+
+.pl-15px {
+  padding-left: 15px!important;
+}
+
+.pl-10px {
+  padding-left: 10px!important;
+}
+
+.pt-10px {
+  padding-top: 10px!important;
+}
+
 select.form-control {
   border-radius: 0;
 }
@@ -72,7 +88,7 @@ tbody.no-striped tr:nth-of-type(odd) {
 }
 
 #map-container {
-  height: 500px;
+  height: 450px;
 }
 
 /*#city-map-nav {*/
@@ -129,6 +145,10 @@ tbody.no-striped tr:nth-of-type(odd) {
 
 .main-nav-bar ul {
   font-size: 19px;
+  text-shadow: 0px 0px 1px #212529;
+}
+
+h5 {
   text-shadow: 0px 0px 1px #212529;
 }
 
@@ -869,11 +889,11 @@ button:disabled {
   white-space: nowrap;
 }
 
-@media (min-width: 1070px) {
-  .small-box-mod {
-    max-width: 230px;
-  }
-}
+/*@media (min-width: 1070px) {*/
+/*  .small-box-mod {*/
+/*    max-width: 230px;*/
+/*  }*/
+/*}*/
 
 .small-box-mod h3 {font-size: 19px;}
 
@@ -927,6 +947,7 @@ button:disabled {
 .pads-controls table tr {
   height: 45px;
 }
+
 
 
 
