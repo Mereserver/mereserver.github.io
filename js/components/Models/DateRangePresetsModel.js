@@ -10,6 +10,7 @@ let DateRangePresetsModel = (function(){
         let result = [];
         for(let i in states)
         {
+            if(i != states.All)
             result.push(states[i]);
         }
         return result;

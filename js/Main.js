@@ -107,7 +107,7 @@ window.onload = function () {
 
   if(document.getElementById('station-rating-page') != null) {
     let RangeStates = DateRangePresetsModel.States;
-    let stationRatingComponent = new StationRatingComponent(vueModel, RangeStates.All);
+    let stationRatingComponent = new StationRatingComponent(vueModel, RangeStates.ThisMonth);
   }
 
   let headerInfo = new HeaderInfo(vueModel);

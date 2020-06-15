@@ -3,17 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="8f2d33c1-f34b-4b26-8473-2d464abc3c4a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/billing.html" beforeDir="false" afterPath="$PROJECT_DIR$/billing.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/DateRangeComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/DateRangeComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/MapComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/MapComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/Models/CitiesModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/CitiesModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/Models/Stations.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/Stations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/Models/StationsRating.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/StationsRating.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/StationRatingComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/StationRatingComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/CountriesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/CountriesComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/Models/DateRangePresetsModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/DateRangePresetsModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/Models/Reports.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/Reports.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/StationsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/StationsComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/station-rating-usage.html" beforeDir="false" afterPath="$PROJECT_DIR$/station-rating-usage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stations-admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/stations-admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stations.html" beforeDir="false" afterPath="$PROJECT_DIR$/stations.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +121,7 @@
       <workItem from="1585593480435" duration="103169000" />
       <workItem from="1585892683461" duration="27390000" />
       <workItem from="1586939063597" duration="41673000" />
-      <workItem from="1590445135566" duration="502524000" />
+      <workItem from="1590445135566" duration="507939000" />
     </task>
     <servers />
   </component>
@@ -183,10 +182,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="642" y="88" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591011635941" />
-    <state x="532" y="258" key="run.anything.popup" timestamp="1591784003139">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state x="532" y="231" key="run.anything.popup" timestamp="1592236743112">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="532" y="231" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591189530339" />
+    <state x="532" y="231" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592236743112" />
     <state x="532" y="258" key="run.anything.popup/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1591784003139" />
     <state x="539" y="5" key="search.everywhere.popup" timestamp="1585751143380">
       <screen x="0" y="0" width="1920" height="1040" />

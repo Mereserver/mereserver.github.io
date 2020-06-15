@@ -952,6 +952,9 @@ button:disabled {
 
 .form-control-text {line-height: 35px;}
 
+.font-size-14px {
+  font-size: 14px!important;
+}
 
 
 

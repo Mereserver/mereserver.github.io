@@ -37,7 +37,7 @@ let StationsComponent = (function () {
 
           });
         });
-    }, 500);
+    }, 10);
   };
 
   function StationsComponent(vueModel) {
@@ -115,12 +115,15 @@ let StationsComponent = (function () {
           else {
             ModalWindows.HideStationModal();
           }
+
+          _this.Filter();
         } catch (e) {
           ModalWindows.ShowError("OnStationsAggregatorSubmit: " + e);
         }
       },
       OnDeleteStation() {
         sAgg.DeleteModel();
+        _this.Filter();
         Init();
       },
       OnStationsAggregatorOnCheckClick(e) {
@@ -169,7 +172,7 @@ let StationsComponent = (function () {
       for (let s in stations) {
         if (typeof stations[s].slots != "undefined") {
 
-          let newSlots = stations[s].slots.filter(s => s.status == inFilter || s.info == inFilter);
+          let newSlots = stations[s].slots.filter(s => s.status == inFilter || s.infoString == inFilter);
 
           if (newSlots.length > 0) {
 

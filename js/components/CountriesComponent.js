@@ -1,6 +1,9 @@
 let CountriesComponent = function () {
     let countries = new CountriesModel();
 
+    let defaultCountry = "Latvia";
+    let defaultCity = "Riga";
+
     function CountriesComponent(vueModel) {
         let $this = this;
 
@@ -13,13 +16,13 @@ let CountriesComponent = function () {
 
         CopyObjects(vueModel.data, {
             countries: countriesNames,
-            countriesSelector: "All",
+            countriesSelector: defaultCountry,
             cities: cities,
-            citiesSelector: "All"
+            citiesSelector: defaultCity
         });
 
-        let selectedCountry = "All";
-        let selectedCity = "All";
+        let selectedCountry = defaultCountry;
+        let selectedCity = defaultCity;
 
         CopyObjects(vueModel.watch, {
             countriesSelector: function (country, oldVal) {

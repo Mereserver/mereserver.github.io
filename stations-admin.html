@@ -199,7 +199,7 @@
                   </tr>
                   </thead>
                   <tbody>
-                  <tr v-for="(station, index) in stations">
+                  <tr v-for="(station, index) in stations" :key="index">
                     <td>
                       <div class="icheck-primary d-inline">
                         <input :data-index="index" type="checkbox" :id="'user-pr-'+(index+1)" v-model="station.selected" v-on:click="OnStationsAggregatorOnCheckClick($event)"/>
