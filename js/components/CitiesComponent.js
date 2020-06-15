@@ -1,4 +1,8 @@
-let CitiesComponent = function (citiesModel) {
+let CitiesComponent = function (citiesModel, citiesNames, citiesSelectorName) {
+
+    citiesNames = citiesNames || "cities";
+    citiesSelectorName = citiesSelectorName || "citiesSelector";
+
     function CitiesComponent(vueModel) {
 
         let cityArr = [];
@@ -12,10 +16,8 @@ let CitiesComponent = function (citiesModel) {
             cityArr.push(new City(key, locations[key]))
         }
 
-        CopyObjects(vueModel.data, {
-            cities: cityArr,
-            citiesSelector: "All"
-        });
+        vueModel.data[citiesNames] = cityArr;
+        vueModel.data[citiesSelectorName] = "All";
 
         this.model = vueModel;
         this.cityArr = cityArr;

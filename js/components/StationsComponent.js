@@ -1,23 +1,79 @@
 
 let StationsComponent = (function () {
 
+  let $ = jQuery;
+
   let statusComponent = StatusComponent(new StationStatusModel());
   let countriesComponent = CountriesComponent();
 
   let StateType = Aggregator.StateType;
 
+  function Init() {
+    setTimeout(() => {
+
+        $("input[data-bootstrap-switch]").each(function() {
+
+          //let s = $(this).prop('checked');
+
+          $(this).bootstrapToggle('destroy');
+          $(this).off('change');
+
+          $(this).bootstrapToggle({
+            size: 'mini',
+            onstyle: 'success',
+            offstyle: 'danger',
+            height: 10
+          })
+
+          $(this).data('disabled', false);
+
+          $(this).on('change', function (e) {
+
+            if (!$(this).data('disabled')) {
+              $(this).data('disabled', true);
+              $(this).click();
+              $(this).data('disabled', false);
+            }
+
+          });
+        });
+    }, 500);
+  };
+
   function StationsComponent(vueModel) {
     let _this = this;
-    let sAgg = this.stationsAggregator = new Aggregator(new StationsAggregator());
+
+    let stationsModel = new StationsAggregator();
+    let sAgg = new Aggregator(stationsModel);
+
+    let padsComponent = new PadsComponent(vueModel);
+
+    padsComponent.CallBack = function() {
+      Log.trace("CallBack");
+    }
 
     this.GetStations = function () {
-      return sAgg.GetObjects();
+      return stationsModel.GetObjects();
+    }
+
+    this.GetStationsModel = function () {
+      return stationsModel;
+    }
+
+    this.LoadPads = function() {
+      padsComponent.LoadPads(sAgg.GetDefaultModel().slots);
+    }
+
+    this.SavePads = function() {
+      sAgg.GetDefaultModel().slots = padsComponent.GetPads();
+      Init();
     }
 
     VueModelInitial(vueModel);
 
     let countriesComponentObj = new countriesComponent(vueModel);
     let statusComponentObj = new statusComponent(vueModel);
+
 
     this.countriesComponentObj = countriesComponentObj;
     this.statusComponentObj = statusComponentObj;
@@ -32,10 +88,13 @@ let StationsComponent = (function () {
     CopyObjects(vueModel.methods, {
       OnAddStation: function () {
         sAgg.AddModelEvent();
+        padsComponent.ResetPads();
       },
       OnEditStation: function () {
         try {
           sAgg.EditModelEvent();
+          _this.LoadPads();
+
           ModalWindows.ShowStationModal();
         } catch (e) {
           ModalWindows.ShowError(e);
@@ -43,14 +102,18 @@ let StationsComponent = (function () {
       },
       OnStationsAggregatorSubmit() {
         try {
-          let mode = sAgg.Mode;
-          if (!sAgg.Submit())
-            ModalWindows.HideStationModal();
+          _this.SavePads();
 
-          if (mode == StateType.Add) {
-            ModalWindows.ShowSuccess("Station added");
-          } else if (mode == StateType.Edit) {
-            ModalWindows.ShowSuccess("Station updated");
+          let mode = sAgg.Mode;
+          if (sAgg.Submit()) {
+            if (mode == StateType.Add) {
+              ModalWindows.ShowSuccess("Station added");
+            } else if (mode == StateType.Edit) {
+              ModalWindows.ShowSuccess("Station updated");
+            }
+          }
+          else {
+            ModalWindows.HideStationModal();
           }
         } catch (e) {
           ModalWindows.ShowError("OnStationsAggregatorSubmit: " + e);
@@ -58,6 +121,7 @@ let StationsComponent = (function () {
       },
       OnDeleteStation() {
         sAgg.DeleteModel();
+        Init();
       },
       OnStationsAggregatorOnCheckClick(e) {
         sAgg.OnCheckClick(e);
@@ -73,6 +137,10 @@ let StationsComponent = (function () {
       _this.Filter();
     }
 
+    vueModel.userInitsCallbacks.push(() => {
+      _this.Filter();
+    });
+
     this.model = vueModel;
   }
 
@@ -87,18 +155,12 @@ let StationsComponent = (function () {
 
     let countriesComponentObj = this.countriesComponentObj;
 
-    let stations = this.GetStations();
+    let stationsModel = this.GetStationsModel();
 
     let country = countriesComponentObj.GetCountry();
     let city = countriesComponentObj.GetCity();
 
-    if(country != "All") {
-      stations = stations.filter(x => x.location.country == country);
-    }
-
-    if(city != "All") {
-      stations = stations.filter(x => x.location.city == city);
-    }
+    let stations = stationsModel.GetObjectsByCountryCity(country, city);
 
     if(inFilter != "All") {
 
@@ -134,6 +196,8 @@ let StationsComponent = (function () {
     this.model.data.stations = stations;
 
     this.CalcStationsBrief(stations, this.model.data)
+
+    Init();
   }
 
   StationsComponent.prototype.CalcStationsBrief = function(stations, data) {

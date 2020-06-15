@@ -1,9 +1,17 @@
 body {
-  font-family: Courier New;
+  font-family: "Courier New";
 }
 body,
 html {
   height: 100%!important;
+}
+
+select.form-control {
+  border-radius: 0;
+}
+
+select[disabled] {
+  background-color: #e3e3e3!important;
 }
 
 td.border-size-2,
@@ -121,7 +129,7 @@ tbody.no-striped tr:nth-of-type(odd) {
 
 .main-nav-bar ul {
   font-size: 19px;
-  font-weight: bold;
+  text-shadow: 0px 0px 1px #212529;
 }
 
 .main-nav-bar ul li {
@@ -251,7 +259,9 @@ a {
 .filter-combobox label,
 .filter-combobox select {
   padding: 0;
-  height: 40px;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 5px;
 }
 
 .filter-combobox label {
@@ -283,7 +293,7 @@ a {
 .filter-controls-group.filter-input:last-child,
 .filter-controls-group.filter-combobox:last-child,
 .filter-controls-group .filter-combobox:last-child {
-  padding-right: 0;
+  padding-right: 8px;
 }
 
 .filter-input input,
@@ -849,7 +859,74 @@ button:disabled {
   border: none!important;
 }
 
+.small-box-mod {
+  background: #e9fff7;
+}
 
+.small-box-mod {
+  font-weight: bold;
+  padding: 16px 16px 28px 16px;
+  white-space: nowrap;
+}
+
+@media (min-width: 1070px) {
+  .small-box-mod {
+    max-width: 230px;
+  }
+}
+
+.small-box-mod h3 {font-size: 19px;}
+
+.small-box-mod p {text-align: center;}
+
+.small-box-mod .value {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.small-box-mod .bottom {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.content-align-2 {
+  margin: 0 234px!important;
+}
+
+.toggle-handle {
+  height: 20px;
+  width: 20px;
+  padding: 0;
+  border-radius: 5px;
+}
+
+.toggle.btn-xs {
+  border-radius: 13px;
+}
+
+.toggle-group .btn-success {
+  background: #38c992;
+}
+
+.toggle-group .btn-danger {
+  background: #fd6c53!important;
+}
+.modal-backdrop {
+  z-index: 999999999;
+}
+
+.modal {
+  z-index: 999999999999;
+}
+
+.pads-controls input[type="text"] {
+  height: 29px;
+  line-height: 29px;
+}
+
+.pads-controls table tr {
+  height: 45px;
+}
 
 
 

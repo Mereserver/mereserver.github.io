@@ -1,5 +1,5 @@
 let MapComponent = function () {
-  let citiesComponent = CitiesComponent(new CitiesModel());
+  let citiesComponent = CitiesComponent(new CitiesModel(), "mapCities", "mapCitySelector");
   let locations = citiesComponent.GetLocations();
 
   function InitMap() {
@@ -59,7 +59,7 @@ let MapComponent = function () {
     let mymap = null;
 
     CopyObjects(vueModel.watch, {
-      citiesSelector: function (val, oldVal) {
+      mapCitySelector: function (val, oldVal) {
         _this.setView(citiesComponentObj.GetCityByName(val));
       }
     });

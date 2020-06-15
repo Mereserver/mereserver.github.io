@@ -18,8 +18,10 @@ let HeaderInfo = (function () {
         CopyObjects(vueModel.data, {
             companyName: "MEREDOT",
             userName: model.userName,
+            relationshipManagerLabel: "Relationship Manager",
             relationshipManager: model.relationshipManager,
-            manager: model.manager,
+            managerLabel: "Support Manager",
+            manager: model.manager
         });
     }
 

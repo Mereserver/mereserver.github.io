@@ -37,125 +37,149 @@
 <!-- wrapper -->
 <div class="wrapper" id="app">
 
-  <div class="top-container">
-    <div class="row justify-content-end">
-      <div class="top-info col-auto" v-cloak>
-        <p>{{companyName}}: {{userName}}, <a href="login.html" title="Exit" class="log-out">log out</a></p>
-        <p>Relationship Manager: {{relationshipManager.name}} ({{relationshipManager.email}})</p>
-        <span>Manager: {{manager.name}} ({{manager.email}})</span>
+  <div id="dashboard-page">
+
+    <div class="top-container">
+      <div class="row justify-content-end">
+        <div class="top-info col-auto" v-cloak>
+          <p>{{companyName}}: {{userName}}, <a href="login.html" title="Exit" class="log-out">log out</a></p>
+          <p>Relationship Manager: {{relationshipManager.name}} ({{relationshipManager.email}})</p>
+          <span>Manager: {{manager.name}} ({{manager.email}})</span>
+        </div>
       </div>
+      <nav class="navbar navbar-white navbar-light top-nav-bar col-auto">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="index.html" role="button"><i class="fas fa-long-arrow-alt-left"></i><span>Dashboard</span></a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="navbar navbar-white navbar-light top-nav-bar col-auto">
-      <!-- Left navbar links -->
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a href="index.html" role="button"><i class="fas fa-long-arrow-alt-left"></i><span>Dashboard</span></a>
-        </li>
-      </ul>
-    </nav>
-  </div>
 
-  <div class="spacer"></div>
+    <div class="spacer"></div>
 
-  <!-- Main content -->
-  <div class="content" id="dashboard-page">
-    <div class="container-fluid">
-      <div class="row dashboard-widgets">
-        <div class="col-md-3 col-sm-6 col-12">
-          <!-- small card -->
-          <div class="small-box bg-success">
-            <div class="inner">
-              <h3>1678 kWh</h3>
-              <p>Total power per Month</p>
-            </div>
-            <div class="icon">
-              <i class="fas fa-battery-three-quarters"></i>
-            </div>
-          </div>
-        </div>
+    <!-- Main content -->
+    <div class="content-align-2 pb-4" v-cloak>
 
-        <div class="col-md-3 col-sm-6 col-12">
-          <!-- small card -->
-          <div class="small-box bg-success">
-            <div class="inner">
-              <h3>20</h3>
-              <p>Scooters on charge</p>
-            </div>
-            <div class="icon">
-              <i class="fas fa-biking"></i>
-            </div>
-          </div>
-        </div>
+      <div class="row justify-content-between">
 
-        <div class="col-md-3 col-sm-6 col-12">
-          <!-- small card -->
-          <div class="small-box bg-success">
-            <div class="inner">
-              <h3>100<sup style="font-size: 20px">$</sup><span style="font-size: 16px">till 24.05.2020</span></h3>
-              <p>Balance and prediction</p>
+        <div class="col-auto head-controls">
+          <div class="row filter-controls-group">
+            <div class="filter-combobox form-inline col-auto">
+              <div class="row">
+                <label class="col-auto" for="country-filter">Country:</label>
+                <select class="form-control col-auto" v-model="countriesSelector" id="country-filter">
+                  <option v-for="country in countries">{{ country }}</option>
+                </select>
+              </div>
             </div>
-            <div class="icon">
-              <i class="fas fa-wallet"></i>
+            <div class="filter-combobox form-inline col-auto">
+              <div class="row">
+                <label class="col-auto" for="city-filter">City:</label>
+                <select class="form-control col-auto" v-model="citiesSelector" id="city-filter">
+                  <option v-for="city in cities">{{ city }}</option>
+                </select>
+              </div>
             </div>
-
-          </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6 col-12">
-          <!-- small card -->
-          <div class="small-box bg-danger">
-            <div class="inner">
-              <h3>12</h3>
-              <p><a href="#" class="small-box-footer text-light">Notification errors</a></p>
-            </div>
-            <div class="icon">
-              <i class="fas fa-exclamation"></i>
-            </div>
-            </a>
           </div>
         </div>
 
       </div>
-      <div class="row">
-        <div class="col-md-6">
 
-          <!-- Line chart -->
-          <div class="card card-outline no-shadow">
-            <div class="card-header no-border">
-              <h3 class="card-title">
-                <i class="far fa-chart-bar"></i>
-                Power / Time 24h
-              </h3>
+      <div class="pt-4">
 
-            </div>
-            <div class="card-body">
-              <div id="power-chart"></div>
-            </div>
-            <!-- /.card-body-->
-          </div>
-          <!-- /.card -->
-        </div>
+        <div class="row dashboard-widgets justify-content-center pb-2">
 
-        <div class="col-md-6">
-          <!-- Bar chart -->
-          <div class="card card-outline no-shadow">
-            <div class="card-header no-border">
-              <h3 class="card-title">
-                <i class="far fa-chart-bar"></i>
-                $ / Months
-              </h3>
-
+          <div class="col-md mb-2">
+            <!-- small card -->
+            <div class="small-box-mod">
+              <div class="inner">
+                <h3>Slots</h3>
+                <p class="value">{{slotsNumber}}</p>
+                <p class="bottom">AVAILABLE</p>
+              </div>
             </div>
-            <div class="card-body">
-              <div id="moneys-chart"></div>
-            </div>
-            <!-- /.card-body-->
           </div>
 
+          <div class="col-md mb-2">
+            <!-- small card -->
+            <div class="small-box-mod">
+              <div class="inner">
+                <h3>Scooters</h3>
+                <p class="value">{{scootersChargingNumber}}</p>
+                <p class="bottom">ON CHARGE</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md mb-2">
+            <!-- small card -->
+            <div class="small-box-mod">
+              <div class="inner">
+                <h3>Balance</h3>
+                <p class="value">{{balance}} {{balanceCurrency}}</p>
+                <p class="bottom">END 24/06/20</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md mb-2">
+            <!-- small card -->
+            <div class="small-box-mod">
+              <div class="inner">
+                <h3>Energy consumption</h3>
+                <p class="value">{{power}} kWh</p>
+                <p class="bottom">PER MONTH</p>
+              </div>
+            </div>
+          </div>
+
         </div>
+
+        <!--  Charts  -->
+        <div class="row">
+          <div class="col-md-6">
+
+            <!-- Line chart -->
+            <div class="card card-outline no-shadow">
+              <div class="card-header no-border">
+                <h3 class="card-title">
+                  <i class="far fa-chart-bar"></i>
+                  Power / Time 24h
+                </h3>
+
+              </div>
+              <div class="card-body">
+                <div id="power-chart"></div>
+              </div>
+              <!-- /.card-body-->
+            </div>
+            <!-- /.card -->
+          </div>
+
+          <div class="col-md-6">
+            <!-- Bar chart -->
+            <div class="card card-outline no-shadow">
+              <div class="card-header no-border">
+                <h3 class="card-title">
+                  <i class="far fa-chart-bar"></i>
+                  Monthly Expenses
+                </h3>
+
+              </div>
+              <div class="card-body">
+                <div id="moneys-chart"></div>
+              </div>
+              <!-- /.card-body-->
+            </div>
+
+          </div>
+        </div>
+
       </div>
 
-      <!-- Map -->
+      <!-- Map  -->
       <div class="map-wrapper" style="display: none;">
         <div id="map-container"></div>
 
@@ -169,8 +193,8 @@
           <div v-else v-cloak class="row justify-content-center">
             <div class="city-selector-body">
               <label>City:</label>
-              <select class="form-control" id="city-map-nav" v-model="citiesSelector" >
-                <option v-for="city in cities">{{ city.name }}</option>
+              <select class="form-control" id="city-map-nav" v-model="mapCitySelector" >
+                <option v-for="city in mapCities">{{ city.name }}</option>
               </select>
             </div>
           </div>
@@ -234,7 +258,16 @@
 <script src="js/components/MapComponent.js"></script>
 <script src="js/components/HeaderInfo.js"></script>
 
-<script src="js/Graphics.js"></script>
+<script src="js/components/Models/CountriesModel.js"></script>
+<script src="js/components/CountriesComponent.js"></script>
+
+<script src="js/components/Models/Stations.js"></script>
+<script src="js/components/Models/Scooters.js"></script>
+<script src="js/components/Models/Powers.js"></script>
+<script src="js/components/Models/Balance.js"></script>
+
+<script src="js/components/DashboardComponent.js"></script>
+<script src="js/MainDashboard.js"></script>
 
 </body>
 </html>
