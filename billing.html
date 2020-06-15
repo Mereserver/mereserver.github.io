@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bbootstrap 4 -->
   <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="plugins/select2/css/select2.min.css">
+
   <!-- SweetAlert2 -->
   <link rel="stylesheet" href="plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!-- Toastr -->
@@ -100,7 +103,7 @@
                 <div class="filter-combobox form-inline col-auto">
                   <div class="row">
                     <label class="col-auto" for="month-filter">Month:</label>
-                    <select class="form-control col-auto" v-model="monthSelector" id="month-filter">
+                    <select class="form-control col-auto select2" v-model="monthSelector" id="month-filter">
                       <option v-for="month in months">{{ month }}</option>
                     </select>
                   </div>
@@ -108,7 +111,7 @@
                 <div class="filter-combobox form-inline col-auto">
                   <div class="row">
                     <label class="col-auto" for="year-filter">Year:</label>
-                    <select class="form-control col-auto" v-model="yearSelector" id="year-filter">
+                    <select class="form-control col-auto select2" v-model="yearSelector" id="year-filter">
                       <option v-for="year in years">{{ year }}</option>
                     </select>
                   </div>
@@ -141,7 +144,7 @@
                 <div class="filter-combobox form-inline col-auto">
                   <div class="row">
                     <label class="col-auto" for="country-filter">Country:</label>
-                    <select class="form-control col-auto" v-model="countriesSelector" id="country-filter">
+                    <select class="form-control col-auto select2" v-model="countriesSelector" id="country-filter">
                       <option v-for="country in countries">{{ country }}</option>
                     </select>
                   </div>
@@ -149,7 +152,7 @@
                 <div class="filter-combobox form-inline col-auto">
                   <div class="row">
                     <label class="col-auto" for="city-filter">City:</label>
-                    <select class="form-control col-auto" v-model="citiesSelector" id="city-filter">
+                    <select class="form-control col-auto select2" v-model="citiesSelector" id="city-filter">
                       <option v-for="city in cities">{{ city }}</option>
                     </select>
                   </div>
@@ -242,6 +245,9 @@
 <script src="plugins/daterangepicker/daterangepicker.js"></script>
 <!-- Tempusdominus Bootstrap 4 -->
 <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Select2 -->
+<script src="plugins/select2/js/select2.full.min.js"></script>
+
 <!-- Summernote -->
 <script src="plugins/summernote/summernote-bs4.min.js"></script>
 <!-- overlayScrollbars -->

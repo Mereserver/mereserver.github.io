@@ -31,7 +31,7 @@ let PowerCostComponent = (function () {
             reports: _this.GetReportRecords()
         });
 
-        let countriesComponentObj = new countriesComponent(vueModel);
+        let countriesComponentObj = new countriesComponent(vueModel, "All", "Riga");
         let dateRangeComponentObj = new dateRangeComponent(vueModel, rangeNameDefault);
 
         countriesComponentObj.Callback = function (country, city) {

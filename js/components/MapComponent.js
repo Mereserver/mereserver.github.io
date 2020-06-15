@@ -5,6 +5,7 @@ let MapComponent = function (model) {
   let locations = model.GetLocations();
 
   const zoom = 10;
+  const iconsDir = "css/images/";
 
   function InitMap(all) {
 
@@ -19,16 +20,19 @@ let MapComponent = function (model) {
 
     if (jQuery('#' + mapSelector).length > 0) {
 
-      if(typeof all == "undefined" || all.length < 2) {
-        all = [56.9500885,24.0319015, zoom];
-      }
+      // if(typeof all == "undefined" || all.length < 2) {
+      //   all = [56.9500885,24.0319015, zoom];
+      // }
+      //
+      // if(all.length < 3)
+      // {
+      //   all[2] = zoom;
+      // }
 
-      if(all.length < 3)
-      {
-        all[2] = zoom;
-      }
-
-      mymap = L.map(mapSelector).setView(all, all[2]);
+      mymap = L.map(mapSelector, {
+        center: [56.9500885,24.0319015],
+        zoom: zoom
+      });
 
       L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
         maxZoom: 18,
@@ -40,9 +44,38 @@ let MapComponent = function (model) {
         zoomOffset: -1
       }).addTo(mymap);
 
+      // Creating a custom icon
+      const rate = 1.37;
+      const width = 40;
+
+      let icons = [
+        L.icon({
+          iconUrl: iconsDir + 'marker-icon.png',
+          iconSize: [width, width * rate]
+        }),
+        L.icon({
+          iconUrl: iconsDir + 'marker-icon_1.png',
+          iconSize: [width, width * rate]
+        }),
+        L.icon({
+          iconUrl: iconsDir + 'marker-icon_2.png',
+          iconSize: [width, width * rate]
+        }),
+        L.icon({
+          iconUrl: iconsDir + 'marker-icon_3.png',
+          iconSize: [width, width * rate]
+        }),
+        L.icon({
+          iconUrl: iconsDir + 'marker-icon_4.png',
+          iconSize: [width, width * rate]
+        })
+      ];
+
       locations.forEach( l => {
         if (l != 'All') {
-          L.marker(l.GetGeoPos()).bindPopup(l.GetString).addTo(mymap);
+          L.marker(l.GetGeoPos(), {
+            icon : icons[Math.round(Math.random() * 4)]
+          }).bindPopup(l.GetString).addTo(mymap);
           //Log.trace(l.GetGeoPos());
         }
       });

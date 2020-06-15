@@ -28,7 +28,14 @@ let StationsRating = (function () {
             new StationsRatingModel(new Location("Latvia", "Riga", "Daugavgrīva", [57.012477,24.036142]),7567, "13.06.2020"),
             new StationsRatingModel(new Location("Latvia", "Riga", "Mangaļsala", [57.067269, 24.073939]),7567, "12.05.2020"),
             new StationsRatingModel(new Location("Latvia", "Riga", "Piedzīvojumu parks", [57.012841, 24.144681]),7567, "11.06.2020"),
-            new StationsRatingModel(new Location("Latvia", "Riga", "Ķekava Parish", [56.886828, 24.132542]),7567, "10.06.2020")
+            new StationsRatingModel(new Location("Latvia", "Riga", "Ķekava Parish", [56.886828, 24.132542]),7567, "10.06.2020"),
+            new StationsRatingModel(new Location("Latvia", "Riga", "Сигулда, Siguldas pilsēta", [57.1414,24.8539373]),7567, "10.06.2020"),
+            new StationsRatingModel(new Location("Latvia", "Riga", "Tomes pagasts", [56.7464864,24.4994616]),7567, "10.06.2020"),
+            new StationsRatingModel(new Location("Latvia", "Riga", "Sērenes pagasts", [56.5709422,25.0095623]),7567, "10.06.2020"),
+            new StationsRatingModel(new Location("Latvia", "Riga", "Auru pagasts", [56.5849567,23.0957571]),7567, "10.06.2020"),
+            new StationsRatingModel(new Location("Latvia", "Riga", "Kuldīgas novads", [56.9359606,21.6907556]),7567, "10.06.2020"),
+            new StationsRatingModel(new Location("Latvia", "Riga", "Kaives pagasts", [57.0371482,25.4486448]),7567, "10.06.2020"),
+            new StationsRatingModel(new Location("Latvia", "Riga", "Ropažu novads", [56.9782438,24.4534237]),7567, "10.06.2020")
             // new StationsRatingModel(new Location("Latvia", "Valmiera", "Elinos 34-6", "https://www.google.ru/maps/place/@56.8509021,24.1430431,9z/"),75171, "10.04.2020"),
             // new StationsRatingModel(new Location("Estonia", "Tallin", "Elinos 34-8", "https://www.google.ru/maps/place/@59.369593,24.739754,9z/"),75173, "02.06.2020"),
             // new StationsRatingModel(new Location("Finland", "Helsinki", "Elinos 33-8", "https://www.google.ru/maps/place/@60.23163,24.920331,9z/"),75173, "01.06.2020"),

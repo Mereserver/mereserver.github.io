@@ -56,6 +56,12 @@ function VueModelInitial(vueModel) {
 
   if (typeof vueModel.userInitsCallbacks == "undefined")
     vueModel.userInitsCallbacks = {};
+
+  if (typeof vueModel.AddInitCallback == "undefined") {
+    vueModel.AddInitCallback = function (fn) {
+      vueModel.userInitsCallbacks.push(fn);
+    }
+  }
 }
 
 let VueExts = {

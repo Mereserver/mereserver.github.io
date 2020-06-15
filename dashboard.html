@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Tempusdominus Bbootstrap 4 -->
     <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="plugins/select2/css/select2.min.css">
+
     <!-- iCheck -->
     <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- JQVMap -->
@@ -70,7 +73,7 @@
                         <div class="filter-combobox form-inline col-auto">
                             <div class="row">
                                 <label class="col-auto" for="country-filter">Country:</label>
-                                <select class="form-control col-auto" v-model="countriesSelector" id="country-filter">
+                                <select class="form-control col-auto select2" v-model="countriesSelector" id="country-filter">
                                     <option v-for="country in countries">{{ country }}</option>
                                 </select>
                             </div>
@@ -78,7 +81,7 @@
                         <div class="filter-combobox form-inline col-auto">
                             <div class="row">
                                 <label class="col-auto" for="city-filter">City:</label>
-                                <select class="form-control col-auto" v-model="citiesSelector" id="city-filter">
+                                <select class="form-control col-auto select2" v-model="citiesSelector" id="city-filter">
                                     <option v-for="city in cities">{{ city }}</option>
                                 </select>
                             </div>
@@ -191,20 +194,21 @@
 
             </div>
 
-            <p class="pl-10px head5">Station Rating</p>
             <!-- Map  -->
             <div class="row">
 
               <div class="col-4">
 
-                    <div class="table-responsive">
-                        <table class="table table-valign-middle text-left table-head-fixed font-size-14px">
-                            <thead>
-                            <tr>
+                    <p class="pl-10px head5">Popular Station</p>
+
+                    <div class="table-responsive dashboard-rating-table">
+                        <table class="table table-valign-middle text-left table-head-fixed font-size-14px no-first-border">
+<!--                            <thead>-->
+<!--                            <tr>-->
 <!--                                <th>№</th>-->
-                                <th colspan="2">STATION LOCATION</th>
-                            </tr>
-                            </thead>
+<!--                                <th colspan="2">STATION LOCATION</th>-->
+<!--                            </tr>-->
+<!--                            </thead>-->
                             <tbody>
                             <tr v-for="(r, index) in stationsRatings">
                                 <td>{{index + 1}}</td>
@@ -222,7 +226,7 @@
 
               <div class="col-8">
 
-                <div class="map-wrapper pt-10px">
+                <div class="map-wrapper">
                   <div id="map-container"></div>
                 </div>
 
@@ -268,6 +272,9 @@
 </script>
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Select2 -->
+<script src="plugins/select2/js/select2.full.min.js"></script>
+
 <!-- ChartJS -->
 <script src="plugins/chart.js/Chart.min.js"></script>
 <!-- Sparkline -->

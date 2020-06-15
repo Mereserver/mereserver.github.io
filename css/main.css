@@ -88,7 +88,7 @@ tbody.no-striped tr:nth-of-type(odd) {
 }
 
 #map-container {
-  height: 450px;
+  height: 500px;
 }
 
 /*#city-map-nav {*/
@@ -281,8 +281,8 @@ a {
 .filter-combobox label,
 .filter-combobox select {
   padding: 0;
-  height: 30px;
-  line-height: 30px;
+  height: 36px;
+  line-height: 36px;
   margin-bottom: 5px;
 }
 
@@ -881,6 +881,10 @@ button:disabled {
   border: none!important;
 }
 
+table.no-first-border tr:first-child td {
+  border: none!important;
+}
+
 .small-box-mod {
   background: #e9fff7;
 }
@@ -956,7 +960,51 @@ button:disabled {
   font-size: 14px!important;
 }
 
+.dashboard-rating-table {
+  height: 460px;
+  overflow-y: auto;
+}
 
+
+/*select option:checked,*/
+/*select option:hover {*/
+/*  background: #e9fff7!important;*/
+/*}*/
+
+.select2 .select2-selection {
+  border: none!important;
+  outline: none!important;
+}
+
+.select2-dropdown {
+  font-size: 14px;
+  z-index: 9999999;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true],
+.select2-results__option--highlighted {
+  background: #e9fff7!important;
+  color: black!important;
+}
+
+/*.select2-container--default .select2-selection--single {*/
+/*  padding: 0.26875rem .75rem;*/
+/*}*/
+
+.select2-selection__rendered {
+  padding-right: 8px!important;
+}
+
+.select2-search__field {
+  border: none!important;
+  border-bottom: 1px solid #c1c1c1!important;
+  outline: none;
+}
+
+.bg-1 .select2-selection,
+.select2-trasparent .select2-selection {
+  background: transparent!important;
+}
 
 
 

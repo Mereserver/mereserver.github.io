@@ -3,13 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="8f2d33c1-f34b-4b26-8473-2d464abc3c4a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/billing.html" beforeDir="false" afterPath="$PROJECT_DIR$/billing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/images/marker-icon-2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/css/images/marker-icon-2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/images/marker-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/css/images/marker-icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Exts.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Exts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/components/CountriesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/CountriesComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/Models/DateRangePresetsModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/DateRangePresetsModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/Models/Reports.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/Reports.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/StationsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/StationsComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/MapComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/MapComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/Models/StationsRating.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/StationsRating.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/MonthComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/MonthComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/PowerCostComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/PowerCostComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/power-cost.html" beforeDir="false" afterPath="$PROJECT_DIR$/power-cost.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scooters.html" beforeDir="false" afterPath="$PROJECT_DIR$/scooters.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/station-rating-usage.html" beforeDir="false" afterPath="$PROJECT_DIR$/station-rating-usage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stations-admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/stations-admin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stations.html" beforeDir="false" afterPath="$PROJECT_DIR$/stations.html" afterDir="false" />
@@ -121,7 +127,7 @@
       <workItem from="1585593480435" duration="103169000" />
       <workItem from="1585892683461" duration="27390000" />
       <workItem from="1586939063597" duration="41673000" />
-      <workItem from="1590445135566" duration="507939000" />
+      <workItem from="1590445135566" duration="524236000" />
     </task>
     <servers />
   </component>
