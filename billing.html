@@ -44,8 +44,8 @@
     <div class="row justify-content-end">
       <div class="top-info col-auto" v-cloak>
         <p>{{companyName}}: {{userName}}, <a href="login.html" title="Exit" class="log-out">log out</a></p>
-        <p>Relationship Manager: {{relationshipManager.name}} ({{relationshipManager.email}})</p>
-        <span>Manager: {{manager.name}} ({{manager.email}})</span>
+        <p>{{relationshipManagerLabel}}: {{relationshipManager.name}} ({{relationshipManager.email}})</p>
+        <span>{{managerLabel}}: {{manager.name}} ({{manager.email}})</span>
       </div>
     </div>
     <nav class="navbar navbar-white navbar-light top-nav-bar col-auto">
@@ -187,9 +187,9 @@
                 <th scope="col">ID</th>
                 <th scope="col">DATE</th>
                 <th scope="col">TYPE</th>
-                <th scope="col">TOTAL POWER</th>
-                <th scope="col">TOTAL TIME</th>
-                <th scope="col">TOTAL PRICE</th>
+                <th scope="col">POWER</th>
+                <th scope="col">TIME</th>
+                <th scope="col">PRICE</th>
               </tr>
               </thead>
               <tbody>

@@ -44,8 +44,8 @@
     <div class="row justify-content-end">
       <div class="top-info col-auto" v-cloak>
         <p>{{companyName}}: {{userName}}, <a href="login.html" title="Exit" class="log-out">log out</a></p>
-        <p>Relationship Manager: {{relationshipManager.name}} ({{relationshipManager.email}})</p>
-        <span>Manager: {{manager.name}} ({{manager.email}})</span>
+        <p>{{relationshipManagerLabel}}: {{relationshipManager.name}} ({{relationshipManager.email}})</p>
+        <span>{{managerLabel}}: {{manager.name}} ({{manager.email}})</span>
       </div>
     </div>
     <nav class="navbar navbar-white navbar-light top-nav-bar col-auto">
@@ -381,6 +381,8 @@
 <script src="js/components/ResponsiveTable.js"></script>
 
 <script src="js/components/HeaderInfo.js"></script>
+
+<script src="js/components/PadsComponent.js"></script>
 
 <script src="js/Main.js"></script>
 

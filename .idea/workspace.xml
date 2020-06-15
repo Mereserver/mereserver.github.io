@@ -2,75 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f2d33c1-f34b-4b26-8473-2d464abc3c4a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/components/DashboardComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/components/Models/Balance.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/components/Models/Powers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/components/PadsComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/billing.html" beforeDir="false" afterPath="$PROJECT_DIR$/billing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/city-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/city-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fw-update.html" beforeDir="false" afterPath="$PROJECT_DIR$/fw-update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/history.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index0.html" beforeDir="false" afterPath="$PROJECT_DIR$/index0.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/index2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index3.html" beforeDir="false" afterPath="$PROJECT_DIR$/index3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/Graphics.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/MainDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/CitiesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/CitiesComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/HeaderInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/HeaderInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/MapComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/MapComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/Models/Stations.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/Stations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/StationsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/StationsComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locations.html" beforeDir="false" afterPath="$PROJECT_DIR$/locations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/UI/buttons.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/UI/buttons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/UI/general.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/UI/general.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/UI/icons.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/UI/icons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/UI/modals.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/UI/modals.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/UI/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/UI/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/UI/ribbons.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/UI/ribbons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/UI/sliders.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/UI/sliders.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/UI/timeline.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/UI/timeline.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/calendar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/charts/chartjs.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/charts/chartjs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/charts/flot.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/charts/flot.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/charts/inline.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/charts/inline.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/examples/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/examples/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/examples/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/examples/500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/examples/blank.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/examples/blank.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/examples/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/examples/contacts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/examples/e-commerce.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/examples/e-commerce.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/examples/invoice.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/examples/invoice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/examples/language-menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/examples/language-menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/examples/legacy-user-menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/examples/legacy-user-menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/examples/pace.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/examples/pace.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/examples/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/examples/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/examples/project-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/examples/project-add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/examples/project-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/examples/project-detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/examples/project-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/examples/project-edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/examples/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/examples/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/forms/advanced.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/forms/advanced.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/forms/advanced2.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/forms/advanced2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/forms/editors.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/forms/editors.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/forms/general.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/forms/general.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/forms/validation.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/forms/validation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/layout/boxed.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/layout/boxed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/layout/collapsed-sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/layout/collapsed-sidebar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/layout/fixed-footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/layout/fixed-footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/layout/fixed-sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/layout/fixed-sidebar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/layout/fixed-topnav.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/layout/fixed-topnav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/layout/top-nav-sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/layout/top-nav-sidebar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/mailbox/compose.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mailbox/compose.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/mailbox/mailbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mailbox/mailbox.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/mailbox/read-mail.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mailbox/read-mail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/tables/data.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/tables/data.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/tables/jsgrid.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/tables/jsgrid.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/tables/simple.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/tables/simple.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/widgets.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/widgets.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/settings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stations_.html" beforeDir="false" afterPath="$PROJECT_DIR$/stations_.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/~dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/~dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/index-admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messages-incoming.html" beforeDir="false" afterPath="$PROJECT_DIR$/messages-incoming.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messages-new.html" beforeDir="false" afterPath="$PROJECT_DIR$/messages-new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messages-outgoing.html" beforeDir="false" afterPath="$PROJECT_DIR$/messages-outgoing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-clear.html" beforeDir="false" afterPath="$PROJECT_DIR$/page-clear.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/power-cost.html" beforeDir="false" afterPath="$PROJECT_DIR$/power-cost.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scooters.html" beforeDir="false" afterPath="$PROJECT_DIR$/scooters.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/station-rating-usage.html" beforeDir="false" afterPath="$PROJECT_DIR$/station-rating-usage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stations.html" beforeDir="false" afterPath="$PROJECT_DIR$/stations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system-logs.html" beforeDir="false" afterPath="$PROJECT_DIR$/system-logs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/users.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +126,7 @@
       <workItem from="1585593480435" duration="103169000" />
       <workItem from="1585892683461" duration="27390000" />
       <workItem from="1586939063597" duration="41673000" />
-      <workItem from="1590445135566" duration="483842000" />
+      <workItem from="1590445135566" duration="484865000" />
     </task>
     <servers />
   </component>
