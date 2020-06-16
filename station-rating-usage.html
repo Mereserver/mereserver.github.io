@@ -141,24 +141,24 @@
                     <span class="sr-only">Loading...</span>
                   </div>
 
-                  <div v-else v-cloak>
-                    <div class="table-responsive">
-                    <table class="table table-striped table-valign-middle text-left table-head-fixed text-nowrap">
-                      <thead>
-                      <tr>
-                        <th>№</th>
-                        <th>STATION LOCATION</th>
-                        <th>QTY OF CHARGING EVENTS</th>
-                      </tr>
-                      </thead>
-                      <tbody>
-                      <tr v-for="(r, index) in stationsRatings">
-                        <td>{{index + 1}}</td>
-                        <td>{{r.GetLocation.GetString}}</td>
-                        <td class="text-center">{{r.GetChargingEventsQty}}</td></tr>
-                      </tbody>
-                    </table>
-                  </div>
+                  <div v-else v-cloak class="hide-scroll">
+                    <div class="table-responsive rating-table">
+                      <table class="table table-striped table-valign-middle text-left table-head-fixed text-nowrap">
+                        <thead>
+                        <tr>
+                          <th>№</th>
+                          <th>STATION LOCATION</th>
+                          <th>QTY OF CHARGING EVENTS</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr v-for="(r, index) in stationsRatings">
+                          <td>{{index + 1}}</td>
+                          <td>{{r.GetLocation.GetString}}</td>
+                          <td class="text-center">{{r.GetChargingEventsQty}}</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
 
                 </div>

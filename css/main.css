@@ -569,6 +569,7 @@ a.dropdown-item,
   border-bottom: 1px solid #c1c1c1;
   line-height: 28px;
   padding: 2px 0;
+  margin: 0;
 }
 
 .questions-block > .row > div {
@@ -588,6 +589,16 @@ a.dropdown-item,
 .questions-block {
   max-height: 500px;
   overflow: auto;
+}
+
+.hide-scroll {
+  overflow: hidden;
+  width: 100%;
+}
+.hide-scroll > div {
+  box-sizing: content-box;
+  padding-right: 15px;
+  width: 100%;
 }
 
 .new-message-block {
@@ -960,9 +971,13 @@ table.no-first-border tr:first-child td {
   font-size: 14px!important;
 }
 
+/*.rating-table {*/
+/*  overflow-y: hidden;*/
+/*}*/
+
 .dashboard-rating-table {
   height: 460px;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 

@@ -106,12 +106,16 @@
                     <div class="row"><a href="messages-incoming.html" class="active">INBOX</a></div>
                     <div class="row"><a href="messages-outgoing.html">OUTBOX</a></div>
                   </div>
-                  <div class="col questions-block">
-                    <div class="row" v-for="m in messages">
-                      <div class="col-sm">
-                        <p>{{m.message}}</p>
+                  <div class="col">
+                    <div class="hide-scroll">
+                      <div class="questions-block">
+                        <div class="row" v-for="m in messages">
+                          <div class="col-sm">
+                            <p>{{m.message}}</p>
+                          </div>
+                          <div class="col-auto">{{m.GetDateString}}</div>
+                        </div>
                       </div>
-                      <div class="col-auto">{{m.GetDateString}}</div>
                     </div>
                   </div>
                 </div>
