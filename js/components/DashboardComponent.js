@@ -131,17 +131,19 @@ let DashboardComponent = (function () {
         }
 
         CopyObjects(vueModel.data, {
-            stationsTotalNumber: 351,//_this.GetStations().length,
-            stationsNumber: 350,//_this.GetStations().length,
+            stationsTotalNumber: 5,//_this.GetStations().length,
+            stationsNumber: 5,//_this.GetStations().length,
             scooters : [],
             stations : [],
             balance : _this.balance.GetCurrentBalance(),
             balanceCurrency : _this.balance.GetBalanceCurrency(),
             power: _this.powers.GetPowerPerMonth(),
-            slotsNumber: 3500,
-            slotsAvailableNumber : 1000,
-            scootersNumber : 150,
-            scootersChargingNumber: 100
+            slotsNumber: 20,
+            slotsAvailableNumber : 10,
+            slotsEmptyNumber : 5,
+            scootersNumber : 20,
+            scootersChargingNumber: 10,
+            slotsLabel: 'AVAILABLE'
         });
 
 

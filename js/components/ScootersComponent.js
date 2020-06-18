@@ -2,10 +2,15 @@
 let ScootersComponent = (function () {
 
     let statusComponent = StatusComponent(new ScooterStatusModel());
-    let countriesComponent = CountriesComponent();
 
-    function ScootersComponent(vueModel) {
+    function ScootersComponent(vueModel, defCountryCity, countries) {
         let _this = this;
+
+        if(typeof defCountryCity == "undefined")
+            defCountryCity = {};
+
+        countries = countries || new CountriesModel();
+        let countriesComponent = CountriesComponent(countries);
 
         let scootersObj = new Scooters();
 
@@ -19,7 +24,7 @@ let ScootersComponent = (function () {
 
         VueModelInitial(vueModel);
 
-        let countriesComponentObj = new countriesComponent(vueModel);
+        let countriesComponentObj = new countriesComponent(vueModel, defCountryCity.country, defCountryCity.city);
         let statusComponentObj = new statusComponent(vueModel);
 
         this.countriesComponentObj = countriesComponentObj;

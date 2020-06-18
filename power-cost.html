@@ -105,9 +105,9 @@
 
                 <div class="btn-group btn-group-toggle filter-radio-buttons">
 
-                  <label class="btn" :class="statusSelector == s ? 'active' : ''" v-for="(s, index) in statuses">
+                  <label class="btn" v-for="(s, index) in statuses" :class="{disabled: statusesEnables[index], active: statusSelector == s}">
                     <input type="radio" name="range" autocomplete="off"
-                           :id="'range-'+index+1" :value="s" v-model="statusSelector"/>{{s}}
+                           :id="'range-'+index+1" :value="s" v-model="statusSelector" :disabled="statusesEnables[index]" :class="{disabled: statusesEnables[index]}"/>{{s}}
                   </label>
 
                 </div>
@@ -172,12 +172,12 @@
                     <thead>
                     <tr>
                       <th scope="col">№</th>
-                      <th scope="col">Date</th>
-                      <th scope="col">City</th>
-                      <th scope="col">QTY charging events</th>
-                      <th scope="col">Power</th>
-                      <th scope="col">Time</th>
-                      <th scope="col">Price</th>
+                      <th scope="col">DATE</th>
+                      <th scope="col">CITY</th>
+                      <th scope="col">CHARGING EVENTS</th>
+                      <th scope="col">POWER, kW</th>
+                      <th scope="col">TIME, h</th>
+                      <th scope="col">PRICE, $</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -260,6 +260,7 @@
 <script src="js/components/CitiesComponent.js"></script>
 
 <script src="js/components/Models/CountriesModel.js"></script>
+<script src="js/components/Models/CountriesModel2.js"></script>
 <script src="js/components/CountriesComponent.js"></script>
 
 <script src="js/components/Models/StationStatusModel.js"></script>

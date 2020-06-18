@@ -1,14 +1,20 @@
 
 let StationRatingComponent = (function () {
 
-    let countriesComponent = CountriesComponent();
     let dateRangePresetsComponent = StatusComponent(new DateRangePresetsModel());
     let dateRangeComponent = DateRangeComponent();
 
     let RangeStates = DateRangePresetsModel.States;
 
-    function StationRatingComponent(vueModel, rangeNameDefault) {
+    function StationRatingComponent(vueModel, rangeNameDefault, stationsRatingObj, geopos, defCountryCity, countries) {
         let _this = this;
+
+        if(typeof defCountryCity == "undefined")
+            defCountryCity = {};
+
+        countries = countries || new CountriesModel();
+
+        geopos = geopos || [56.9500885,24.0319015, 10];
 
         rangeNameDefault = rangeNameDefault || RangeStates.ThisMonth;
 
@@ -18,12 +24,14 @@ let StationRatingComponent = (function () {
 
         VueModelInitial(vueModel);
 
-        let stationsRatingObj = new StationsRating();
+        stationsRatingObj = stationsRatingObj || new StationsRating();
 
         let compObjFactory = MapComponent(stationsRatingObj);
-        let mapObj = new compObjFactory(vueModel, [56.9500885,24.0319015, 10]);
+        let mapObj = new compObjFactory(vueModel, geopos);
 
-        let countriesComponentObj = new countriesComponent(vueModel);
+        let countriesComponent = CountriesComponent(countries);
+
+        let countriesComponentObj = new countriesComponent(vueModel, defCountryCity.country, defCountryCity.city);
         this.countriesComponentObj = countriesComponentObj;
 
         let dateRangeComponentObj = new dateRangeComponent(vueModel, rangeNameDefault);

@@ -10,5 +10,6 @@ let StationStatusModel = (function(){
         return ["All", "Occupied", "Available", "Unavailable", "Online", "Offline"];
     }
 
+
     return StatusModel;
 })();

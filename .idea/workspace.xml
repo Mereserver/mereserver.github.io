@@ -2,11 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f2d33c1-f34b-4b26-8473-2d464abc3c4a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/components/Models/CountriesModel2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/Models/StationsRating2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/billing.html" beforeDir="false" afterPath="$PROJECT_DIR$/billing.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messages-incoming.html" beforeDir="false" afterPath="$PROJECT_DIR$/messages-incoming.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messages-outgoing.html" beforeDir="false" afterPath="$PROJECT_DIR$/messages-outgoing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img/logos/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/logos/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Exts.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Exts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/MainDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/MainDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/CountriesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/CountriesComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/DashboardComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/DashboardComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/MapComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/MapComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/Models/BillingRecords.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/BillingRecords.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/Models/CitiesModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/CitiesModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/Models/CountriesModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/CountriesModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/Models/DateRangePresetsModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/DateRangePresetsModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/Models/Reports.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/Reports.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/Models/Scooters.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/Scooters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/Models/StationStatusModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/StationStatusModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/Models/Stations.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/Stations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/Models/StationsRating.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/StationsRating.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/PowerCostComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/PowerCostComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/ScootersComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/ScootersComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/StationRatingComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/StationRatingComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/StationsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/StationsComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/StatusComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/StatusComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/power-cost.html" beforeDir="false" afterPath="$PROJECT_DIR$/power-cost.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/station-rating-usage.html" beforeDir="false" afterPath="$PROJECT_DIR$/station-rating-usage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stations.html" beforeDir="false" afterPath="$PROJECT_DIR$/stations.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,22 +94,23 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/js/components/Models" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\!Rabota\MereServer\cpanels\MereServerPages\js\components\Models" />
+      <recent name="D:\!Rabota\MereServer\cpanels\AdminLTEMod_v2" />
+      <recent name="C:\xampp\htdocs\cpanels\AdminLTEMod" />
+      <recent name="C:\xampp\htdocs\cpanels\AdminLTEMod\js\components\Models" />
+      <recent name="C:\xampp\htdocs\cpanels\AdminLTEMod\js\components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\!Rabota\MereServer\cpanels\AdminLTEMod_v2\js\components" />
       <recent name="D:\!Rabota\MereServer\cpanels\AdminLTEMod_v2\js\components\Models" />
       <recent name="D:\!Rabota\MereServer\cpanels\AdminLTEMod_v2\js\components\View" />
-      <recent name="C:\xampp\htdocs\cpanels\AdminLTEMod\js\components\Models" />
-      <recent name="C:\xampp\htdocs\cpanels\AdminLTEMod\js\components" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\!Rabota\MereServer\cpanels\AdminLTEMod_v2" />
-      <recent name="C:\xampp\htdocs\cpanels\AdminLTEMod" />
       <recent name="C:\xampp\htdocs\cpanels\AdminLTEMod\js\components\Models" />
       <recent name="C:\xampp\htdocs\cpanels\AdminLTEMod\js\components" />
     </key>
@@ -115,7 +142,9 @@
       <workItem from="1585593480435" duration="103169000" />
       <workItem from="1585892683461" duration="27390000" />
       <workItem from="1586939063597" duration="41673000" />
-      <workItem from="1590445135566" duration="533617000" />
+      <workItem from="1590445135566" duration="535263000" />
+      <workItem from="1592378081431" duration="55000" />
+      <workItem from="1592378281576" duration="22108000" />
     </task>
     <servers />
   </component>
@@ -139,25 +168,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="222" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590517039481" />
-    <state width="1864" height="301" key="GridCell.Tab.0.bottom" timestamp="1591798150031">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state width="1864" height="301" key="GridCell.Tab.0.bottom" timestamp="1592336492791">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1864" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591111513517" />
+    <state width="1864" height="301" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592336492790" />
     <state width="1864" height="301" key="GridCell.Tab.0.bottom/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1591798150031" />
-    <state width="1864" height="301" key="GridCell.Tab.0.center" timestamp="1591798150031">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state width="1864" height="301" key="GridCell.Tab.0.center" timestamp="1592336492787">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1864" height="262" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591111513517" />
+    <state width="1864" height="301" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592336492786" />
     <state width="1864" height="301" key="GridCell.Tab.0.center/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1591798150031" />
-    <state width="1864" height="301" key="GridCell.Tab.0.left" timestamp="1591798150030">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state width="1864" height="301" key="GridCell.Tab.0.left" timestamp="1592336492780">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1864" height="262" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591111513517" />
+    <state width="1864" height="301" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592336492780" />
     <state width="1864" height="301" key="GridCell.Tab.0.left/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1591798150030" />
-    <state width="1864" height="301" key="GridCell.Tab.0.right" timestamp="1591798150031">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state width="1864" height="301" key="GridCell.Tab.0.right" timestamp="1592336492788">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1864" height="262" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591111513517" />
+    <state width="1864" height="301" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592336492788" />
     <state width="1864" height="301" key="GridCell.Tab.0.right/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1591798150031" />
     <state x="355" y="62" key="SettingsEditor" timestamp="1585751277619">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -176,10 +205,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="642" y="88" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591011635941" />
-    <state x="532" y="231" key="run.anything.popup" timestamp="1592236743112">
+    <state x="532" y="231" key="run.anything.popup" timestamp="1592500807319">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="532" y="231" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592236743112" />
+    <state x="532" y="231" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592500807319" />
     <state x="532" y="258" key="run.anything.popup/0.0.1920.1160/1920.0.1920.1040@0.0.1920.1160" timestamp="1591784003139" />
     <state x="539" y="5" key="search.everywhere.popup" timestamp="1585751143380">
       <screen x="0" y="0" width="1920" height="1040" />

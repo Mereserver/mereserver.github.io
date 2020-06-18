@@ -1,7 +1,6 @@
 
 let PowerCostComponent = (function () {
 
-    let countriesComponent = CountriesComponent();
     let dateRangeComponent = DateRangeComponent();
 
     let dateRangePresetsComponent = StatusComponent(new DateRangePresetsModel());
@@ -10,14 +9,19 @@ let PowerCostComponent = (function () {
 
     const rangeNameDefault = RangeStates.ThisMonth;
 
-    function PowerCostComponent(vueModel) {
+    function PowerCostComponent(vueModel, defCountryCity, countries, model) {
         let _this = this;
 
         this.model = vueModel;
 
         VueModelInitial(vueModel);
 
-        let reportsObj = new Reports();
+        let reportsObj = model || new Reports();
+
+        if(typeof defCountryCity == "undefined")
+            defCountryCity = {};
+
+        let countriesComponent = CountriesComponent(countries || new CountriesModel());
 
         this.GetReportRecords = function () {
             return reportsObj.GetObjects();
@@ -31,7 +35,7 @@ let PowerCostComponent = (function () {
             reports: _this.GetReportRecords()
         });
 
-        let countriesComponentObj = new countriesComponent(vueModel, "All", "Riga");
+        let countriesComponentObj = new countriesComponent(vueModel, defCountryCity.country, defCountryCity.city);
         let dateRangeComponentObj = new dateRangeComponent(vueModel, rangeNameDefault);
 
         countriesComponentObj.Callback = function (country, city) {

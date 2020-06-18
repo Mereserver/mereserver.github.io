@@ -4,7 +4,6 @@ let StationsComponent = (function () {
   let $ = jQuery;
 
   let statusComponent = StatusComponent(new StationStatusModel());
-  let countriesComponent = CountriesComponent();
 
   let StateType = Aggregator.StateType;
 
@@ -40,8 +39,15 @@ let StationsComponent = (function () {
     }, 10);
   };
 
-  function StationsComponent(vueModel) {
+  function StationsComponent(vueModel, defCountryCity, countries) {
     let _this = this;
+
+    if(typeof defCountryCity == "undefined")
+      defCountryCity = {};
+
+    countries = countries || new CountriesModel();
+
+    let countriesComponent = CountriesComponent(countries);
 
     let stationsModel = new StationsAggregator();
     let sAgg = new Aggregator(stationsModel);
@@ -71,7 +77,7 @@ let StationsComponent = (function () {
 
     VueModelInitial(vueModel);
 
-    let countriesComponentObj = new countriesComponent(vueModel);
+    let countriesComponentObj = new countriesComponent(vueModel, defCountryCity.country, defCountryCity.city);
     let statusComponentObj = new statusComponent(vueModel);
 
 

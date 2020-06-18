@@ -245,4 +245,12 @@ function CheckObjFields(obj, fields) {
   return r;
 }
 
+function GenIds() {
+
+  let alphaArr = "0123456789ABCDEF";
+
+  let fn = () => alphaArr[Math.ceil(Math.random()*15)];
+
+  return [1, 2, 3, 4].map( x => fn().toString() + fn().toString()).join(':')
+}
 

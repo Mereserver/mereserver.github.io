@@ -1,5 +1,6 @@
-let CountriesComponent = function () {
-    let countries = new CountriesModel();
+let CountriesComponent = function (countries) {
+
+    countries = countries || new CountriesModel();
 
     let defaultCountry = "Latvia";
     let defaultCity = "Riga";

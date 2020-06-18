@@ -108,9 +108,9 @@
 
                   <div class="btn-group btn-group-toggle filter-radio-buttons">
 
-                    <label class="btn" :class="statusSelector == s ? 'active' : ''" v-for="(s, index) in statuses">
+                    <label class="btn" v-for="(s, index) in statuses" :class="{disabled: statusesEnables[index], active: statusSelector == s}">
                       <input type="radio" name="range" autocomplete="off"
-                             :id="'range-'+index+1" :value="s" v-model="statusSelector"/>{{s}}
+                             :id="'range-'+index+1" :value="s" v-model="statusSelector" :disabled="statusesEnables[index]" :class="{disabled: statusesEnables[index]}"/>{{s}}
                     </label>
 
                   </div>
@@ -148,7 +148,7 @@
                         <tr>
                           <th>№</th>
                           <th>STATION LOCATION</th>
-                          <th>QTY OF CHARGING EVENTS</th>
+                          <th>CHARGING EVENTS</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -248,6 +248,7 @@
 <script src="js/components/CitiesComponent.js"></script>
 
 <script src="js/components/Models/CountriesModel.js"></script>
+<script src="js/components/Models/CountriesModel2.js"></script>
 <script src="js/components/CountriesComponent.js"></script>
 
 <script src="js/components/Models/StationStatusModel.js"></script>
@@ -260,6 +261,7 @@
 <script src="js/components/ResponsiveTable.js"></script>
 
 <script src="js/components/Models/StationsRating.js"></script>
+<script src="js/components/Models/StationsRating2.js"></script>
 <script src="js/components/StationRatingComponent.js"></script>
 
 <script src="js/components/MapComponent.js"></script>

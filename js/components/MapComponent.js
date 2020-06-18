@@ -4,7 +4,7 @@ let MapComponent = function (model) {
   //let citiesComponent = CitiesComponent(model, "mapCities", "mapCitySelector");
   let locations = model.GetLocations();
 
-  const zoom = 10;
+  const zoom  = 10;
   const iconsDir = "css/images/";
 
   function InitMap(all) {
@@ -20,18 +20,22 @@ let MapComponent = function (model) {
 
     if (jQuery('#' + mapSelector).length > 0) {
 
-      // if(typeof all == "undefined" || all.length < 2) {
-      //   all = [56.9500885,24.0319015, zoom];
-      // }
-      //
-      // if(all.length < 3)
-      // {
-      //   all[2] = zoom;
-      // }
+      if(typeof all == "undefined" || all.length < 2) {
+        all = [56.9500885,24.0319015, zoom];
+      }
 
+      if(all.length < 3)
+      {
+        all[2] = zoom;
+      }
+
+      // mymap = L.map(mapSelector, {
+      //   center: [56.9500885,24.0319015],
+      //   zoom: zoom
+      // });
       mymap = L.map(mapSelector, {
-        center: [56.9500885,24.0319015],
-        zoom: zoom
+        center: all,
+        zoom: all[2]
       });
 
       L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -74,7 +78,7 @@ let MapComponent = function (model) {
       locations.forEach( l => {
         if (l != 'All') {
           L.marker(l.GetGeoPos(), {
-            icon : icons[Math.round(Math.random() * 4)]
+            icon : icons[2] //Math.round(Math.random() * 4)
           }).bindPopup(l.GetString).addTo(mymap);
           //Log.trace(l.GetGeoPos());
         }

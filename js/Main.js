@@ -66,11 +66,17 @@ window.onload = function () {
   let vueModel = (new DefaultVueModel()).GetModel();
 
   if (document.getElementById('stations-page') != null) {
-    let stationsComponent = new StationsComponent(vueModel);
+    let stationsComponent = new StationsComponent(vueModel,{
+      country : "Israel",
+      city: "Tel Aviv-Yafo"
+    }, new CountriesModel2());
   }
 
   if (document.getElementById('scooters-page') != null) {
-    let scootersComponent = new ScootersComponent(vueModel);
+    let scootersComponent = new ScootersComponent(vueModel,{
+      country : "Israel",
+      city: "Tel Aviv-Yafo"
+    }, new CountriesModel2());
   }
 
   if (document.getElementById('billing-page') != null) {
@@ -82,7 +88,10 @@ window.onload = function () {
   }
 
   if (document.getElementById('power-cost-page') != null) {
-    let powerCostComponent = new PowerCostComponent(vueModel);
+    let powerCostComponent = new PowerCostComponent(vueModel, {
+      country : "Israel",
+      city: "Tel Aviv-Yafo"
+    }, new CountriesModel2());
   }
 
   if (document.getElementById('messages-page') != null) {
@@ -107,7 +116,11 @@ window.onload = function () {
 
   if(document.getElementById('station-rating-page') != null) {
     let RangeStates = DateRangePresetsModel.States;
-    let stationRatingComponent = new StationRatingComponent(vueModel, RangeStates.ThisMonth);
+    let stationRatingComponent = new StationRatingComponent(vueModel, RangeStates.ThisMonth, new StationsRating2(),
+        [32.068683,34.767,14], {
+          country : "Israel",
+          city: "Tel Aviv-Yafo"
+        }, new CountriesModel2());
   }
 
   let headerInfo = new HeaderInfo(vueModel);
