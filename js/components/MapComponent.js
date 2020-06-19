@@ -9,6 +9,7 @@ let MapComponent = function (model) {
 
   function InitMap(all) {
 
+    Log.trace(all);
     //let all = locations['All'];
 
     let mapSelector = 'map-container';
@@ -34,7 +35,7 @@ let MapComponent = function (model) {
       //   zoom: zoom
       // });
       mymap = L.map(mapSelector, {
-        center: all,
+        center: [all[0], all[1]],
         zoom: all[2]
       });
 
@@ -105,6 +106,17 @@ let MapComponent = function (model) {
 
     let _this = this;
 
+    if(typeof geoPosAll == "undefined" || geoPosAll.length < 2) {
+      geoPosAll = [56.9500885,24.0319015, zoom];
+    }
+
+    if(geoPosAll.length < 3)
+    {
+      geoPosAll[2] = zoom;
+    }
+
+    this.zoom = geoPosAll[3] || geoPosAll[2];
+
     VueModelInitial(vueModel);
 
     ///let citiesComponentObj = new citiesComponent(vueModel);
@@ -144,7 +156,7 @@ let MapComponent = function (model) {
       //   mymap.setView(obj.location, obj.zoom);
 
       if(mymap != null) {
-        mymap.setView(geoPos, 12);
+        mymap.setView([geoPos[0], geoPos[1]],  this.zoom);
       }
 
     }

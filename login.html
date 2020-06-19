@@ -38,7 +38,7 @@
       <div class="row justify-content-end">
         <!-- /.col -->
         <div class="col-5">
-          <a href="index.html" class="btn btn-block bg-gradient-success" ref="sendReply">Log in</a>
+          <a href="index.html" class="btn btn-block bg-gradient-success" ref="sendReply" @click.prevent="OnLogin">Log in</a>
         </div>
         <!-- /.col -->
       </div>
@@ -54,27 +54,8 @@
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <script src="js/Vue.js"></script>
-
-<script>
-  window.onload = function () {
-    let app  = new Vue({
-      el: '#app',
-      data: {
-        login: '',
-        password: ''
-      },
-      methods: {
-        enterKeyUp() {
-          if (this.login.length == 0 || this.password.length == 0) {
-            alert('Invalid login or password');
-          } else {
-            this.$refs.sendReply.click();
-          }
-        }
-      }
-    });
-  }
-</script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/login.js"></script>
 
 </body>
 </html>

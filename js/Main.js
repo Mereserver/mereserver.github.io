@@ -68,19 +68,22 @@ window.onload = function () {
   if (document.getElementById('stations-page') != null) {
     let stationsComponent = new StationsComponent(vueModel,{
       country : "Israel",
-      city: "Tel Aviv-Yafo"
+      city: "Tel Aviv"
     }, new CountriesModel2());
   }
 
   if (document.getElementById('scooters-page') != null) {
     let scootersComponent = new ScootersComponent(vueModel,{
       country : "Israel",
-      city: "Tel Aviv-Yafo"
+      city: "Tel Aviv"
     }, new CountriesModel2());
   }
 
   if (document.getElementById('billing-page') != null) {
-    let billingComponent = new BillingComponent(vueModel);
+    let billingComponent = new BillingComponent(vueModel,{
+      country : "Israel",
+      city: "Tel Aviv"
+    }, new CountriesModel2());
   }
 
   if (document.getElementById('users-page') != null) {
@@ -90,7 +93,7 @@ window.onload = function () {
   if (document.getElementById('power-cost-page') != null) {
     let powerCostComponent = new PowerCostComponent(vueModel, {
       country : "Israel",
-      city: "Tel Aviv-Yafo"
+      city: "Tel Aviv"
     }, new CountriesModel2());
   }
 
@@ -116,10 +119,10 @@ window.onload = function () {
 
   if(document.getElementById('station-rating-page') != null) {
     let RangeStates = DateRangePresetsModel.States;
-    let stationRatingComponent = new StationRatingComponent(vueModel, RangeStates.ThisMonth, new StationsRating2(),
+    let stationRatingComponent = new StationRatingComponent(vueModel, RangeStates.LastMonth, new StationsRating2(),
         [32.068683,34.767,14], {
           country : "Israel",
-          city: "Tel Aviv-Yafo"
+          city: "Tel Aviv"
         }, new CountriesModel2());
   }
 

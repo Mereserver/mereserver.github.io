@@ -1,11 +1,11 @@
 let StationsRating2 = (function () {
     function StationsRating2() {
         this.objs = [
-            new StationsRatingModel(new Location("Israel", "Tel Aviv-Yafo", "HaCarmel St 48", [32.068683,34.7668583,17]),300, "15.06.2020"),
-            new StationsRatingModel(new Location("Israel", "Tel Aviv-Yafo", "Ahad Ha'Am St 43", [32.0655783,34.7735893,17]),310, "12.06.2020"),
-            new StationsRatingModel(new Location("Israel", "Tel Aviv-Yafo", "Tchernikhovski St 24", [32.0741166,34.7708168,17]),100, "08.06.2020"),
-            new StationsRatingModel(new Location("Israel", "Tel Aviv-Yafo", "Tarsat Ave 2", [32.0725914,34.7767774,17]),120, "06.06.2020"),
-            new StationsRatingModel(new Location("Israel", "Tel Aviv-Yafo", "HaGdud Haivri St 8", [32.0603079,34.7727862,17]),370, "02.06.2020")
+            new StationsRatingModel(new Location("Israel", "Tel Aviv", "HaCarmel St 48", [32.068683,34.7668583]),300, "15.05.2020"),
+            new StationsRatingModel(new Location("Israel", "Tel Aviv", "Ahad Ha'Am St 43", [32.0655783,34.7735893]),310, "12.05.2020"),
+            new StationsRatingModel(new Location("Israel", "Tel Aviv", "Tchernikhovski St 24", [32.0741166,34.7708168]),100, "08.05.2020"),
+            new StationsRatingModel(new Location("Israel", "Tel Aviv", "Tarsat Ave 2", [32.0725914,34.7767774]),120, "06.05.2020"),
+            new StationsRatingModel(new Location("Israel", "Tel Aviv", "HaGdud Haivri St 8", [32.0603079,34.7727862]),370, "02.05.2020")
         ];
     }
 

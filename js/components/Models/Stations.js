@@ -182,31 +182,31 @@ let StationsAggregator = (function () {
         new Slot("68:88:CE:8A",Slot.Satatus.Occupied, true, 13),
         new Slot("1B:74:BA:58",Slot.Satatus.Available, true, 16),
         new Slot("C9:E5:19:CF",Slot.Satatus.Available, true, 16)
-      ], new Location("Israel", "Tel Aviv-Yafo", "HaCarmel St 48", [32.068683,34.7668583,17])),
+      ], new Location("Israel", "Tel Aviv", "HaCarmel St 48", [32.068683,34.7668583,17])),
       new Station("45:64:5A:32", [
         new Slot("3B:E3:EC:CE", Slot.Satatus.Available, true, -1),
         new Slot("1A:EB:FC:5B",Slot.Satatus.Available, true, 78),
         new Slot("3C:DA:61:2E",Slot.Satatus.Occupied, true, 89),
         new Slot("51:1D:DE:AB",Slot.Satatus.Occupied, true, 63)
-      ], new Location("Israel", "Tel Aviv-Yafo", "Ahad Ha'Am St 43", [32.0655783,34.7735893,17])),
+      ], new Location("Israel", "Tel Aviv", "Ahad Ha'Am St 43", [32.0655783,34.7735893,17])),
       new Station("45:64:5A:32", [
-        new Slot("41:25:8B:16", Slot.Satatus.Unavailable, false, -1),
+        new Slot("41:25:8B:16", Slot.Satatus.Available, true, -1),
         new Slot("97:B9:FE:F8",Slot.Satatus.Occupied, true, 50),
         new Slot("B5:47:EC:A2",Slot.Satatus.Available, true, -1),
         new Slot("83:B8:CE:C2",Slot.Satatus.Occupied, true, 16)
-      ], new Location("Israel", "Tel Aviv-Yafo", "Tchernikhovski St 24", [32.0741166,34.7708168,17])),
+      ], new Location("Israel", "Tel Aviv", "Tchernikhovski St 24", [32.0741166,34.7708168,17])),
       new Station("45:64:4A:32", [
-        new Slot("B7:9F:4C:99", Slot.Satatus.Unavailable, true, -1),
-        new Slot("42:2C:DE:D3",Slot.Satatus.Unavailable, true, -1),
+        new Slot("B7:9F:4C:99", Slot.Satatus.Available, true, -1),
+        new Slot("42:2C:DE:D3",Slot.Satatus.Available, true, -1),
         new Slot("31:9F:AC:B3",Slot.Satatus.Occupied, true, 50),
         new Slot("AC:D1:EF:A4",Slot.Satatus.Occupied, true, 16)
-      ], new Location("Israel", "Tel Aviv-Yafo", "Tarsat Ave 2", [32.0725914,34.7767774,17])),
+      ], new Location("Israel", "Tel Aviv", "Tarsat Ave 2", [32.0725914,34.7767774,17])),
       new Station("45:64:3A:32", [
-        new Slot("76:3B:51:CB", Slot.Satatus.Unavailable, true, -1),
+        new Slot("76:3B:51:CB", Slot.Satatus.Available, true, -1),
         new Slot("5F:B2:6A:BF",Slot.Satatus.Occupied, true, 17),
         new Slot("4D:7C:8B:E3",Slot.Satatus.Occupied, true, 18),
-        new Slot("43:E2:32:CA",Slot.Satatus.Unavailable, true, 16)
-      ], new Location("Israel", "Tel Aviv-Yafo", "HaGdud Haivri St 8", [32.0603079,34.7727862,17]))
+        new Slot("43:E2:32:CA",Slot.Satatus.Available, true, 16)
+      ], new Location("Israel", "Tel Aviv", "HaGdud Haivri St 8", [32.0603079,34.7727862,17]))
     ];
   }
 

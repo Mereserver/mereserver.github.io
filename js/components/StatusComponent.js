@@ -21,11 +21,9 @@ let StatusComponent = function (status) {
 
         let defaultStatus = statuses.length == 0 ? "-" : defaultValue;
 
-
-
         CopyObjects(vueModel.data, {
             statuses: statuses,
-            statusesEnables: typeof status.GetStatusesEnables != "undefined" ? status.GetStatusesEnables() : [],
+            statusesEnables: typeof status.GetStatusesDisables != "undefined" ? status.GetStatusesDisables() : [],
             statusSelector: defaultStatus
         });
 

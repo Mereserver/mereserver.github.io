@@ -96,7 +96,8 @@ let Reports = (function () {
             [34,27.2,68,11.9],
             [45,36,90,15.75],
             [40,32,80,14],
-            [45,36,90,15.75],
+            [30,20,20,5.75],
+            [15,18,25,10.75],
             [45,36,90,15.75],
             [45,36,90,15.75],
             [48,38.4,96,16.8],
@@ -111,7 +112,7 @@ let Reports = (function () {
         ];
 
         // data.forEach( x=> {
-        //      new Report("10.06.2020", new Location("Israel", "Tel Aviv-Yafo", "HaCarmel St 48", [32.068683,34.7668583,17]),
+        //      new Report("10.06.2020", new Location("Israel", "Tel Aviv", "HaCarmel St 48", [32.068683,34.7668583,17]),
         //         1891, 15, "12 h 30 min", "100"
         //     )
         // });
@@ -119,7 +120,7 @@ let Reports = (function () {
 
 
 
-        objs = data.map((x, index) =>  new Report(("0"+(index + 1)).slice(-2) + ".06.2020", new Location("Israel", "Tel Aviv-Yafo", "HaCarmel St 48", [32.068683,34.7668583,17]),
+        objs = data.map((x, index) =>  new Report(("0"+(index + 1)).slice(-2) + ".05.2020", new Location("Israel", "Tel Aviv", "HaCarmel St 48", [32.068683,34.7668583,17]),
             x[0], x[1], x[2] + " h", x[3]
         ));
 

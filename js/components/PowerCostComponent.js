@@ -7,7 +7,7 @@ let PowerCostComponent = (function () {
 
     let RangeStates = DateRangePresetsModel.States;
 
-    const rangeNameDefault = RangeStates.ThisMonth;
+    const rangeNameDefault = RangeStates.LastMonth;
 
     function PowerCostComponent(vueModel, defCountryCity, countries, model) {
         let _this = this;

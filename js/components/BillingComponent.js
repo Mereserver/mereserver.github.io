@@ -2,12 +2,17 @@
 let BillingComponent = (function () {
 
     let monthComponent = MonthComponent();
-    let countriesComponent = CountriesComponent();
 
     let StateType = Aggregator.StateType;
 
-    function BillingComponent(vueModel) {
+    function BillingComponent(vueModel, defCountryCity, countries) {
         let _this = this;
+
+        if(typeof defCountryCity == "undefined")
+            defCountryCity = {};
+
+        countries = countries || new CountriesModel();
+        let countriesComponent = CountriesComponent(countries);
 
         let billingObj = new BillingRecords();
 
@@ -21,14 +26,15 @@ let BillingComponent = (function () {
 
         VueModelInitial(vueModel);
 
-        let countriesComponentObj = new countriesComponent(vueModel);
-        let monthComponentObj = new monthComponent(vueModel);
+        let countriesComponentObj = new countriesComponent(vueModel, defCountryCity.country, defCountryCity.city);
+        let monthComponentObj = new monthComponent(vueModel, "May", "2020");
 
         this.countriesComponentObj = countriesComponentObj;
         this.monthComponentObj = monthComponentObj;
 
         CopyObjects(vueModel.data, {
-            billingRecords: _this.GetBillingRecords()
+            billingRecords: _this.GetBillingRecords(),
+            companyName: "PowerMobility"
         });
 
         countriesComponentObj.Callback = function (country, city) {

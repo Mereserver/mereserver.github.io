@@ -6,12 +6,12 @@ let ScootersComponent = (function () {
     function ScootersComponent(vueModel, defCountryCity, countries) {
         let _this = this;
 
+
         if(typeof defCountryCity == "undefined")
             defCountryCity = {};
 
         countries = countries || new CountriesModel();
         let countriesComponent = CountriesComponent(countries);
-
         let scootersObj = new Scooters();
 
         this.GetScooters = function () {
@@ -82,7 +82,7 @@ let ScootersComponent = (function () {
         data.scootersGrantedNumber = scooters.filter(x => x.permission == Scooter.Permission.Granted).length;
         data.scootersDeniedNumber = scooters.filter(x => x.permission == Scooter.Permission.Denied).length;
         data.scootersChargingNumber = scooters.filter(x => x.status == Scooter.Status.Charging).length;
-        data.scootersOfflineNumber = scooters.filter(x => x.status == Scooter.Status.Offline).length;
+        data.scootersOfflineNumber = scooters.filter(x => x.status == Scooter.Status.Offline || x.status == Scooter.Status.Charged).length;
     }
 
     return ScootersComponent;

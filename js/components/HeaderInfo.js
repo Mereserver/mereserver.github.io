@@ -16,7 +16,7 @@ let HeaderInfo = (function () {
         let model = this.LoadModel();
 
         CopyObjects(vueModel.data, {
-            companyName: "MEREDOT",
+            companyName: "PowerMobility",
             userName: model.userName,
             relationshipManagerLabel: "Relationship Manager",
             relationshipManager: model.relationshipManager,
@@ -33,7 +33,7 @@ let HeaderInfo = (function () {
             manager: new Manager({
                 name: "Helen Lykova", email: "hl@meredot.com"
             }),
-            userName : "roman_bysko"
+            userName : "Daniel"
         }
     }
 

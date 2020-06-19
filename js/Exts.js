@@ -254,3 +254,45 @@ function GenIds() {
   return [1, 2, 3, 4].map( x => fn().toString() + fn().toString()).join(':')
 }
 
+function loadScript(url, callback){
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  if (script.readyState){// IE
+    script.onreadystatechange = function(){
+      if (script.readyState == "loaded" ||
+          script.readyState == "complete"){
+        script.onreadystatechange = null;
+        callback();
+      }
+    };
+  } else {// Others
+    script.onload = function(){
+      callback();
+    };
+  }
+  script.src = url;
+  document.getElementsByTagName("head")[0].appendChild(script);
+}
+
+jQuery(window).on('load', function() {
+
+  const loginPageUrl = "login.html";
+
+  loadScript("js/jquery.cookie.js", function(){
+
+    jQuery('.log-out').bind('click', function () {
+
+      $.removeCookie("login");
+
+      return true;
+
+    });
+
+    if($.cookie("login") != 1) {
+      document.location.href = loginPageUrl;
+    }
+
+  });
+
+});
+

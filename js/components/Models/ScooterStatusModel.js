@@ -3,7 +3,7 @@ let ScooterStatusModel = (function(){
     };
 
     ScooterStatusModel.prototype.GetStatuses = function () {
-        return ["All", "Charging", "Offline", "Charged"];
+        return ["All", "Charging", "Charged", "Not charging"];
     }
 
     return ScooterStatusModel;

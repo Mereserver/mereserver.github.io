@@ -132,7 +132,7 @@ let DashboardComponent = (function () {
 
         CopyObjects(vueModel.data, {
             stationsTotalNumber: 5,//_this.GetStations().length,
-            stationsNumber: 5,//_this.GetStations().length,
+            stationsOnlineNumber: 5,//_this.GetStations().length,
             scooters : [],
             stations : [],
             balance : _this.balance.GetCurrentBalance(),
@@ -175,7 +175,8 @@ let DashboardComponent = (function () {
         if(typeof stations == "undefined" || typeof data == "undefined")
             return;
 
-        data.stationsNumber = stations.length;
+        data.stationsTotalNumber = stations.length;
+        //data.stationsTotalNumber = stations.filter(s => s.);
 
         data.slotsNumber = stations.map(s => s.slots).reduce( (a, b) => a.concat(b)).length;
 

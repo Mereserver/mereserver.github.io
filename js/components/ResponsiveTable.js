@@ -43,6 +43,7 @@ let ResponsiveTable = (function () {
 
             let hSize = CalcHeightOfElement($('.top-container'));
             hSize += CalcHeightOfElement($('.spacer'));
+            hSize += CalcStage1($('#billing-page'));
 
             let sz = window.innerHeight - hSize;
 

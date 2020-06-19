@@ -69,7 +69,7 @@ let CountriesModel = (function(){
 let CountriesModel2 = (function(){
     let countries = {
         "All": ["All"],
-        "Israel": ["Tel Aviv-Yafo"]
+        "Israel": ["Tel Aviv"]
     };
 
     function CountriesModel2() {

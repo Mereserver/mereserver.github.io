@@ -28,8 +28,11 @@ let MonthComponent = function () {
         });
     }
 
-    function MonthComponent(vueModel) {
+    function MonthComponent(vueModel, defaultMonth, defaultYear) {
         let $this = this;
+
+        defaultMonth = defaultMonth || defaultValue;
+        defaultYear = defaultYear || defaultValue;
 
         this.model = vueModel;
 
@@ -39,13 +42,13 @@ let MonthComponent = function () {
 
         CopyObjects(vueModel.data, {
             months: months,
-            monthSelector: defaultValue,
+            monthSelector: defaultMonth,
             years: years,
-            yearSelector: defaultValue
+            yearSelector: defaultYear
         });
 
-        let currentMonth = defaultValue;
-        let currentYear = defaultValue;
+        let currentMonth = defaultMonth;
+        let currentYear = defaultYear;
 
         CopyObjects(vueModel.watch, {
             monthSelector: function (month, oldVal) {

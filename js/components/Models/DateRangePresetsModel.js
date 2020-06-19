@@ -16,8 +16,8 @@ let DateRangePresetsModel = (function(){
         return result;
     }
 
-    DateRangePresetsModel.prototype.GetStatusesEnables = function () {
-        return [true, false, true, true, true];
+    DateRangePresetsModel.prototype.GetStatusesDisables = function () {
+        return [false, true, true, true, true];
     }
 
     DateRangePresetsModel.States = states;
