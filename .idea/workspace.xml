@@ -3,6 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="8f2d33c1-f34b-4b26-8473-2d464abc3c4a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/demo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/pages/dashboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/pages/dashboard2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/pages/dashboard3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locations.html" beforeDir="false" afterPath="$PROJECT_DIR$/locations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stations-admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/stations-admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stations.html" beforeDir="false" afterPath="$PROJECT_DIR$/stations.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,9 +54,6 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="PackageJsonUpdateNotifier">
-    <dismissed value="$PROJECT_DIR$/package.json" />
-  </component>
   <component name="ProjectId" id="1Zov0HHV9kQ9IwVMiWLzHEfxHok" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -64,7 +68,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/js/components/Models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
@@ -115,6 +119,7 @@
       <workItem from="1590445135566" duration="535263000" />
       <workItem from="1592378081431" duration="55000" />
       <workItem from="1592378281576" duration="40440000" />
+      <workItem from="1592839130993" duration="955000" />
     </task>
     <servers />
   </component>
