@@ -2,36 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f2d33c1-f34b-4b26-8473-2d464abc3c4a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/billing.html" beforeDir="false" afterPath="$PROJECT_DIR$/billing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index-admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/index-admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/Exts.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Exts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/MainDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/MainDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/BillingComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/BillingComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/DashboardComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/DashboardComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/HeaderInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/HeaderInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/MapComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/MapComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/Models/BillingRecords.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/BillingRecords.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/Models/CountriesModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/CountriesModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/Models/DateRangePresetsModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/DateRangePresetsModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/Models/Reports.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/Reports.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/Models/ScooterStatusModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/ScooterStatusModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/Models/Scooters.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/Scooters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/Models/Stations.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/Stations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/Models/StationsRating2.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/Models/StationsRating2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/MonthComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/MonthComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/PowerCostComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/PowerCostComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/ResponsiveTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/ResponsiveTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/ScootersComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/ScootersComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/StatusComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/StatusComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messages-new.html" beforeDir="false" afterPath="$PROJECT_DIR$/messages-new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scooters.html" beforeDir="false" afterPath="$PROJECT_DIR$/scooters.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stations.html" beforeDir="false" afterPath="$PROJECT_DIR$/stations.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +114,7 @@
       <workItem from="1586939063597" duration="41673000" />
       <workItem from="1590445135566" duration="535263000" />
       <workItem from="1592378081431" duration="55000" />
-      <workItem from="1592378281576" duration="39835000" />
+      <workItem from="1592378281576" duration="40440000" />
     </task>
     <servers />
   </component>
